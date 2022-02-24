@@ -314,7 +314,8 @@ function show_SmallThumbnail_lazy($video_id,$cateid , $catename,$des,$cdate,$thu
 	echo '<div class="index" data-id="'.$nail_id.'" >';
 
     if($NSFW && $NSFW_v)
-    echo '<img class="lazy" data-original="'.$thumb.'" width="320" height="180" data-id="NSFW">';
+    // echo '<img class="lazy" data-original="'.$thumb.'" width="320" height="180" data-id="NSFW">';
+	echo '<img src=http://cms.nextanimation.com.tw/'.$thumb.' width="320" height="180">';
     else
     {
     	    if($NSFW_v)
