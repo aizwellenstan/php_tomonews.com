@@ -1,4 +1,4 @@
-<?php 
+<?
 function insert_MostViewed($num){
             global $menuAry;
 	          global $ad_video_300x250_1;

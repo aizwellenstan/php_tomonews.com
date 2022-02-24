@@ -1,4 +1,4 @@
-<?php 
+<?
 include_once('configA.php');
 include_once('api_settingA.php');
 include_once('device.php');
@@ -9,34 +9,34 @@ include_once('tags_preprocess.php');
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title><?php  echo $topic_name; ?> | <?php  site_title() ?></title>
+	<title><? echo $topic_name; ?> | <? site_title() ?></title>
 <meta name=viewport content="width=1200px">
 	<meta name="apple-itunes-app" content="app-id=633875353">
 	<meta name="google-play-app" content="app-id=com.nextmedia.gan">
 	<meta name="description" content="TomoNews is your daily source for top animated news. We’ve combined animation and video footage with a snarky personality to bring you the biggest and best stories from around the world." />
 	<meta name="keywords" content="news, news videos, funny news, animated news, funny videos, animation, next media animation" />
 	<link rel="apple-touch-icon-precomposed" href=""/>
-	<link rel="icon" href="<?php  echo THIS_SITE; ?>img/favicon.png?v=1" type="image/png" />
+	<link rel="icon" href="<? echo THIS_SITE; ?>img/favicon.png?v=1" type="image/png" />
 	<link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7365156/7009372/css/fonts.css" />
-	<link rel="stylesheet" href="<?php  echo THIS_SITE; ?>stylesheets/style.min.css">
-	<link rel="stylesheet" href="<?php  echo THIS_SITE; ?>stylesheets/jquery-ui.min.css">
-    <?php  include_once("head_scripts.php"); ?>
-	<script src="<?php echo THIS_SITE; ?>js/all.min.js"></script>     
+	<link rel="stylesheet" href="<? echo THIS_SITE; ?>stylesheets/style.min.css">
+	<link rel="stylesheet" href="<? echo THIS_SITE; ?>stylesheets/jquery-ui.min.css">
+    <? include_once("head_scripts.php"); ?>
+	<script src="<?echo THIS_SITE; ?>js/all.min.js"></script>     
   <script src="http://dev.imp.nextmedia.com/js/nxm_tr_v16_dev.js?t=1119" ></script> 
-  <script src="<?php echo THIS_SITE; ?>js/jquery-ui.min.js"></script>
+  <script src="<?echo THIS_SITE; ?>js/jquery-ui.min.js"></script>
 
  <script type="application/ld+json"> 
     { 
       "@context": "http://schema.org", 
       "@type": "Webpage", 
-      "headline": "<?php site_title();?>", 
-      "url": "<?php  echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];?>", 
+      "headline": "<?site_title();?>", 
+      "url": "<? echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];?>", 
       "thumbnailUrl": "", 
-      <?php $cdate22=date("Y-m-d\TH:i:s") ;   $cdate22= $cdate22.'.000Z';?>
-      "dateCreated": "<?php  echo $cdate22; ?>", 
-      "articleSection": "<?php echo strtoupper($topic_name);?>", 
+      <?$cdate22=date("Y-m-d\TH:i:s") ;   $cdate22= $cdate22.'.000Z';?>
+      "dateCreated": "<? echo $cdate22; ?>", 
+      "articleSection": "<?echo strtoupper($topic_name);?>", 
       "creator": "TOMONEWS", 
-      "keywords": [<?php 
+      "keywords": [<?
                  foreach($META_KW as $i => $value) 
                  {
                    if($i==0)
@@ -47,7 +47,7 @@ include_once('tags_preprocess.php');
                   ?>] 
     } 
 </script>
-<?php  include_once('ga.php'); ?>	
+<? include_once('ga.php'); ?>	
 </head>
 <style>
 .ml3{width: auto;text-align:right;float:right;    padding-right: 5px;}
@@ -87,17 +87,17 @@ label {
 </script>
 <body>
 	<div class="wapper"> 
-		<?php  
+		<? 
 		//$ad728x90=$ad_category_728x90;
 		include_once('header.php'); 
 		?>
 	</div>
 	<div id="srh_lab" class="" align="center" >
-			<?php  echo $cate_name ; ?>
+			<? echo $cate_name ; ?>
 	</div>
 	<div id="vdo_wapper" style="display:table;position:relative;">
 			<div id="vdo_content" style="width:665px; ">
-		<?php 
+		<?
 
 
       if($cate_name=="tomogirls" && $page==2)
@@ -113,7 +113,7 @@ label {
         $ad300x600_1=$ad_category_300x600;
       }
 		?>
-		<?php 
+		<?
 		$sdate='*';
 		$edate=strtotime(date('Y-m-d h:i:sa'));
 		if ( rawurlencode(trim($listTitle)) != trim($KW) ){
@@ -201,35 +201,35 @@ label {
             {$showStart=1;}
         }
 		?>	
-    <div class="pager" style="<?php if($totalPage==1){echo 'display:none;';}?>">
-		<div class="pager_cnt"><a href="<?php  echo $thisURL; ?>"><span>&lt;&lt;First</span></a></div>
-		<div class="pager_cnt"><a href="<?php  echo $thisURL; ?><?php  echo '&page='.$prePage; ?>"><span>&lt;Previous</span></a></div>
+    <div class="pager" style="<?if($totalPage==1){echo 'display:none;';}?>">
+		<div class="pager_cnt"><a href="<? echo $thisURL; ?>"><span>&lt;&lt;First</span></a></div>
+		<div class="pager_cnt"><a href="<? echo $thisURL; ?><? echo '&page='.$prePage; ?>"><span>&lt;Previous</span></a></div>
 		<div class="pager_cnt">
-			<?php 
+			<?
 			for($i=$showStart;$i<=$showEnd;$i++  ){
 				?>
-				<a href="<?php  echo $thisURL; ?><?php  echo '&page='.$i; ?>"><span class="pgcount <?php  if($i==$page){ ?>current<?php  } ?> "><?php  echo $i; ?></span></a>
-				<?php 
+				<a href="<? echo $thisURL; ?><? echo '&page='.$i; ?>"><span class="pgcount <? if($i==$page){ ?>current<? } ?> "><? echo $i; ?></span></a>
+				<?
 			}
 			?>
 		</div>
-		<div class="pager_cnt"><a href="<?php  echo $thisURL; ?><?php  echo '&page='.$nexPage; ?>"><span>Next&gt;</span></a></div>
-		<div class="pager_cnt"><a href="<?php  echo $thisURL; ?><?php  echo '&page='.$totalPage; ?>"><span>Last&gt;&gt;</span></a></div>
+		<div class="pager_cnt"><a href="<? echo $thisURL; ?><? echo '&page='.$nexPage; ?>"><span>Next&gt;</span></a></div>
+		<div class="pager_cnt"><a href="<? echo $thisURL; ?><? echo '&page='.$totalPage; ?>"><span>Last&gt;&gt;</span></a></div>
 	</div>
 		
 	</div>
 	
 	<div id="vdo_otherlist" >
-		<!-- <div class="mov" style="width: 300px; height: 600px;display:block;background:#ccc;margin:0;margin-top:25px;"><?php  /*echo $ad300x600_1;*/?></div> -->
-	    <div class="mail_box" style="width: 300px; height:auto;display:block;background:#ccc;margin:0;margin-top:25px;position:relative;font-family:Roboto, sans-serif;<?php if($num_video <=4) {echo 'display:none;';}?>">
+		<!-- <div class="mov" style="width: 300px; height: 600px;display:block;background:#ccc;margin:0;margin-top:25px;"><? /*echo $ad300x600_1;*/?></div> -->
+	    <div class="mail_box" style="width: 300px; height:auto;display:block;background:#ccc;margin:0;margin-top:25px;position:relative;font-family:Roboto, sans-serif;<?if($num_video <=4) {echo 'display:none;';}?>">
 	    	
-	    	 <img class="img-full" src="<?php  echo THIS_SITE; ?>img/mail_us.png">
+	    	 <img class="img-full" src="<? echo THIS_SITE; ?>img/mail_us.png">
 	    	 <a href="mailto:info@nma.com.tw" ><div class="mail_box_btn" ></div></a>
-	    	 <a href="<?php  echo FB_LINKS;?>" target="_blank"><div class="mail_box_btn" style="left: 53px;"></div></a>
-	    	  <a href="<?php  echo TWITTER_LINKS;?>" target="_blank"><div class="mail_box_btn" style="left: 86px;"></div></a>
-	    	  <a href="<?php  echo GPLUS_LINKS;?>" target="_blank"><div class="mail_box_btn" style="left: 119px; "></div></a>
-	    	  <a href="<?php  echo THIS_SITE; ?>rss_us/index.php" target="_blank"><div class="mail_box_btn" style="left: 155px;"></div></a>
-	    	  <a href="<?php  echo THIS_SITE.MOBILE_PAGE_LINK;?>" target="_blank"><div class="mail_box_btn" style="left: 191px;"></div></a>
+	    	 <a href="<? echo FB_LINKS;?>" target="_blank"><div class="mail_box_btn" style="left: 53px;"></div></a>
+	    	  <a href="<? echo TWITTER_LINKS;?>" target="_blank"><div class="mail_box_btn" style="left: 86px;"></div></a>
+	    	  <a href="<? echo GPLUS_LINKS;?>" target="_blank"><div class="mail_box_btn" style="left: 119px; "></div></a>
+	    	  <a href="<? echo THIS_SITE; ?>rss_us/index.php" target="_blank"><div class="mail_box_btn" style="left: 155px;"></div></a>
+	    	  <a href="<? echo THIS_SITE.MOBILE_PAGE_LINK;?>" target="_blank"><div class="mail_box_btn" style="left: 191px;"></div></a>
 	    	 <form action="//tomonews.us2.list-manage.com/subscribe/post?u=28c2f2044f22c46a64747226f&amp;id=8254ba5d15" method="get" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 	    	 	<div style="position:absolute;top:105px;left:17px;">  
 	    	 	 <div class="mc-field-group" style="position:relative;top:0px;left:0px;">    
@@ -247,7 +247,7 @@ label {
               </div>
           </form>
 	    </div>
-			<?php 
+			<?
                /*側邊影片縮圖*/
                include_once('tags_sidethumbnail.php');
                 ?>
@@ -257,10 +257,10 @@ label {
 	<div id="dialog" title="">
   <p></p>
 </div>
-	<?php  include_once('footer.php'); ?>
+	<? include_once('footer.php'); ?>
     
 	<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-  <script type='text/javascript' src='<?php  echo THIS_SITE; ?>js/follow_signUp.js'></script>
+  <script type='text/javascript' src='<? echo THIS_SITE; ?>js/follow_signUp.js'></script>
 <script type='text/javascript'>
 $(function() {
      $(".index .minfo ").ellipsis({
@@ -287,13 +287,13 @@ $(function() {
      try{
      var siteMap_index = 'TOPICS';
      var from = (getCookie('track_menu')=="" || !getCookie('track_menu'))? "MAIN":getCookie('track_menu');
-         console.log('test:' + '<?php echo  $topic_name ;?>' );
+         console.log('test:' + '<?echo  $topic_name ;?>' );
           cnf_1X1.nxmObj={
         "region":"US",
         "prod":"TOMONEWS",
-        "site":"<?php echo THIS_SITE;?>",
+        "site":"<?echo THIS_SITE;?>",
         "platform":"WEB",  //WEB | MOBWEB | ANDROID | IPHONE | IPAD | TABLET 
-        "section":'<?php echo  $topic_name ;?>', ////Site map
+        "section":'<?echo  $topic_name ;?>', ////Site map
         "media":"TEXT",//Site map
         "content":"INDEX",  //Site map
         "issueid":"",      //Aritcle Issue Date or send blank for homepage/index

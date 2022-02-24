@@ -1,4 +1,4 @@
-<?php 
+<?
 include_once('config.php');
 include_once('api_setting.php');
 //include_once('device.php');
@@ -11,7 +11,7 @@ $thisURL=THIS_SITE;
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title><?php  site_title() ?></title>
+	<title><? site_title() ?></title>
 	<meta name="google-site-verification" content="LNkk7F3gMpWHgnHPEz5vsFDYBjONRopvjCGwaypBy6c" />
   <meta id ="viewport" name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 	<meta name="description" content="TomoNews is your daily source for top animated news. We??¢ve combined animation and video footage with a snarky personality to bring you the biggest and best stories from around the world." />
@@ -19,27 +19,27 @@ $thisURL=THIS_SITE;
 	<meta property="fb:pages" content="148740698487405" />
 	<link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7365156/7009372/css/fonts.css" />
 	<link rel="apple-touch-icon-precomposed" href=""/>
-	<link rel="icon" href="<?php  echo THIS_SITE; ?>img/favicon.png?v=2" type="image/png" />
-	<link rel="stylesheet" href="<?php  echo THIS_SITE; ?>stylesheets/style.min.css?nocache=1103">
+	<link rel="icon" href="<? echo THIS_SITE; ?>img/favicon.png?v=2" type="image/png" />
+	<link rel="stylesheet" href="<? echo THIS_SITE; ?>stylesheets/style.min.css?nocache=1103">
 	
-	<link rel="canonical" href="<?php  echo THIS_SITE_DESKTOP; ?>" />
-<?php  include_once("../head_scripts.php"); ?> 	
-<script src="<?php echo THIS_SITE;?>js/all.min.js?nocache=1117"></script>
-  <script src="<?php  echo THIS_SITE; ?>js/jquery.lazyload.min.js"></script>
+	<link rel="canonical" href="<? echo THIS_SITE_DESKTOP; ?>" />
+<? include_once("../head_scripts.php"); ?> 	
+<script src="<?echo THIS_SITE;?>js/all.min.js?nocache=1117"></script>
+  <script src="<? echo THIS_SITE; ?>js/jquery.lazyload.min.js"></script>
   
-  	<?php  echo '<script>'; ?>
-  	<?php  echo '</script>'; ?>
+  	<? echo '<script>'; ?>
+  	<? echo '</script>'; ?>
      <script type="application/ld+json"> 
     { 
       "@context": "http://schema.org", 
       "@type": "Webpage", 
-      "headline": "<?php site_title();?>", 
-      "url": "<?php  echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];?>", 
+      "headline": "<?site_title();?>", 
+      "url": "<? echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];?>", 
       "thumbnailUrl": "", 
-     <?php $cdate22=date("Y-m-d\TH:i:s") ;   $cdate22= $cdate22.'.000Z';?>
-      "dateCreated": "<?php  echo $cdate22; ?>", 
+     <?$cdate22=date("Y-m-d\TH:i:s") ;   $cdate22= $cdate22.'.000Z';?>
+      "dateCreated": "<? echo $cdate22; ?>", 
       "creator": "TOMONEWS", 
-      "keywords": [<?php 
+      "keywords": [<?
                  foreach($META_KW as $i => $value) 
                  {
                    if($i==0)
@@ -51,12 +51,12 @@ $thisURL=THIS_SITE;
     } 
 	"potentialAction": {
 		"@type": "SearchAction",
-		"target": "<?php  echo THIS_SITE; ?>/search?kw={search_term_string}",
+		"target": "<? echo THIS_SITE; ?>/search?kw={search_term_string}",
 		"query-input": "required name=search_term_string"
 	}
 	</script>
 
-<?php  include_once('../ga.php'); ?>	
+<? include_once('../ga.php'); ?>	
 </head>
 
 <style>
@@ -76,7 +76,7 @@ $thisURL=THIS_SITE;
 }
 </style>
 <body>
-		<?php  
+		<? 
 		$ad300x50 = $ad_index_300x50;
 		$ad300x250_1 = $ad_index_300x250_1;
 		$ad300x250_2 = $ad_index_300x250_2;
@@ -85,7 +85,7 @@ $thisURL=THIS_SITE;
 	<div class="wapper"> 
 	<div id="lists3">
 		
-		<?php 
+		<?
 		
 		$getUrls=APPLICATION_FRONT_PAGE_URL;
 		
@@ -105,9 +105,9 @@ $thisURL=THIS_SITE;
             $cate_name='';
             $cate_id='';
 			
-			if($i==1){ ?><div id="" style="width: 351px;height: 51px;overflow: hidden;margin: auto;margin-bottom:15px;"> <?php  echo $ad300x50 ?></div> <?php  }
-			if($i==3){ ?><div id="" style="width: 300px;height: 251px;overflow: hidden;margin: auto;margin-bottom:15px;"> <?php  echo $ad300x250_1 ?></div> <?php  }
-			if($i==6){ ?><div id="" style="width: 300px;height: 251px;overflow: hidden;margin: auto;margin-bottom:15px;"> <?php  echo $ad300x250_2 ?></div> <?php  }
+			if($i==1){ ?><div id="" style="width: 351px;height: 51px;overflow: hidden;margin: auto;margin-bottom:15px;"> <? echo $ad300x50 ?></div> <? }
+			if($i==3){ ?><div id="" style="width: 300px;height: 251px;overflow: hidden;margin: auto;margin-bottom:15px;"> <? echo $ad300x250_1 ?></div> <? }
+			if($i==6){ ?><div id="" style="width: 300px;height: 251px;overflow: hidden;margin: auto;margin-bottom:15px;"> <? echo $ad300x250_2 ?></div> <? }
 			
             $dArynCat=$value['custom']; 
             $cate_name = is_array($value['categories'])? $value['categories'][0] : $value['categories'];
@@ -134,8 +134,8 @@ $thisURL=THIS_SITE;
 
 	</div>
 
-    <a href="<?php echo THIS_SITE.'newsfeed/'?>" target="_self"><div class="newsfeed_btn" >SEE ALL NEWS >></div></a>
-	<?php  include_once('footer.php'); ?>
+    <a href="<?echo THIS_SITE.'newsfeed/'?>" target="_self"><div class="newsfeed_btn" >SEE ALL NEWS >></div></a>
+	<? include_once('footer.php'); ?>
    <!-- <div class="test_info" style="position:fixed;width:100px;height:15px;background:#fff;top: 100px;">test</div> -->
 </body>
 
@@ -153,7 +153,7 @@ $(function() {
           cnf_1X1.nxmObj={
         "region":"US",
         "prod":"TOMONEWS",
-        "site":"<?php echo THIS_SITE;?>",
+        "site":"<?echo THIS_SITE;?>",
         "platform":"MOBWEB",  //WEB | MOBWEB | ANDROID | IPHONE | IPAD | TABLET 
         "section":cnf_1X1.params[siteMap_index].sec, ////Site map
         "media":"TEXT",//Site map

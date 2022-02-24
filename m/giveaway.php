@@ -1,4 +1,4 @@
-<?php 
+<?
 include_once('config.php');
 include_once('api_setting.php');
 include_once('device.php');
@@ -19,15 +19,15 @@ $thisURL='index.php';
 	<meta name="description" content="TomoNews is your daily source for top animated news. We’ve combined animation and video footage with a snarky personality to bring you the biggest and best stories from around the world." />
 	<meta name="keywords" content="news, news videos, funny news, animated news, funny videos, animation, next media animation" />
 	<link rel="apple-touch-icon-precomposed" href=""/>
-	<link rel="icon" href="<?php  echo THIS_SITE; ?>img/favicon.ico" type="image/icon" />
-	<link rel="stylesheet" href="<?php  echo THIS_SITE; ?>stylesheets/style.min.css">
-	<link rel="stylesheet" href="<?php  echo THIS_SITE; ?>stylesheets/giveaway.min.css">
-	 <?php  include_once("../head_scripts.php"); ?> 
-	<script src="<?php echo THIS_SITE;?>js/all.min.js"></script>
-	<script src="<?php echo THIS_SITE;?>/js/movideo.min.latest.js" type="text/javascript"></script>
+	<link rel="icon" href="<? echo THIS_SITE; ?>img/favicon.ico" type="image/icon" />
+	<link rel="stylesheet" href="<? echo THIS_SITE; ?>stylesheets/style.min.css">
+	<link rel="stylesheet" href="<? echo THIS_SITE; ?>stylesheets/giveaway.min.css">
+	 <? include_once("../head_scripts.php"); ?> 
+	<script src="<?echo THIS_SITE;?>js/all.min.js"></script>
+	<script src="<?echo THIS_SITE;?>/js/movideo.min.latest.js" type="text/javascript"></script>
 	
     <style>
-      #aboutc{	    	background:#ffb400 url("<?php  echo THIS_SITE; ?>img/kv_giveaway2.gif"	) no-repeat ;background-size: contain;height:1480px;}
+      #aboutc{	    	background:#ffb400 url("<? echo THIS_SITE; ?>img/kv_giveaway2.gif"	) no-repeat ;background-size: contain;height:1480px;}
 	</style>
 
 <script type="application/ld+json"> 
@@ -35,13 +35,13 @@ $thisURL='index.php';
       "@context": "http://schema.org", 
       "@type": "Webpage", 
       "headline": "$500 Giveaway", 
-      "url": "<?php  echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];?>", 
+      "url": "<? echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];?>", 
       "thumbnailUrl": "", 
-      <?php $cdate22=date("Y-m-d\TH:i:s") ;   $cdate22= $cdate22.'.000Z';?>
-      "dateCreated": "<?php  echo $cdate22; ?>", 
+      <?$cdate22=date("Y-m-d\TH:i:s") ;   $cdate22= $cdate22.'.000Z';?>
+      "dateCreated": "<? echo $cdate22; ?>", 
       "articleSection": "GIVEAWAY", 
       "creator": "TOMONEWS", 
-      "keywords": [<?php 
+      "keywords": [<?
                  foreach($META_KW as $i => $value) 
                  {
                    if($i==0)
@@ -54,7 +54,7 @@ $thisURL='index.php';
 </script>
 </head>
 <body>
-		<?php  $ad300x50 = $ad_about_300x50;		
+		<? $ad300x50 = $ad_about_300x50;		
 		include_once('header.php'); 
 		?>	
 	<div class="wapper"> 
@@ -90,16 +90,16 @@ $thisURL='index.php';
           	<p>- TomoNews will reach out to winners via email or Facebook message within 30 days of the announcement. Winners must provide a full name and valid mailing address to claim the prize.</p>
           	<br><div class="title_line">QUESTIONS?</div>
           	<p>Email us at <a href="mailto:info-us@tomonews.com">info-us@tomonews.com</a></p>
-          	<div id="treasure"><img src="<?php  echo THIS_SITE; ?>img/event_deco.png"></div>
+          	<div id="treasure"><img src="<? echo THIS_SITE; ?>img/event_deco.png"></div>
 
 
-             <br><p>*All terms and conditions apply</p><br><br><br><br><br><br><div class="prev_giveaway">See our previous Giveaway <a href="<?php echo THIS_SITE;?>giveaway_old.php"  target="_blank">here!</a></div>
+             <br><p>*All terms and conditions apply</p><br><br><br><br><br><br><div class="prev_giveaway">See our previous Giveaway <a href="<?echo THIS_SITE;?>giveaway_old.php"  target="_blank">here!</a></div>
           	<div class='social_bar'>
-          		<a href="<?php echo FB_LINKS;?> " target="_blank"><img src="<?php  echo THIS_SITE; ?>img/icon_fb.png"></a>
-          		<a href="<?php echo TWITTER_LINKS;?>" target="_blank"><img src="<?php  echo THIS_SITE; ?>img/icon_twitt.png"></a>
-          		<a href="<?php echo GPLUS_LINKS;?>" target="_blank"><img src="<?php  echo THIS_SITE; ?>img/icon_gp.png"></a>
-          		<a href="<?php echo YOUTUBE_LINKS;?>" target="_blank"><img src="<?php  echo THIS_SITE; ?>img/icon_yt.png"></a>
-          		<a href="<?php echo INSTAGRAM_LINKS;?>" target="_blank"><img src="<?php  echo THIS_SITE; ?>img/icon_ig.png"></a>
+          		<a href="<?echo FB_LINKS;?> " target="_blank"><img src="<? echo THIS_SITE; ?>img/icon_fb.png"></a>
+          		<a href="<?echo TWITTER_LINKS;?>" target="_blank"><img src="<? echo THIS_SITE; ?>img/icon_twitt.png"></a>
+          		<a href="<?echo GPLUS_LINKS;?>" target="_blank"><img src="<? echo THIS_SITE; ?>img/icon_gp.png"></a>
+          		<a href="<?echo YOUTUBE_LINKS;?>" target="_blank"><img src="<? echo THIS_SITE; ?>img/icon_yt.png"></a>
+          		<a href="<?echo INSTAGRAM_LINKS;?>" target="_blank"><img src="<? echo THIS_SITE; ?>img/icon_ig.png"></a>
           	</div>
 		  </div>
 		  <div class="aboutc2" data-id="2" style="height:690px;">
@@ -137,14 +137,14 @@ $thisURL='index.php';
             
             <div class="prev_giveaway" style="margin-top: 697px;">
 
-            	<span>See our previous Giveaway <a href="<?php echo THIS_SITE;?>giveaway_old.php"  target="_blank">here!</a></span>
+            	<span>See our previous Giveaway <a href="<?echo THIS_SITE;?>giveaway_old.php"  target="_blank">here!</a></span>
             </div>
           	<div class='social_bar' style="margin:25px auto">
-          		<a href="<?php echo FB_LINKS;?> " target="_blank"><img src="<?php  echo THIS_SITE; ?>img/icon_fb.png"></a>
-          		<a href="<?php echo TWITTER_LINKS;?>" target="_blank"><img src="<?php  echo THIS_SITE; ?>img/icon_twitt.png"></a>
-          		<a href="<?php echo GPLUS_LINKS;?>" target="_blank"><img src="<?php  echo THIS_SITE; ?>img/icon_gp.png"></a>
-          		<a href="<?php echo YOUTUBE_LINKS;?>" target="_blank"><img src="<?php  echo THIS_SITE; ?>img/icon_yt.png"></a>
-          		<a href="<?php echo INSTAGRAM_LINKS;?>" target="_blank"><img src="<?php  echo THIS_SITE; ?>img/icon_ig.png"></a>
+          		<a href="<?echo FB_LINKS;?> " target="_blank"><img src="<? echo THIS_SITE; ?>img/icon_fb.png"></a>
+          		<a href="<?echo TWITTER_LINKS;?>" target="_blank"><img src="<? echo THIS_SITE; ?>img/icon_twitt.png"></a>
+          		<a href="<?echo GPLUS_LINKS;?>" target="_blank"><img src="<? echo THIS_SITE; ?>img/icon_gp.png"></a>
+          		<a href="<?echo YOUTUBE_LINKS;?>" target="_blank"><img src="<? echo THIS_SITE; ?>img/icon_yt.png"></a>
+          		<a href="<?echo INSTAGRAM_LINKS;?>" target="_blank"><img src="<? echo THIS_SITE; ?>img/icon_ig.png"></a>
           	</div>
 		  </div> 
 		  <div class="aboutc2" data-id="3" style="height:1995px;">
@@ -170,13 +170,13 @@ $thisURL='index.php';
                 <li>TomoNews reserves the right to disclose winner’s name.</li>
 
 		  	</ol>
-		  	 <br><br><br><div class="prev_giveaway">See our previous Giveaway <a href="<?php echo THIS_SITE;?>giveaway_old.php"  target="_blank">here!</a></div>
+		  	 <br><br><br><div class="prev_giveaway">See our previous Giveaway <a href="<?echo THIS_SITE;?>giveaway_old.php"  target="_blank">here!</a></div>
 		  	<div class='social_bar' >
-          		<a href="<?php echo FB_LINKS;?>" target="_blank"><img src="<?php  echo THIS_SITE; ?>img/icon_fb.png"></a>
-          		<a href="<?php echo TWITTER_LINKS;?>" target="_blank"><img src="<?php  echo THIS_SITE; ?>img/icon_twitt.png"></a>
-          		<a href="<?php echo GPLUS_LINKS;?>" target="_blank"><img src="<?php  echo THIS_SITE; ?>img/icon_gp.png"></a>
-          		<a href="<?php echo YOUTUBE_LINKS;?>" target="_blank"><img src="<?php  echo THIS_SITE; ?>img/icon_yt.png"></a>
-          		<a href="<?php echo INSTAGRAM_LINKS;?>" target="_blank"><img src="<?php  echo THIS_SITE; ?>img/icon_ig.png"></a>
+          		<a href="<?echo FB_LINKS;?>" target="_blank"><img src="<? echo THIS_SITE; ?>img/icon_fb.png"></a>
+          		<a href="<?echo TWITTER_LINKS;?>" target="_blank"><img src="<? echo THIS_SITE; ?>img/icon_twitt.png"></a>
+          		<a href="<?echo GPLUS_LINKS;?>" target="_blank"><img src="<? echo THIS_SITE; ?>img/icon_gp.png"></a>
+          		<a href="<?echo YOUTUBE_LINKS;?>" target="_blank"><img src="<? echo THIS_SITE; ?>img/icon_yt.png"></a>
+          		<a href="<?echo INSTAGRAM_LINKS;?>" target="_blank"><img src="<? echo THIS_SITE; ?>img/icon_ig.png"></a>
           	</div>
 		  </div>
 		</div>
@@ -187,7 +187,7 @@ $thisURL='index.php';
  		<div class="cb"></div>
 	</div>
 	
-	<?php  include_once('footer.php'); ?>
+	<? include_once('footer.php'); ?>
 
 </body>
 <script>

@@ -1,4 +1,4 @@
-<?php 
+<?
 	//API key & alias
 $if_test4= strpos( strtolower( $_SERVER['HTTP_HOST'] )  ,'tomonews');
 $if_test5= strpos( strtolower( $_SERVER['HTTP_HOST'] )  ,'intranet01');

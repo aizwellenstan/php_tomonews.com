@@ -1,4 +1,4 @@
-<?php 
+<?
               
     /*$content = nl2br(htmlspecialchars_decode($des));            
     echo  $content;

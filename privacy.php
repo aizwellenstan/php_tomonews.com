@@ -1,4 +1,4 @@
-<?php 
+<?
 include_once('configA.php');
 include_once('api_settingA.php');
 include_once('device.php');/*include_once('media_preprocess.php');*/
@@ -15,7 +15,7 @@ $thisURL='index.php';
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title><?php  site_title() ?></title>
+	<title><? site_title() ?></title>
     <meta name=viewport content="width=1200px">
 	<meta name="apple-itunes-app" content="app-id=633875353">
 	<meta name="google-play-app" content="app-id=com.nextmedia.gan">
@@ -23,12 +23,12 @@ $thisURL='index.php';
 	<meta name="keywords" content="news, news videos, funny news, animated news, funny videos, animation, next media animation" />
 	<link rel="apple-touch-icon-precomposed" href=""/>
 	<link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7365156/7009372/css/fonts.css" />
-	<link rel="icon" href="<?php  echo THIS_SITE; ?>img/favicon.png?v=1" type="image/png" />
+	<link rel="icon" href="<? echo THIS_SITE; ?>img/favicon.png?v=1" type="image/png" />
 	<link rel="stylesheet" href="stylesheets/style.min.css">
- <link rel="stylesheet" href="<?php  echo THIS_SITE; ?>stylesheets/about.min.css">
- <?php  include_once("head_scripts.php"); ?>
-	<script src="<?php echo THIS_SITE; ?>js/all.min.js"></script>
-	 <script src="<?php echo THIS_SITE; ?>js/media_nav.min.js"></script>
+ <link rel="stylesheet" href="<? echo THIS_SITE; ?>stylesheets/about.min.css">
+ <? include_once("head_scripts.php"); ?>
+	<script src="<?echo THIS_SITE; ?>js/all.min.js"></script>
+	 <script src="<?echo THIS_SITE; ?>js/media_nav.min.js"></script>
 	<script src="http://dev.imp.nextmedia.com/js/nxm_tr_v16_dev.js?t=1119" ></script>  
 	 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
@@ -37,14 +37,14 @@ $thisURL='index.php';
     { 
       "@context": "http://schema.org", 
       "@type": "Webpage", 
-      "headline": "<?php  site_title();?>", 
-      "url": "<?php  echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];?>", 
+      "headline": "<? site_title();?>", 
+      "url": "<? echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];?>", 
       "thumbnailUrl": "", 
-      <?php $cdate22=date("Y-m-d\TH:i:s") ;   $cdate22= $cdate22.'.000Z';?>
-      "dateCreated": "<?php  echo $cdate22; ?>", 
+      <?$cdate22=date("Y-m-d\TH:i:s") ;   $cdate22= $cdate22.'.000Z';?>
+      "dateCreated": "<? echo $cdate22; ?>", 
       "articleSection": "HOME", 
       "creator": "TOMONEWS", 
-      "keywords": [<?php 
+      "keywords": [<?
                  foreach($META_KW as $i => $value) 
                  {
                  	 if($i==0)
@@ -55,17 +55,17 @@ $thisURL='index.php';
                   ?>] 
     } 
 </script>
-<?php  include_once('ga.php'); ?>	
+<? include_once('ga.php'); ?>	
 </head>
 <body>
 	<div class="wapper"> 
-		<?php  
+		<? 
 		//$ad728x90=$ad_about_728x90;
 		include_once('header.php'); ?>	
 </div>
 	<div id="lists">
 	 <!-- NAV BAR -->
-    <?php //include_once('./media_nav.php');?>
+    <?//include_once('./media_nav.php');?>
      <!-- NAV BAR -->
 
      <div class="right_content">
@@ -99,7 +99,7 @@ $thisURL='index.php';
 
     
 	
-	<?php  include_once('footer.php'); ?>
+	<? include_once('footer.php'); ?>
 </body>
 
 <script>
@@ -107,11 +107,11 @@ $thisURL='index.php';
 
    $(function() {
 
-    _GLOBAL.base='<?php THIS_SITE;?>'
+    _GLOBAL.base='<?THIS_SITE;?>'
     _GLOBAL.page='ABOUT';
-    /*_GLOBAL.tok2 = "<?php echo $_SESSION['token2'];?>";
-    _GLOBAL.MEDIA_Ys = <?php  echo '["' . implode('", "', $MEDIA_Ys) . '"]' ?>;
-    _GLOBAL.ASOT_Chs = <?php  echo '["' . implode('", "', $ASOT_Chs) . '"]' ?>;*/
+    /*_GLOBAL.tok2 = "<?echo $_SESSION['token2'];?>";
+    _GLOBAL.MEDIA_Ys = <?php echo '["' . implode('", "', $MEDIA_Ys) . '"]' ?>;
+    _GLOBAL.ASOT_Chs = <?php echo '["' . implode('", "', $ASOT_Chs) . '"]' ?>;*/
 
 /*    var _media_nav = new MEDIA_NAV();
     _media_nav.set_model_nav ({'years':_GLOBAL.MEDIA_Ys , 'channel': _GLOBAL.ASOT_Chs}) 
@@ -123,7 +123,7 @@ $thisURL='index.php';
 cnf_1X1.nxmObj={
 "region":"US",
 "prod":"TOMONEWS",
-"site":"<?php echo THIS_SITE;?>",
+"site":"<?echo THIS_SITE;?>",
 "platform":"WEB",//WEB | MOBWEB | ANDROID | IPHONE | IPAD | TABLET 
 "section":cnf_1X1.params['ABOUT'].sec, ////每頁
 "media":"TEXT",//Site map

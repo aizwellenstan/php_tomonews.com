@@ -1,4 +1,4 @@
-<?php 
+<?
 include_once('config.php');
 include_once('api_setting.php');
 
@@ -20,7 +20,7 @@ $thisURL=THIS_SITE.'tags.php?kw='.$KW;
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title><?php  echo $theme_name; ?> | <?php  site_title() ?></title>
+	<title><? echo $theme_name; ?> | <? site_title() ?></title>
     <meta id="viewport" name="viewport" content="width=device-width, user-scalable=0;">
    
 	
@@ -28,23 +28,23 @@ $thisURL=THIS_SITE.'tags.php?kw='.$KW;
 	<meta name="keywords" content="news, news videos, funny news, animated news, funny videos, animation, next media animation" />
 	<link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7365156/7009372/css/fonts.css" />
 	<link rel="apple-touch-icon-precomposed" href=""/>
-	<link rel="icon" href="<?php  echo THIS_SITE; ?>img/favicon.png?ver=1" type="image/png" />
-	<link rel="stylesheet" href="<?php  echo THIS_SITE; ?>stylesheets/style.min.css">
- <?php  include_once("../head_scripts.php"); ?> 
-    <script src="<?php echo THIS_SITE;?>js/all.min.js?nocache=1117"></script>
+	<link rel="icon" href="<? echo THIS_SITE; ?>img/favicon.png?ver=1" type="image/png" />
+	<link rel="stylesheet" href="<? echo THIS_SITE; ?>stylesheets/style.min.css">
+ <? include_once("../head_scripts.php"); ?> 
+    <script src="<?echo THIS_SITE;?>js/all.min.js?nocache=1117"></script>
 	 <script src="http://dev.imp.nextmedia.com/js/nxm_tr_v16_dev.js?t=1119" ></script> 
 
   	 <script type="application/ld+json"> 
     { 
       "@context": "http://schema.org", 
       "@type": "Webpage", 
-      "headline": "<?php site_title();?>", 
-      "url": "<?php  echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];?>", 
+      "headline": "<?site_title();?>", 
+      "url": "<? echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];?>", 
       "thumbnailUrl": "", 
       "dateCreated": "", 
-      "articleSection": "<?php echo strtoupper($topic_name);?>", 
+      "articleSection": "<?echo strtoupper($topic_name);?>", 
       "creator": "TOMONEWS", 
-      "keywords": [<?php 
+      "keywords": [<?
                  foreach($META_KW as $i => $value) 
                  {
                    if($i==0)
@@ -55,22 +55,22 @@ $thisURL=THIS_SITE.'tags.php?kw='.$KW;
                   ?>] 
     } 
 </script>
-<?php  include_once('../ga.php'); ?>	
+<? include_once('../ga.php'); ?>	
 </head>
 <body>
-		<?php  
+		<? 
 		$ad300x50 = $ad_theme_300x50; 
 		include_once('header.php'); 
 		?>
 	<div class="wapper"> 
 	</div>
 
-	<!-- <div id="ad2" style=""> <?php /* echo $ad300x50 */?></div> -->
+	<!-- <div id="ad2" style=""> <?/* echo $ad300x50 */?></div> -->
 	<div id="lists">
 		<div id="srh_lab" class="" align="center" style="text-transform:uppercase;top:0px;margin-bottom:10px;">
-			<?php  echo $theme_name ; ?>
+			<? echo $theme_name ; ?>
 	    </div>
-		<?php 
+		<?
 		$sdate='*';
 		$edate=strtotime(date('Y-m-d h:i:sa'));
 		$getUrls=APPLICATION_FEED_URL.'KBJRKBD5PNUFPGRALF?start=0&count='.PAGE_LIMIT_CATEGORY.'&filters[]=c_ts_publish_l:['.$sdate.'%20TO%20'.$edate.']&filters[]=u_Topic_Tag_smv:"'.$KW.'"&sort=c_ts_publish_l+desc';
@@ -159,7 +159,7 @@ $thisURL=THIS_SITE.'tags.php?kw='.$KW;
 
 		<div class="cb"></div>
 	</div>
-	<?php 
+	<?
 	$theme2 = str_replace(' ', '+', $theme_name);
 	?>
 
@@ -167,10 +167,10 @@ $thisURL=THIS_SITE.'tags.php?kw='.$KW;
 	<div class="pager"style="display:table;width:320px;height:60px;">
 		
 	</div>
-	<?php 
+	<?
 	//}
 	?>
-	<?php  include_once('footer.php'); ?>
+	<? include_once('footer.php'); ?>
 </body>
 <script type="text/javascript">
 	
@@ -178,7 +178,7 @@ $thisURL=THIS_SITE.'tags.php?kw='.$KW;
 
  $(function() {
     /*waterfall cate*/
-     _GLOBAL.theme = '<?php echo $KW; ?>';
+     _GLOBAL.theme = '<?echo $KW; ?>';
      _GLOBAL.NSFW  = false;
  	var datawall = new tags_waterfall();
 
@@ -188,13 +188,13 @@ $thisURL=THIS_SITE.'tags.php?kw='.$KW;
      try{
       var from = (getCookie('track_menu')=="" || !getCookie('track_menu'))? "MAIN":getCookie('track_menu');
      var siteMap_index = 'TOPICS';
-         console.log('test:' + '<?php echo  $topic_name ;?>' );
+         console.log('test:' + '<?echo  $topic_name ;?>' );
           cnf_1X1.nxmObj={
         "region":"US",
         "prod":"TOMONEWS",
-        "site":"<?php echo THIS_SITE;?>",
+        "site":"<?echo THIS_SITE;?>",
         "platform":"MOBWEB",  //WEB | MOBWEB | ANDROID | IPHONE | IPAD | TABLET 
-        "section":'<?php echo  $topic_name ;?>', ////Site map
+        "section":'<?echo  $topic_name ;?>', ////Site map
         "media":"TEXT",//Site map
         "content":"INDEX",  //Site map
         "issueid":"",      //Aritcle Issue Date or send blank for homepage/index

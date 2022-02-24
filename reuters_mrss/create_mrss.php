@@ -1,11 +1,11 @@
-<?php 
+<?
 	//API key & alias
 // define('APPLICATION_ALIAS','NMTomoUS-universal-flash');
 define('APPLICATION_URL','http://nextmedia-mcp.anvato.net/api?');
 define('APPLICATION_FEED_URL','http://api.nm.anvato.net/v2/feed/');
 define('APPLICATION_PRIVATE','074FA752D96A4AD6AD9972B3687A2F4A');
 define('APPLICATION_PUBLIC','BD6795A907354B1C80EE3A2BBA9911FF');
-define('GET_SYND_TAGS','<?php xml version="1.0" ?><request><type>get_synd_tags</type><params></params></request>');
+define('GET_SYND_TAGS','<?xml version="1.0" ?><request><type>get_synd_tags</type><params></params></request>');
 define('HASHING_ALGORITHM','sha256');
 
 /// start 

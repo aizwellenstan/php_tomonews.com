@@ -1,4 +1,4 @@
-<?php 
+<?
 function insert_breakingNews($num){
     global $menuAry;
     global $thumaType ;

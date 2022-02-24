@@ -1,4 +1,4 @@
-<?php 
+<?
 	//API key & alias
 define('APPLICATION_FEED_URL','http://api.nm.anvato.net/v2/feed/');
 define('THIS_SITE','http://'.$_SERVER['SERVER_NAME'].'/'); 

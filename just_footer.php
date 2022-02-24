@@ -1,5 +1,5 @@
-<?php  include_once('configA.php'); ?>
-<script src="<?php echo THIS_SITE ?>js/basic.min.js"></script>
+<? include_once('configA.php'); ?>
+<script src="<?echo THIS_SITE ?>js/basic.min.js"></script>
 <style>
 #ft_menu3{top:145px;left:663px;}
 #ft_menu3a{position: absolute;    top: 54px;    left: 666px;    width: 120px;    height: 200px;font-size: 12.6666679382324px;}
@@ -9,10 +9,10 @@
 
 <div id="footer">
 		<div id="footer_content">
-			<img src="<?php  echo THIS_SITE; ?>img/footer_1.gif?nocache=0907" width="1000" height="206">
+			<img src="<? echo THIS_SITE; ?>img/footer_1.gif?nocache=0907" width="1000" height="206">
 			<div id="ft_menu1" style="text-transform:uppercase;">
 				<ul>
-					<?php 
+					<?
 					foreach( $topmenu as $tmv ){
 						            $enTMV  = str_replace('?', '', $tmv[0]);
             $enTMV  = str_replace(' ', '-', $enTMV );
@@ -49,17 +49,17 @@
                         }
 
 						?>
-						<a href="<?php  echo THIS_SITE; ?>category/<?php  echo strtolower($enTMV); ?>" style="text-decoration: none;" onclick="track_menu('<?php  echo $tmv[0]; ?>' ,'<?php  echo THIS_SITE; ?>category/<?php  echo strtolower($enTMV); ?>');return false;">
-							<li class="ft_def w<?php  echo $tmv[1]; ?>"><?php  echo $tmv[0]; ?></li>
+						<a href="<? echo THIS_SITE; ?>category/<? echo strtolower($enTMV); ?>" style="text-decoration: none;" onclick="track_menu('<? echo $tmv[0]; ?>' ,'<? echo THIS_SITE; ?>category/<? echo strtolower($enTMV); ?>');return false;">
+							<li class="ft_def w<? echo $tmv[1]; ?>"><? echo $tmv[0]; ?></li>
 						</a>
-						<?php 
+						<?
 					}
 					?>
 				</ul>
 			</div>
 			<div id="ft_menu2" style="text-transform:uppercase;">
 				<ul>
-					<?php 
+					<?
 					foreach( $toptheme as $thk=>$thv ){
             $enTHV = str_replace('?', '', $thv[0]);
             $enTHV = str_replace(' ', '-', $enTHV);
@@ -97,43 +97,43 @@
                         }
 
 						?>
-						<a href="<?php  echo THIS_SITE; ?>theme/<?php  echo strtolower($enTHV); ?>" style="text-decoration: none;"  onclick="track_menu('<?php  echo $thv[0]; ?>' ,'<?php  echo THIS_SITE; ?>theme/<?php  echo strtolower( $enTHV ); ?>');return false;"><li><?php  echo $thv[0]; ?></li></a>
-						<?php 
+						<a href="<? echo THIS_SITE; ?>theme/<? echo strtolower($enTHV); ?>" style="text-decoration: none;"  onclick="track_menu('<? echo $thv[0]; ?>' ,'<? echo THIS_SITE; ?>theme/<? echo strtolower( $enTHV ); ?>');return false;"><li><? echo $thv[0]; ?></li></a>
+						<?
 					}
 					?>
 				</ul>
 			</div>
 			<div id="ft_menu3a" style="text-transform:uppercase;">
-				<div><a href="<?php  echo THIS_SITE.'newsfeed'; ?>" style="text-decoration: none;color:white" target="_blank"><span>NEWSFEED</span></a></div>
+				<div><a href="<? echo THIS_SITE.'newsfeed'; ?>" style="text-decoration: none;color:white" target="_blank"><span>NEWSFEED</span></a></div>
 				
 			</div>
 			<div id="ft_menu3" style="text-transform:uppercase;">
-					<div><a href="<?php  echo FB_LINKS ?>" style="text-decoration: none;" target="_blank"><img src="<?php  echo THIS_SITE; ?>img/icon_ft_fb.png" width="20" height ="20"> <span>Facebook</span></a></div>
-					<div><a href="<?php  echo TWITTER_LINKS ?>" style="text-decoration: none;" target="_blank"><img src="<?php  echo THIS_SITE; ?>img/icon_ft_tw.png"  width="20" height ="20"> <span>Twitter</span></a></div>
-					<div><a href="<?php  echo GPLUS_LINKS ?>" style="text-decoration: none;" target="_blank"><img src="<?php  echo THIS_SITE; ?>img/icon_ft_gp.png"  width="20" height ="20"> <span>Google+</span></a></div>
-					<div><a href="<?php  echo YOUTUBE_LINKS ?>" style="text-decoration: none;" target="_blank"><img src="<?php  echo THIS_SITE; ?>img/icon_ft_yt.png"  width="20" height ="20"> <span>Youtube</span></a></div>
-					<div><a href="<?php  echo INSTAGRAM_LINKS ?>" style="text-decoration: none;" target="_blank"><img src="<?php  echo THIS_SITE; ?>img/icon_ft_in.png"  width="20" height ="20"> <span>Instagram</span></a></div>
+					<div><a href="<? echo FB_LINKS ?>" style="text-decoration: none;" target="_blank"><img src="<? echo THIS_SITE; ?>img/icon_ft_fb.png" width="20" height ="20"> <span>Facebook</span></a></div>
+					<div><a href="<? echo TWITTER_LINKS ?>" style="text-decoration: none;" target="_blank"><img src="<? echo THIS_SITE; ?>img/icon_ft_tw.png"  width="20" height ="20"> <span>Twitter</span></a></div>
+					<div><a href="<? echo GPLUS_LINKS ?>" style="text-decoration: none;" target="_blank"><img src="<? echo THIS_SITE; ?>img/icon_ft_gp.png"  width="20" height ="20"> <span>Google+</span></a></div>
+					<div><a href="<? echo YOUTUBE_LINKS ?>" style="text-decoration: none;" target="_blank"><img src="<? echo THIS_SITE; ?>img/icon_ft_yt.png"  width="20" height ="20"> <span>Youtube</span></a></div>
+					<div><a href="<? echo INSTAGRAM_LINKS ?>" style="text-decoration: none;" target="_blank"><img src="<? echo THIS_SITE; ?>img/icon_ft_in.png"  width="20" height ="20"> <span>Instagram</span></a></div>
 			</div>
 			<div id="ft_menu4" style="text-transform:uppercase;">
-				<p><a href="<?php  echo THIS_SITE; ?><?php  echo ABOUT_PAGE_LINK ?>" style="text-decoration: none;" onclick="track_menu('ABOUT' ,'<?php  echo THIS_SITE; ?><?php  echo ABOUT_PAGE_LINK ?>');return false;">About Us</a></p>
-				<p><a href="<?php  echo THIS_SITE; ?><?php  echo MOBILE_PAGE_LINK ?>" style="text-decoration: none;" onclick="track_menu('MOBILE' ,'<?php  echo THIS_SITE; ?><?php  echo MOBILE_PAGE_LINK ?>');return false;">Mobile</a></p> 
+				<p><a href="<? echo THIS_SITE; ?><? echo ABOUT_PAGE_LINK ?>" style="text-decoration: none;" onclick="track_menu('ABOUT' ,'<? echo THIS_SITE; ?><? echo ABOUT_PAGE_LINK ?>');return false;">About Us</a></p>
+				<p><a href="<? echo THIS_SITE; ?><? echo MOBILE_PAGE_LINK ?>" style="text-decoration: none;" onclick="track_menu('MOBILE' ,'<? echo THIS_SITE; ?><? echo MOBILE_PAGE_LINK ?>');return false;">Mobile</a></p> 
 
-				<img src="<?php  echo THIS_SITE; ?>img/ft2.gif" width="46" height="21" style="padding-top:10px;"><br><br>
+				<img src="<? echo THIS_SITE; ?>img/ft2.gif" width="46" height="21" style="padding-top:10px;"><br><br>
 				
-				<a href="<?php  echo US_WEBSITE; ?>" ><img class="edtion_link" src="<?php  echo THIS_SITE; ?>img/flag_us2.gif" width="126" height="19" style="text-decoration: none;"></a><br>
-				<a href="<?php  echo JP_WEBSITE; ?>"><img  class="edtion_link" src="<?php  echo THIS_SITE; ?>img/flag_jp2.gif" width="126" height="19" style="text-decoration: none;"></a><br>	
+				<a href="<? echo US_WEBSITE; ?>" ><img class="edtion_link" src="<? echo THIS_SITE; ?>img/flag_us2.gif" width="126" height="19" style="text-decoration: none;"></a><br>
+				<a href="<? echo JP_WEBSITE; ?>"><img  class="edtion_link" src="<? echo THIS_SITE; ?>img/flag_jp2.gif" width="126" height="19" style="text-decoration: none;"></a><br>	
 			</div>
 		</div>
 		<div id="footer_copy"  style="text-transform:uppercase;">TOMONEWS © 2017   All rights reserved.<a href="http://tomonews.com/term_us.html" target="_blank" style="color:#7a7a7a;"><span style="float:right;">TERMS & CONDITIONS</span></a></div>
 	</div>
   
 	
-  <script src="<?php echo THIS_SITE; ?>js/config.js?nocache=1112" defer></script>
-  <script src="<?php echo THIS_SITE; ?>js/basic.min.js?nocache=1219" defer></script>    
-	<script src="<?php echo THIS_SITE; ?>js/jquery-ui.min.js"></script>
-  <script src="<?php echo THIS_SITE; ?>js/common.min.js" defer></script>  
-  <script src="<?php echo THIS_SITE; ?>js/cookies.js" defer></script>
-	<script src="<?php echo THIS_SITE; ?>js/mcp.js?nocache=1020" defer></script> 
+  <script src="<?echo THIS_SITE; ?>js/config.js?nocache=1112" defer></script>
+  <script src="<?echo THIS_SITE; ?>js/basic.min.js?nocache=1219" defer></script>    
+	<script src="<?echo THIS_SITE; ?>js/jquery-ui.min.js"></script>
+  <script src="<?echo THIS_SITE; ?>js/common.min.js" defer></script>  
+  <script src="<?echo THIS_SITE; ?>js/cookies.js" defer></script>
+	<script src="<?echo THIS_SITE; ?>js/mcp.js?nocache=1020" defer></script> 
   
   
 <!--  fb like box Start  -->
@@ -191,7 +191,7 @@
 .mcp_form .mce_inline_error{left: -1px;    top: -246px;    color: #f00;}
 #mcpBox{
     position: fixed;
-    background: url('<?php  echo THIS_SITE;?>img/mcp_box_bg.png') no-repeat;
+    background: url('<? echo THIS_SITE;?>img/mcp_box_bg.png') no-repeat;
     width: 411px;
     height: 323px;
     
@@ -226,7 +226,7 @@
 <div class="POP_CONT POP_MCP">
   <div class='POP_BG'></div>
   <div class="POP" >        
-    <div > <img src="<?php  echo THIS_SITE;?>img/mcp_popup.png"></div>
+    <div > <img src="<? echo THIS_SITE;?>img/mcp_popup.png"></div>
     
     <div class="mcp_form">
     	 <form action="//tomonews.us2.list-manage.com/subscribe/post?u=28c2f2044f22c46a64747226f&amp;id=8254ba5d15" method="get" id="mc-embedded-subscribe-form1" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -260,7 +260,7 @@
 	
 </div>
 <div id="mcpBox" class="invi" style="">
-      <img src="<?php  echo THIS_SITE;?>img/mcp_box_bg.png">
+      <img src="<? echo THIS_SITE;?>img/mcp_box_bg.png">
 	  <div class="mcp_form2">
             <form action="//tomonews.us2.list-manage.com/subscribe/post?u=28c2f2044f22c46a64747226f&amp;id=8254ba5d15" method="get" id="mc-embedded-subscribe-form2" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 	    	 	<div style="position:absolute;top:105px;left:17px;">  

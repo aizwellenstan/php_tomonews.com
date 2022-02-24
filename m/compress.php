@@ -1,4 +1,4 @@
-<?php 
+<?
 /*$dir = '/var/www/html/tomo_us/m/img';
 $files1 = scandir($dir);
 print_r($files1);

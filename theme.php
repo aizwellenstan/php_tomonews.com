@@ -1,4 +1,4 @@
-<?php 
+<?
 include_once('configA.php');
 include_once('api_settingA.php');
 include_once('device.php');
@@ -41,7 +41,7 @@ $thisURL=THIS_SITE.'theme/'.$theme_title;
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title><?php  echo $theme_name; ?> | <?php  site_title() ?></title>
+	<title><? echo $theme_name; ?> | <? site_title() ?></title>
 <meta name=viewport content="width=1200px">
 	<meta name="apple-itunes-app" content="app-id=633875353">
 	<meta name="google-play-app" content="app-id=com.nextmedia.gan">
@@ -50,28 +50,28 @@ $thisURL=THIS_SITE.'theme/'.$theme_title;
 	<meta property="fb:pages" content="148740698487405" />
   
 	<link rel="apple-touch-icon-precomposed" href=""/>
-	<link rel="icon" href="<?php  echo THIS_SITE; ?>img/favicon.png?v=1" type="image/png" />
+	<link rel="icon" href="<? echo THIS_SITE; ?>img/favicon.png?v=1" type="image/png" />
 		<link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7365156/7009372/css/fonts.css" />
-	<link rel="stylesheet" href="<?php  echo THIS_SITE; ?>stylesheets/style.min.css">
-	<link rel="stylesheet" href="<?php  echo THIS_SITE; ?>stylesheets/jquery-ui.min.css">
-  <?php  include_once("head_scripts.php"); ?> 
-  <script src="<?php echo THIS_SITE; ?>js/all.min.js"></script>   
+	<link rel="stylesheet" href="<? echo THIS_SITE; ?>stylesheets/style.min.css">
+	<link rel="stylesheet" href="<? echo THIS_SITE; ?>stylesheets/jquery-ui.min.css">
+  <? include_once("head_scripts.php"); ?> 
+  <script src="<?echo THIS_SITE; ?>js/all.min.js"></script>   
   <script src="http://dev.imp.nextmedia.com/js/nxm_tr_v16_dev.js?t=1119" ></script>   
-  <script src="<?php echo THIS_SITE; ?>js/jquery-ui.min.js"></script>
+  <script src="<?echo THIS_SITE; ?>js/jquery-ui.min.js"></script>
   
   
   <script type="application/ld+json"> 
     { 
       "@context": "http://schema.org", 
       "@type": "Webpage", 
-      "headline": "<?php echo $theme_name;?>", 
-      "url": "<?php  echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];?>", 
+      "headline": "<?echo $theme_name;?>", 
+      "url": "<? echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];?>", 
       "thumbnailUrl": "", 
-      <?php $cdate22=date("Y-m-d\TH:i:s") ;   $cdate22= $cdate22.'.000Z';?>
-      "dateCreated": "<?php  echo $cdate22; ?>", 
+      <?$cdate22=date("Y-m-d\TH:i:s") ;   $cdate22= $cdate22.'.000Z';?>
+      "dateCreated": "<? echo $cdate22; ?>", 
       "articleSection": "", 
       "creator": "TOMONEWS", 
-      "keywords": [<?php 
+      "keywords": [<?
                  foreach($META_KW as $i => $value) 
                  {
                    if($i==0)
@@ -82,7 +82,7 @@ $thisURL=THIS_SITE.'theme/'.$theme_title;
                   ?>] 
     } 
 </script>
-<?php  include_once('ga.php'); ?>	
+<? include_once('ga.php'); ?>	
 </head>
 <style>
 .ml3{width: auto;text-align:right;float:right;    padding-right: 5px;}
@@ -118,17 +118,17 @@ label {
 
 <body>
 	<div class="wapper"> 
-		<?php  
+		<? 
 		include_once('header.php'); 
 		?>
 	</div>
 		<div id="srh_lab" class="" align="center" >
-			<?php  echo $theme_name ; ?>
+			<? echo $theme_name ; ?>
 		</div>
 	<div id="vdo_wapper" style="display:table;position:relative;">
 
 			<div id="vdo_content" style="width:665px; ">
-		<?php 
+		<?
 			if ( $theme_title == 'nsfw'){
 				$ad300x250_1 = '<img src="'.THIS_SITE.'img/GIF_300x250-marijuana-and-panda.gif">';
 				$ad300x250_2='<img src="'.THIS_SITE.'img/GIF_300x250-Baby-Panda.gif">';
@@ -207,22 +207,22 @@ label {
         }
 		?>	
 
-    <div class="pager" style="<?php if($totalPage==1){echo 'display:none;';}?>">
-		<div class="pager_cnt"><a href="<?php  echo $thisURL; ?>"><span>&lt;&lt;First</span></a></div>
-		<div class="pager_cnt"><a href="<?php  echo $thisURL; ?>/<?php  echo $prePage; ?>"><span>&lt;Previous</span></a></div>
+    <div class="pager" style="<?if($totalPage==1){echo 'display:none;';}?>">
+		<div class="pager_cnt"><a href="<? echo $thisURL; ?>"><span>&lt;&lt;First</span></a></div>
+		<div class="pager_cnt"><a href="<? echo $thisURL; ?>/<? echo $prePage; ?>"><span>&lt;Previous</span></a></div>
 		<div class="pager_cnt">
 			
-			<?php 
+			<?
 			for($i=$showStart;$i<=$showEnd;$i++  ){
 				?>
-				<a href="<?php  echo $thisURL; ?>/<?php  echo $i; ?>"><span class="pgcount <?php  if($i==$page){ ?>current<?php  } ?> "><?php  echo $i; ?></span></a>
-				<?php 
+				<a href="<? echo $thisURL; ?>/<? echo $i; ?>"><span class="pgcount <? if($i==$page){ ?>current<? } ?> "><? echo $i; ?></span></a>
+				<?
 			}
 			?>
 			
 		</div>
-		<div class="pager_cnt"><a href="<?php  echo $thisURL; ?>/<?php  echo $nexPage; ?>"><span>Next&gt;</span></a></div>
-		<div class="pager_cnt"><a href="<?php  echo $thisURL; ?>/<?php  echo $totalPage; ?>"><span>Last&gt;&gt;</span></a></div>
+		<div class="pager_cnt"><a href="<? echo $thisURL; ?>/<? echo $nexPage; ?>"><span>Next&gt;</span></a></div>
+		<div class="pager_cnt"><a href="<? echo $thisURL; ?>/<? echo $totalPage; ?>"><span>Last&gt;&gt;</span></a></div>
 	</div>
 		
 	</div>
@@ -230,13 +230,13 @@ label {
 	<div id="vdo_otherlist" >
 	    <div class="mail_box" style="width: 300px; height:auto;display:block;background:#ccc;margin:0;margin-top:25px;position:relative;font-family:Roboto, sans-serif;">
 	    	
-	    	 <img class="img-full" src="<?php  echo THIS_SITE; ?>img/mail_us.png">
+	    	 <img class="img-full" src="<? echo THIS_SITE; ?>img/mail_us.png">
 	    	 <a href="mailto:info@nma.com.tw" ><div class="mail_box_btn" ></div></a>
-	    	 <a href="<?php  echo FB_LINKS;?>" target="_blank"><div class="mail_box_btn" style="left: 53px;"></div></a>
-	    	  <a href="<?php  echo TWITTER_LINKS;?>" target="_blank"><div class="mail_box_btn" style="left: 86px;"></div></a>
-	    	  <a href="<?php  echo GPLUS_LINKS;?>" target="_blank"><div class="mail_box_btn" style="left: 119px; "></div></a>
-	    	  <a href="<?php  echo THIS_SITE; ?>rss_us/index.php" target="_blank"><div class="mail_box_btn" style="left: 155px;"></div></a>
-	    	  <a href="<?php  echo THIS_SITE.MOBILE_PAGE_LINK;?>" target="_blank"><div class="mail_box_btn" style="left: 191px;"></div></a>
+	    	 <a href="<? echo FB_LINKS;?>" target="_blank"><div class="mail_box_btn" style="left: 53px;"></div></a>
+	    	  <a href="<? echo TWITTER_LINKS;?>" target="_blank"><div class="mail_box_btn" style="left: 86px;"></div></a>
+	    	  <a href="<? echo GPLUS_LINKS;?>" target="_blank"><div class="mail_box_btn" style="left: 119px; "></div></a>
+	    	  <a href="<? echo THIS_SITE; ?>rss_us/index.php" target="_blank"><div class="mail_box_btn" style="left: 155px;"></div></a>
+	    	  <a href="<? echo THIS_SITE.MOBILE_PAGE_LINK;?>" target="_blank"><div class="mail_box_btn" style="left: 191px;"></div></a>
 	    	 
 	    	 
 	    	
@@ -263,8 +263,8 @@ label {
          
 
 	    </div>
-		<div class="mov" style="width: 300px; height: 600px;display:block;background:#ccc;margin:0;margin-top:25px;"><?php  echo $ad300x600_1;?></div> 
-			<?php 
+		<div class="mov" style="width: 300px; height: 600px;display:block;background:#ccc;margin:0;margin-top:25px;"><? echo $ad300x600_1;?></div> 
+			<?
 			  $PAGE = 'Theme';
 
 
@@ -318,9 +318,9 @@ label {
 <div id="dialog" title="">
   <p></p>
 </div>
-	<?php  include_once('footer.php'); ?>
+	<? include_once('footer.php'); ?>
 	<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-  <script type='text/javascript' src='<?php  echo THIS_SITE; ?>js/follow_signUp.js'></script>
+  <script type='text/javascript' src='<? echo THIS_SITE; ?>js/follow_signUp.js'></script>
 <script type='text/javascript'>
 
 $(function() {
@@ -350,12 +350,12 @@ $(function() {
 
      try{
       var from = (getCookie('track_menu')=="" || !getCookie('track_menu'))? "MAIN":getCookie('track_menu');
-     var siteMap_index = '<?php echo strtoupper($theme_name);?>';
+     var siteMap_index = '<?echo strtoupper($theme_name);?>';
          console.log('test:' + cnf_1X1.params[siteMap_index].sec );
          cnf_1X1.nxmObj={
         "region":"US",
         "prod":"TOMONEWS",
-        "site":"<?php echo THIS_SITE;?>",
+        "site":"<?echo THIS_SITE;?>",
         "platform":"WEB",  //WEB | MOBWEB | ANDROID | IPHONE | IPAD | TABLET 
         "section":cnf_1X1.params[siteMap_index].sec, ////Site map
         "media":"TEXT",//Site map
@@ -364,7 +364,7 @@ $(function() {
         "title":"",        //Article Title, Photo Title, etc or send Blank for home page/index page
         "cid":"",          //Article ID/Photo ID or send blank for Menu/Index pages
         "news":"TOMONEWS", //Site map
-        /*"edm":"<?php echo ($cate_title=='us')? 'RECOMM':($cate_title=='world')?  'TOPIC': '';?>",          //Site map*/
+        /*"edm":"<?echo ($cate_title=='us')? 'RECOMM':($cate_title=='world')?  'TOPIC': '';?>",          //Site map*/
         "action":"PAGEVIEW",  //Always send PAGEVIEW
         //"uid":"", //
         "subsect":"", //Site map

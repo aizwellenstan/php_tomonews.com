@@ -1,4 +1,4 @@
-<?php 
+<?
 include_once('config.php');
 include_once('api_setting.php');
 //  //ini_set('display_errors', true) ;
@@ -33,17 +33,17 @@ include_once('api_setting.php');
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title><?php  site_title_name() ?> <?php  echo $title; ?></title>
+	<title><? site_title_name() ?> <? echo $title; ?></title>
 <link rel="stylesheet" href="stylesheets/style.css">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript" src="http://static.nmhk.movideo.com/js/movideo.min.latest.js"></script>
-	<script src="<?php  echo THIS_SITE; ?>js/jquery.zclip.min.js"></script>
+	<script src="<? echo THIS_SITE; ?>js/jquery.zclip.min.js"></script>
 <body>
 <div id="disqus">
 					<div id="disqus_thread"></div>
 					<script type="text/javascript">
 					    var disqus_shortname = 'tomonews-us'; 		    
-		    		    var disqus_url = '<?php  echo THIS_SITE; ?>disqus/mobile.html?shortname=tomonews-us&url=<?php  echo urlencode(THIS_SITE.remove_punc($title).'-'.$video_id) ?>&identifier=<?php  echo $video_id; ?>'; 
+		    		    var disqus_url = '<? echo THIS_SITE; ?>disqus/mobile.html?shortname=tomonews-us&url=<? echo urlencode(THIS_SITE.remove_punc($title).'-'.$video_id) ?>&identifier=<? echo $video_id; ?>'; 
 		
 					    (function() {
 					        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

@@ -1,4 +1,4 @@
-<?php 
+<?
 $ts = time();
 
 function curl_info($url, $req) { //anvato
@@ -144,7 +144,7 @@ function category_id2name($id,$topmenu){ //anvato
     if($category_name!=''){
     	return $category_name;
     }else{
-    	?><script>location.href=<?php  THIS_SITE ?></script><?php 
+    	?><script>location.href=<? THIS_SITE ?></script><?
     }
     unset($category_name);
 }
@@ -392,7 +392,7 @@ function theme_id2name($id,$toptheme){
     if($theme_name!=''){
     	return $theme_name;
     }else{
-    	?><script>location.href='index.php';</script><?php 
+    	?><script>location.href='index.php';</script><?
     }
     unset($theme_name);
 }	

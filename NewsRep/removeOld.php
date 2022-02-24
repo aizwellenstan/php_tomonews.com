@@ -1,4 +1,4 @@
-<?php 
+<?
 
 $lessthan = new DateTime();
 

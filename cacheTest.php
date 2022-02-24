@@ -1,4 +1,4 @@
-<?php 
+<?
 include_once('configA.php');
 include_once('api_settingA.php');
 include_once('device.php');/*include_once('media_preprocess.php');*/
@@ -15,7 +15,7 @@ $thisURL='index.php';
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title><?php  site_title() ?></title>
+	<title><? site_title() ?></title>
     <meta name=viewport content="width=1200px">
 	<meta name="apple-itunes-app" content="app-id=633875353">
 	<meta name="google-play-app" content="app-id=com.nextmedia.gan">
@@ -23,12 +23,12 @@ $thisURL='index.php';
 	<meta name="keywords" content="news, news videos, funny news, animated news, funny videos, animation, next media animation" />
 	<link rel="apple-touch-icon-precomposed" href=""/>
 	<link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7365156/7009372/css/fonts.css" />
-	<link rel="icon" href="<?php  echo THIS_SITE; ?>img/favicon.png?v=1" type="image/png" />
+	<link rel="icon" href="<? echo THIS_SITE; ?>img/favicon.png?v=1" type="image/png" />
 	<link rel="stylesheet" href="stylesheets/style.min.css">
- <link rel="stylesheet" href="<?php  echo THIS_SITE; ?>stylesheets/about.min.css">
- <?php  include_once("head_scripts.php"); ?>
-	<script src="<?php echo THIS_SITE; ?>js/all.min.js"></script>
-	 <script src="<?php echo THIS_SITE; ?>js/media_nav.min.js"></script>
+ <link rel="stylesheet" href="<? echo THIS_SITE; ?>stylesheets/about.min.css">
+ <? include_once("head_scripts.php"); ?>
+	<script src="<?echo THIS_SITE; ?>js/all.min.js"></script>
+	 <script src="<?echo THIS_SITE; ?>js/media_nav.min.js"></script>
 	<script src="http://dev.imp.nextmedia.com/js/nxm_tr_v16_dev.js?t=1119" ></script>  
 	 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
@@ -37,14 +37,14 @@ $thisURL='index.php';
     { 
       "@context": "http://schema.org", 
       "@type": "Webpage", 
-      "headline": "<?php  site_title();?>", 
-      "url": "<?php  echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];?>", 
+      "headline": "<? site_title();?>", 
+      "url": "<? echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];?>", 
       "thumbnailUrl": "", 
-      <?php $cdate22=date("Y-m-d\TH:i:s") ;   $cdate22= $cdate22.'.000Z';?>
-      "dateCreated": "<?php  echo $cdate22; ?>", 
+      <?$cdate22=date("Y-m-d\TH:i:s") ;   $cdate22= $cdate22.'.000Z';?>
+      "dateCreated": "<? echo $cdate22; ?>", 
       "articleSection": "HOME", 
       "creator": "TOMONEWS", 
-      "keywords": [<?php 
+      "keywords": [<?
                  foreach($META_KW as $i => $value) 
                  {
                  	 if($i==0)
@@ -55,17 +55,17 @@ $thisURL='index.php';
                   ?>] 
     } 
 </script>
-<?php  include_once('ga.php'); ?>	
+<? include_once('ga.php'); ?>	
 </head>
 <body>
 	<div class="wapper"> 
-		<?php  
+		<? 
 		//$ad728x90=$ad_about_728x90;
 		include_once('header.php'); ?>	
 </div>
 	<div id="lists">
 	 <!-- NAV BAR -->
-    <?php //include_once('./media_nav.php');?>
+    <?//include_once('./media_nav.php');?>
      <!-- NAV BAR -->
 
      <div class="right_content">
@@ -80,17 +80,17 @@ $thisURL='index.php';
 			<br><p>We’re deeply suspicious any time someone tells another person how they should think, act or behave. We don’t like bullies in all forms, especially the ones who pretend to be your savior. We’re deeply suspicious of government intrusion, when people — if left to their own devices — can find a solution on their own. Our world is powered by ideas, and a free market of ideas is necessary to keep us moving forward.</p>
 			<br><p>Finally, TomoNews animates without fear or favor. If you do something stupid, you’re going to get animated.</p>
 			<br><p>Get all your top, trending stories on the go by downloading the TomoNews app in
-			<a href="<?php  echo APP_GOOGLE_PLAY ?>" target="_blank">Google Play</a> and <a href="<?php  echo APP_APPLE_STORE ?>" target="_blank">Apple’s App Store</a>. Connect with us on <a href="<?php  echo FB_LINKS ?>" target="_blank">Facebook</a> ,<a href="<?php  echo TWITTER_LINKS ?>" target="_blank">Twitter</a> and <a href="<?php  echo GPLUS_LINKS ?>" target="_blank">Google+</a> for more!</p>
+			<a href="<? echo APP_GOOGLE_PLAY ?>" target="_blank">Google Play</a> and <a href="<? echo APP_APPLE_STORE ?>" target="_blank">Apple’s App Store</a>. Connect with us on <a href="<? echo FB_LINKS ?>" target="_blank">Facebook</a> ,<a href="<? echo TWITTER_LINKS ?>" target="_blank">Twitter</a> and <a href="<? echo GPLUS_LINKS ?>" target="_blank">Google+</a> for more!</p>
 			
 		</div>
 		<div id="aboutc3">
-			<a href="<?php  echo APP_APPLE_STORE; ?>" target="_blank"><img src="img/hd_as.jpg" width="155" height="50" ></a>
-			<a href="<?php  echo APP_GOOGLE_PLAY; ?>" target="_blank"><img src="img/hd_gp.jpg" width="155" height="50" ></a>
+			<a href="<? echo APP_APPLE_STORE; ?>" target="_blank"><img src="img/hd_as.jpg" width="155" height="50" ></a>
+			<a href="<? echo APP_GOOGLE_PLAY; ?>" target="_blank"><img src="img/hd_gp.jpg" width="155" height="50" ></a>
 			
-			<a href="<?php  echo FB_LINKS ?>" target="_blank"><img src="img/icon_48_fb.gif"  ></a>
-			<a href="<?php  echo TWITTER_LINKS ?>" target="_blank"><img src="img/icon_48_tw.gif" ></a>
-			<a href="<?php  echo GPLUS_LINKS ?>" target="_blank"><img src="img/icon_48_gplus.gif"  ></a>
-			<a href="<?php  echo INSTAGRAM_LINKS ?>" target="_blank"><img src="img/icon_48_instagram.gif"></a>
+			<a href="<? echo FB_LINKS ?>" target="_blank"><img src="img/icon_48_fb.gif"  ></a>
+			<a href="<? echo TWITTER_LINKS ?>" target="_blank"><img src="img/icon_48_tw.gif" ></a>
+			<a href="<? echo GPLUS_LINKS ?>" target="_blank"><img src="img/icon_48_gplus.gif"  ></a>
+			<a href="<? echo INSTAGRAM_LINKS ?>" target="_blank"><img src="img/icon_48_instagram.gif"></a>
 			<br><br>
 			<hr>
 			<br>
@@ -126,7 +126,7 @@ $thisURL='index.php';
 
     
 	
-	<?php  include_once('footer.php'); ?>
+	<? include_once('footer.php'); ?>
 </body>
 
 <script>
@@ -134,11 +134,11 @@ $thisURL='index.php';
 
    $(function() {
 
-    _GLOBAL.base='<?php THIS_SITE;?>'
+    _GLOBAL.base='<?THIS_SITE;?>'
     _GLOBAL.page='ABOUT';
-    _GLOBAL.tok2 = "<?php echo $_SESSION['token2'];?>";
-    _GLOBAL.MEDIA_Ys = <?php  echo '["' . implode('", "', $MEDIA_Ys) . '"]' ?>;
-    _GLOBAL.ASOT_Chs = <?php  echo '["' . implode('", "', $ASOT_Chs) . '"]' ?>;
+    _GLOBAL.tok2 = "<?echo $_SESSION['token2'];?>";
+    _GLOBAL.MEDIA_Ys = <?php echo '["' . implode('", "', $MEDIA_Ys) . '"]' ?>;
+    _GLOBAL.ASOT_Chs = <?php echo '["' . implode('", "', $ASOT_Chs) . '"]' ?>;
 
     var _media_nav = new MEDIA_NAV();
     _media_nav.set_model_nav ({'years':_GLOBAL.MEDIA_Ys , 'channel': _GLOBAL.ASOT_Chs}) 
@@ -150,7 +150,7 @@ $thisURL='index.php';
 cnf_1X1.nxmObj={
 "region":"US",
 "prod":"TOMONEWS",
-"site":"<?php echo THIS_SITE;?>",
+"site":"<?echo THIS_SITE;?>",
 "platform":"WEB",//WEB | MOBWEB | ANDROID | IPHONE | IPAD | TABLET 
 "section":cnf_1X1.params['ABOUT'].sec, ////每頁
 "media":"TEXT",//Site map

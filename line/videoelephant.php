@@ -1,4 +1,4 @@
-<?php 
+<?
 define('APPLICATION_FEED_URL','http://api.nm.anvato.net/v2/feed/');
 	//movideo token will expire after 3600 sec .
 	//so we make our session keep 40 mins (40m*60s=2400s) . 

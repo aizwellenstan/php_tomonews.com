@@ -1,4 +1,4 @@
-<?php 
+<?
 
 // get & check movideo token before get movies
 function call_token_url($applicationalias,$key){
@@ -41,7 +41,7 @@ function category_id2name($id,$topmenu){
     if($category_name!=''){
     	return $category_name;
     }else{
-    	/*?><script>location.href='index.php';</script><?php */
+    	/*?><script>location.href='index.php';</script><?*/
     }
     unset($category_name);
 }
@@ -91,7 +91,7 @@ function theme_id2name($id,$toptheme){
     if($theme_name!=''){
     	return $theme_name;
     }else{
-    	?><script>location.href='index.php';</script><?php 
+    	?><script>location.href='index.php';</script><?
     }
     unset($theme_name);
 }	

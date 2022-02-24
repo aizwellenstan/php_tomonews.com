@@ -1,4 +1,4 @@
-<?php 
+<?
 $AdImg_arr = array('GIF_300x250-Baby-Panda.gif','GIF_300x250-Baby-Panda-2.gif','GIF_300x250-marijuana-and-panda.gif' ,  'GIF_300x250_marijuana-man.gif');//'GIF_300x250-marijuana-man.gif' ,
 $KW=$_GET['kw'];
 $page=isset($_GET['page']) ? (int)$_GET['page'] : '';

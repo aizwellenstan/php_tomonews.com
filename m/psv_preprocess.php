@@ -1,4 +1,4 @@
-<?php 
+<?
 $page = 0;//$_GET['page'];
 $video_id= $_GET['video_id'];
 $PAGE_LIMIT = 8;
@@ -15,9 +15,9 @@ if (strlen($video_id) >= 14){
 		$title_cp= htmlspecialchars($title_cp);
 	?>
 	<script type="text/javascript">
-		location.href='<?php echo THIS_SITE?><?php  echo urlencode(str_replace(' ', '-', remove_punc($title_cp))).'-'.$dAryFeed['docs'][0]['obj_id']; ?>';
+		location.href='<?echo THIS_SITE?><? echo urlencode(str_replace(' ', '-', remove_punc($title_cp))).'-'.$dAryFeed['docs'][0]['obj_id']; ?>';
 	</script>
-	<?php 
+	<?
 	}	
 }
 $debug_mode=$_GET['debug_mode'];

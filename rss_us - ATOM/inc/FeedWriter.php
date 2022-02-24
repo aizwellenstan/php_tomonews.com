@@ -1,4 +1,4 @@
-<?php 
+<?php
 /***********************************************************************
  * @filename            : FeedWriter.php
  * @author              : Siako Chen
@@ -275,7 +275,7 @@ abstract class FeedWriter
 	*/
 	private function printHeader()
 	{
-		$out  = '<?php xml version="1.0" encoding="utf-8"?>' . PHP_EOL;
+		$out  = '<?xml version="1.0" encoding="utf-8"?>' . PHP_EOL;
 		
 		if($this->version == RSS2)
 		{

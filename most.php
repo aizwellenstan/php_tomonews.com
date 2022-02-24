@@ -1,4 +1,4 @@
-<?php 
+<?
 //ini_set('display_errors', 'On');
 include_once('configA.php');
 include_once('api_settingA.php');
@@ -9,7 +9,7 @@ include_once('mvp_preprocess.php');
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title><?php  echo $page_name; ?> | <?php  site_title() ?></title>
+	<title><? echo $page_name; ?> | <? site_title() ?></title>
 <meta name=viewport content="width=1200px">
 	<meta name="apple-itunes-app" content="app-id=633875353">
 	<meta name="google-play-app" content="app-id=com.nextmedia.gan">
@@ -17,26 +17,26 @@ include_once('mvp_preprocess.php');
 	<meta name="keywords" content="news, news videos, funny news, animated news, funny videos, animation, next media animation" />
 	<meta property="fb:pages" content="148740698487405" />
 	<link rel="apple-touch-icon-precomposed" href=""/>
-	<link rel="icon" href="<?php  echo THIS_SITE; ?>img/favicon.ico" type="image/icon" />
-	<link rel="stylesheet" href="<?php  echo THIS_SITE; ?>stylesheets/style.min.css?nocache=0827">
-  <link rel="stylesheet" href="<?php  echo THIS_SITE; ?>stylesheets/jquery-ui.min.css">
-   <?php  include_once("head_scripts.php"); ?>
-  <script src="<?php echo THIS_SITE; ?>js/all.min.js"></script>      
+	<link rel="icon" href="<? echo THIS_SITE; ?>img/favicon.ico" type="image/icon" />
+	<link rel="stylesheet" href="<? echo THIS_SITE; ?>stylesheets/style.min.css?nocache=0827">
+  <link rel="stylesheet" href="<? echo THIS_SITE; ?>stylesheets/jquery-ui.min.css">
+   <? include_once("head_scripts.php"); ?>
+  <script src="<?echo THIS_SITE; ?>js/all.min.js"></script>      
   <script src="http://dev.imp.nextmedia.com/js/nxm_tr_v16_dev.js?t=1119" ></script>
-  <script src="<?php echo THIS_SITE; ?>js/jquery-ui.min.js"></script>
+  <script src="<?echo THIS_SITE; ?>js/jquery-ui.min.js"></script>
  
    <script type="application/ld+json"> 
     { 
       "@context": "http://schema.org", 
       "@type": "Webpage", 
-      "headline": "<?php echo $page_name; ?>", 
-      "url": "<?php  echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];?>", 
+      "headline": "<?echo $page_name; ?>", 
+      "url": "<? echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];?>", 
       "thumbnailUrl": "", 
-      <?php $cdate22=date("Y-m-d\TH:i:s") ;   $cdate22= $cdate22.'.000Z';?>
-      "dateCreated": "<?php  echo $cdate22; ?>", 
+      <?$cdate22=date("Y-m-d\TH:i:s") ;   $cdate22= $cdate22.'.000Z';?>
+      "dateCreated": "<? echo $cdate22; ?>", 
       "articleSection": 'MOST VIEWED', 
       "creator": "TOMONEWS", 
-      "keywords": [<?php 
+      "keywords": [<?
                  foreach($META_KW as $i => $value) 
                  {
                    if($i==0)
@@ -95,7 +95,7 @@ label {
 .styleSelect{ 
   display:inline-block;position:absolute;right:10px;top: 7px;height: 25px;   line-height: 21px;
   border-radius: 3px; 
-  background: #e2e0e1 url("<?php echo THIS_SITE;?>img/select_ico.jpg") no-repeat 100% 50%;
+  background: #e2e0e1 url("<?echo THIS_SITE;?>img/select_ico.jpg") no-repeat 100% 50%;
   border: 1px solid #e2e0e1;
   width: 150px;
   border-radius: 3px;
@@ -134,10 +134,10 @@ label {
    <div class="POP_CONT invi">
      <div class='POP_BG'></div>
   <div class="POP" id="loading" >        
-    <div > <img src="<?php  echo THIS_SITE;?>img/loading11.png"></div>  
+    <div > <img src="<? echo THIS_SITE;?>img/loading11.png"></div>  
   </div></div>
 	<div class="wapper"> 
-		<?php  
+		<? 
 		include_once('header.php'); 
 		?>
 	</div>
@@ -146,7 +146,7 @@ label {
        <span>Most Viewed Videos</span>
        <div class="selector_container">
        <div class="styleSelect btn" data-act="cls" id='option_title'>
-          <label class="current_list"><?php echo $dtype_title[$dtype];?></label>
+          <label class="current_list"><?echo $dtype_title[$dtype];?></label>
              <!--  <select id="mv_date" >
                 <option value ="day" data-type="day">Past 24 Hours</option>
                 <option value ="week" data-type="week">Past 7 Days</option>
@@ -166,7 +166,7 @@ label {
 	<div id="vdo_wapper" style="display:table;position:relative;top:10px;">
 			<div id="vdo_content" style="display:block;width:1000px; height:auto">
         <div style="display:block;width:100%; height:auto;margin-left: 13px;">
-		<?php 
+		<?
               //echo $dtype;
 			switch ($dtype) {
 				case 'day':
@@ -239,15 +239,15 @@ label {
 	<div id="dialog" title="">
   <p></p>
 </div>
-	<?php  include_once('footer.php'); ?>
+	<? include_once('footer.php'); ?>
 <script type='text/javascript'>
 
  var _GLOBAL={};
  
   _GLOBAL.NSFW  =0;
  
-_GLOBAL.base ='<?php  echo THIS_SITE; ?>';
-_GLOBAL.dtype="<?php echo $dtype;?>";
+_GLOBAL.base ='<? echo THIS_SITE; ?>';
+_GLOBAL.dtype="<?echo $dtype;?>";
 $(function() {
 
 
@@ -323,7 +323,7 @@ $(function() {
           cnf_1X1.nxmObj={
         "region":"US",
         "prod":"TOMONEWS",
-        "site":"<?php echo THIS_SITE;?>",
+        "site":"<?echo THIS_SITE;?>",
         "platform":"WEB",  //WEB | MOBWEB | ANDROID | IPHONE | IPAD | TABLET 
         "section":cnf_1X1.params[siteMap_index].sec, ////Site map
         "media":"TEXT",//Site map
@@ -332,7 +332,7 @@ $(function() {
         "title":"",        //Article Title, Photo Title, etc or send Blank for home page/index page
         "cid":"",          //Article ID/Photo ID or send blank for Menu/Index pages
         "news":"TOMONEWS", //Site map
-        "edm":"<?php echo ($cate_title=='us')? 'RECOMM':($cate_title=='world')?  'TOPIC': '';?>",          //Site map
+        "edm":"<?echo ($cate_title=='us')? 'RECOMM':($cate_title=='world')?  'TOPIC': '';?>",          //Site map
         "action":"PAGEVIEW",  //Always send PAGEVIEW
         //"uid":"", //
         "subsect":"", //Site map

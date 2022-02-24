@@ -1,4 +1,4 @@
-<?php 
+<?
 include_once('config.php');
 include_once('api_setting.php');
 
@@ -30,7 +30,7 @@ $thisURL=THIS_SITE.'theme/'.$theme_title;
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title><?php  echo $theme_name; ?> | <?php  site_title() ?></title>
+	<title><? echo $theme_name; ?> | <? site_title() ?></title>
     <meta id="viewport" name="viewport" content="width=device-width, user-scalable=0;">
    
 	
@@ -39,25 +39,25 @@ $thisURL=THIS_SITE.'theme/'.$theme_title;
 	<meta property="fb:pages" content="148740698487405" />
 	<link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7365156/7009372/css/fonts.css" />
 	<link rel="apple-touch-icon-precomposed" href=""/>
-	<link rel="icon" href="<?php  echo THIS_SITE; ?>img/favicon.png?ver=1" type="image/png" />
+	<link rel="icon" href="<? echo THIS_SITE; ?>img/favicon.png?ver=1" type="image/png" />
 
-<?php  include_once("../head_scripts.php"); ?> 
-	<link rel="stylesheet" href="<?php  echo THIS_SITE; ?>stylesheets/style.min.css?nocache=1117">
-	<script src="<?php echo THIS_SITE;?>js/all.min.js?nocache=1117"></script>
+<? include_once("../head_scripts.php"); ?> 
+	<link rel="stylesheet" href="<? echo THIS_SITE; ?>stylesheets/style.min.css?nocache=1117">
+	<script src="<?echo THIS_SITE;?>js/all.min.js?nocache=1117"></script>
 	<script src="http://dev.imp.nextmedia.com/js/nxm_tr_v16_dev.js?t=1119" ></script>  
   
 <script type="application/ld+json"> 
     { 
       "@context": "http://schema.org", 
       "@type": "Webpage", 
-      "headline": "<?php echo $theme_name;?>", 
-      "url": "<?php  echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];?>", 
+      "headline": "<?echo $theme_name;?>", 
+      "url": "<? echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];?>", 
       "thumbnailUrl": "", 
-      <?php $cdate22=date("Y-m-d\TH:i:s") ;   $cdate22= $cdate22.'.000Z';?>
-      "dateCreated": "<?php  echo $cdate22; ?>",  
+      <?$cdate22=date("Y-m-d\TH:i:s") ;   $cdate22= $cdate22.'.000Z';?>
+      "dateCreated": "<? echo $cdate22; ?>",  
       "articleSection": "", 
       "creator": "TOMONEWS", 
-      "keywords": [<?php 
+      "keywords": [<?
                  foreach($META_KW as $i => $value) 
                  {
                    if($i==0)
@@ -78,7 +78,7 @@ $thisURL=THIS_SITE.'theme/'.$theme_title;
 </script>
 </head>
 <body>
-		<?php  
+		<? 
 		$ad300x50 = $ad_theme_300x50; 
 		$ad300x250_1 = $ad_theme_300x250_1;
 		$ad300x250_2 = $ad_theme_300x250_2;
@@ -87,12 +87,12 @@ $thisURL=THIS_SITE.'theme/'.$theme_title;
 	<div class="wapper"> 
 	</div>
 
-	<!-- <div id="ad2" style=""> <?php  /*echo $ad300x50*/ ?></div> -->
+	<!-- <div id="ad2" style=""> <? /*echo $ad300x50*/ ?></div> -->
 	<div id="lists">
 		<div id="srh_lab" class="" align="center" style="text-transform:uppercase;top:0px;margin-bottom:10px;">
-			<?php  echo $theme_name ; ?>
+			<? echo $theme_name ; ?>
 	    </div>
-		<?php 
+		<?
 		$sdate='*';
 		$edate=strtotime(date('Y-m-d h:i:sa'));
 		$getUrls= APPLICATION_FEED_URL.$themeLink[$theme_id].'?start=0&count='.(PAGE_LIMIT_CATEGORY).'&filters[]=c_ts_publish_l:['.$sdate.'%20TO%20'.$edate.']&sort=c_ts_publish_l+desc'; 
@@ -107,9 +107,9 @@ $thisURL=THIS_SITE.'theme/'.$theme_title;
 		$i=0;
         foreach ($dAryn as $key => $value) {
             
-			if($i==1){ ?><div id="" style="width: 351px;height: 51px;overflow: hidden;margin: auto;margin-bottom:15px;"> <?php  echo $ad300x50 ?></div> <?php  }
-			if($i==3){ ?><div id="" style="width: 300px;height: 251px;overflow: hidden;margin: auto;margin-bottom:15px;"> <?php  echo $ad300x250_1 ?></div> <?php  }
-			if($i==6){ ?><div id="" style="width: 300px;height: 251px;overflow: hidden;margin: auto;margin-bottom:15px;"> <?php  echo $ad300x250_2 ?></div> <?php  }
+			if($i==1){ ?><div id="" style="width: 351px;height: 51px;overflow: hidden;margin: auto;margin-bottom:15px;"> <? echo $ad300x50 ?></div> <? }
+			if($i==3){ ?><div id="" style="width: 300px;height: 251px;overflow: hidden;margin: auto;margin-bottom:15px;"> <? echo $ad300x250_1 ?></div> <? }
+			if($i==6){ ?><div id="" style="width: 300px;height: 251px;overflow: hidden;margin: auto;margin-bottom:15px;"> <? echo $ad300x250_2 ?></div> <? }
 			
 			$NSFW_v = false;
           $mobile_headline=array('tit'=>$value ['c_title_s'], 'mb_tit'=> $value ['c_title_s']);
@@ -142,30 +142,30 @@ foreach ($thumbnail as $key => $value1) {
 
 		<div class="cb"></div>
 	</div>
-	<?php 
+	<?
 	$theme2 = str_replace(' ', '+', $theme_name);
 	?>
-	<?php  include_once('footer.php'); ?>
+	<? include_once('footer.php'); ?>
 </body>
 <script type="text/javascript">
 
  $(function() {
     /*waterfall cate*/
-     _GLOBAL.theme = '<?php echo $theme2; ?>';
-     _GLOBAL.NSFW  = '<?php echo $NSFW;?>'
-	 _GLOBAL.thisSite = "<?php  echo THIS_SITE?>";
-	 _GLOBAL.themeId = '<?php  echo $themeLink[$theme_id] ?>';
+     _GLOBAL.theme = '<?echo $theme2; ?>';
+     _GLOBAL.NSFW  = '<?echo $NSFW;?>'
+	 _GLOBAL.thisSite = "<? echo THIS_SITE?>";
+	 _GLOBAL.themeId = '<? echo $themeLink[$theme_id] ?>';
  	
  	 var datawall = new theme_waterfall()
  	 _GLOBAL.datawalls.push(datawall)
      datawall.init();
 
        try{var from = (getCookie('track_menu')=="" || !getCookie('track_menu'))? "MAIN":getCookie('track_menu');
-         var siteMap_index = '<?php echo strtoupper($theme_name);?>';
+         var siteMap_index = '<?echo strtoupper($theme_name);?>';
          cnf_1X1.nxmObj={
         "region":"US",
         "prod":"TOMONEWS",
-        "site":"<?php echo THIS_SITE;?>",
+        "site":"<?echo THIS_SITE;?>",
         "platform":"MOBWEB",  //WEB | MOBWEB | ANDROID | IPHONE | IPAD | TABLET 
         "section":cnf_1X1.params[siteMap_index].sec, ////Site map
         "media":"TEXT",//Site map

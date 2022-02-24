@@ -1,4 +1,4 @@
-<?php 
+<?
 function xss_clean($data)
 {
         // Fix &entity\n;

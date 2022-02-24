@@ -1,4 +1,4 @@
-<?php 
+<?
 $page=isset($_GET['page']) ? (int)$_GET['page'] : 1;
 $debug_mode=isset($_GET['debug_mode']) ? $_GET['debug_mode'] : '';
 $video_id=isset($_GET['video_id']) ? $_GET['video_id'] : 0;
@@ -16,9 +16,9 @@ if ($dAryFeed['numFound'] > 0){
 	$title_cp= htmlspecialchars($title_cp);
 ?>
 <script type="text/javascript">
-	// location.href='<?php echo THIS_SITE?><?php  echo urlencode(str_replace(' ', '-', remove_punc($title_cp))).'-'.$dAryFeed['docs'][0]['obj_id']; ?>';
+	// location.href='<?echo THIS_SITE?><? echo urlencode(str_replace(' ', '-', remove_punc($title_cp))).'-'.$dAryFeed['docs'][0]['obj_id']; ?>';
 </script>
-<?php 
+<?
 }	
 
 $page_name ='TomoPlay';

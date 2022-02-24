@@ -1,4 +1,4 @@
-<?php 
+<?
 $KW=$_GET['kw'];
 $debug_mode=$_GET['debug_mode'];
 $dtype = $_GET['dtype'];

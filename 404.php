@@ -1,4 +1,4 @@
-<?php 
+<?
 include_once('configA.php');
 include_once('api_settingA.php');
 
@@ -15,26 +15,26 @@ header("HTTP/1.0 404 Not Found");
 <head>
 	<meta charset="UTF-8">
 	
-	<title><?php  site_title() ?></title>
+	<title><? site_title() ?></title>
     <meta name=viewport content="width=1200px">
 	<meta name="apple-itunes-app" content="app-id=633875353">
 	<meta name="google-play-app" content="app-id=com.nextmedia.gan">
 	<meta name="description" content="TomoNews is your daily source for top animated news. We’ve combined animation and video footage with a snarky personality to bring you the biggest and best stories from around the world." />
 	<meta name="keywords" content="news, news videos, funny news, animated news, funny videos, animation, next media animation" />
 	<link rel="apple-touch-icon-precomposed" href=""/>
-	<link rel="icon" href="<?php  echo THIS_SITE; ?>img/favicon.png?v=1" type="image/png" />
+	<link rel="icon" href="<? echo THIS_SITE; ?>img/favicon.png?v=1" type="image/png" />
 	<link rel="stylesheet" href="stylesheets/style.min.css">
 	
-	  <link rel="canonical" href="<?php  echo THIS_SITE.'404.php' ?>" />
-  <link rel="alternate" media="only screen and (max-width: 640px)" href="<?php  echo THIS_SITE.'m/404.php'?>" />
+	  <link rel="canonical" href="<? echo THIS_SITE.'404.php' ?>" />
+  <link rel="alternate" media="only screen and (max-width: 640px)" href="<? echo THIS_SITE.'m/404.php'?>" />
   
-	<script src="<?php  echo THIS_SITE; ?>js/all.min.js"></script>   
-	<?php  include_once("head_scripts.php"); include_once('ga.php'); ?>
+	<script src="<?echo THIS_SITE; ?>js/all.min.js"></script>   
+	<? include_once("head_scripts.php"); include_once('ga.php'); ?>
 	 
 </head>
 <body>
 	<div class="wapper"> 
-		<?php 
+		<? 
 	//	$ad728x90=$ad_about_728x90;
 		include_once('header.php'); ?>	
 </div>
@@ -45,6 +45,6 @@ header("HTTP/1.0 404 Not Found");
 		<div class="cb"></div>
 	</div>
 	
-	<?php  include_once('footer.php'); ?>
+	<? include_once('footer.php'); ?>
 </body>
 </html>

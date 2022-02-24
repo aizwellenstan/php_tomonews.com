@@ -1,4 +1,4 @@
-<?php 
+<?
 include_once('config.php');
 include_once('api_setting.php');
 
@@ -9,19 +9,19 @@ $thisURL='index.php';
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title><?php  site_title() ?></title>
+	<title><? site_title() ?></title>
   <meta id="viewport" name="viewport" content="width=device-width, user-scalable=0;">
 	<meta name="description" content="TomoNews is your daily source for top animated news. We’ve combined animation and video footage with a snarky personality to bring you the biggest and best stories from around the world." />
 	<meta name="keywords" content="news, news videos, funny news, animated news, funny videos, animation, next media animation" />
 	<link rel="apple-touch-icon-precomposed" href=""/>
 	<link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7365156/7009372/css/fonts.css" />
-	<link rel="icon" href="<?php  echo THIS_SITE; ?>img/favicon.png?v=1" type="image/png" />
-	<link rel="stylesheet" href="<?php  echo THIS_SITE; ?>stylesheets/style.min.css">
-  <link rel="stylesheet" href="<?php  echo THIS_SITE; ?>stylesheets/about.min.css">
+	<link rel="icon" href="<? echo THIS_SITE; ?>img/favicon.png?v=1" type="image/png" />
+	<link rel="stylesheet" href="<? echo THIS_SITE; ?>stylesheets/style.min.css">
+  <link rel="stylesheet" href="<? echo THIS_SITE; ?>stylesheets/about.min.css">
 
- <?php  include_once("../head_scripts.php"); ?> 
-	<script src="<?php echo THIS_SITE;?>js/all.min.js"></script>
-  <script src="<?php echo THIS_SITE; ?>js/media_nav.min.js?nocache=0112"></script>
+ <? include_once("../head_scripts.php"); ?> 
+	<script src="<?echo THIS_SITE;?>js/all.min.js"></script>
+  <script src="<?echo THIS_SITE; ?>js/media_nav.min.js?nocache=0112"></script>
 	<script src="http://dev.imp.nextmedia.com/js/nxm_tr_v16_dev.js?t=1119" ></script>  
   
     
@@ -29,14 +29,14 @@ $thisURL='index.php';
     { 
       "@context": "http://schema.org", 
       "@type": "Webpage", 
-      "headline": "<?php  site_title();?>", 
-      "url": "<?php  echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];?>", 
+      "headline": "<? site_title();?>", 
+      "url": "<? echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];?>", 
       "thumbnailUrl": "", 
-     <?php $cdate22=date("Y-m-d\TH:i:s") ;   $cdate22= $cdate22.'.000Z';?>
-      "dateCreated": "<?php  echo $cdate22; ?>", 
+     <?$cdate22=date("Y-m-d\TH:i:s") ;   $cdate22= $cdate22.'.000Z';?>
+      "dateCreated": "<? echo $cdate22; ?>", 
       "articleSection": "HOME", 
       "creator": "TOMONEWS", 
-      "keywords": [<?php 
+      "keywords": [<?
                  foreach($META_KW as $i => $value) 
                  {
                  	 if($i==0)
@@ -47,7 +47,7 @@ $thisURL='index.php';
                   ?>] 
     } 
 </script>
-<?php  include_once('../ga.php'); ?>	
+<? include_once('../ga.php'); ?>	
 <style>
 h1 { text-align: center; font-family: 'Droid Serif', serif;font-size: 20pt;}
 h2 { border-bottom: 0px solid #c4c6c9;font-size: 15pt; }
@@ -55,7 +55,7 @@ h2 { border-bottom: 0px solid #c4c6c9;font-size: 15pt; }
 </style>
 </head>
 <body>
-	<?php  include_once('header.php'); ?>	
+	<? include_once('header.php'); ?>	
 	<div class="wapper"> 
 	<div id="lists">
 		<div id="aboutc">
@@ -127,14 +127,14 @@ h2 { border-bottom: 0px solid #c4c6c9;font-size: 15pt; }
 			
 		</div>
 	</div>
-	<?php  include_once('footer.php'); ?>
+	<? include_once('footer.php'); ?>
 </div>
 </body>
 <script>
 $(function() {
   
 
-    _GLOBAL.base='<?php THIS_SITE;?>'
+    _GLOBAL.base='<?THIS_SITE;?>'
     _GLOBAL.page='ABOUT';
 
     var _media_nav = new MEDIA_NAV();
@@ -148,7 +148,7 @@ $(function() {
               cnf_1X1.nxmObj={
             "region":"US",
             "prod":"TOMONEWS",
-            "site":"<?php echo THIS_SITE;?>",
+            "site":"<?echo THIS_SITE;?>",
             "platform":"MOBWEB",  //WEB | MOBWEB | ANDROID | IPHONE | IPAD | TABLET 
             "section":cnf_1X1.params[siteMap_index].sec, ////Site map
             "media":"TEXT",//Site map

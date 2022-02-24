@@ -1,4 +1,4 @@
-<?php 
+<?
 require_once 'libs/detect.php';
 $mobile_browser = 0;
 $tablet_browser =0;

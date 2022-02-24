@@ -1,4 +1,4 @@
-<?php 
+<?
 require "../../configA.php";
 
 	$lang = ( (!isset($_GET['lang']) ) || ($_GET['lang'] == '') ) ? 'hk' : $_GET['lang'];

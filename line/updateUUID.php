@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 try {
 	$category = $_GET['cate'];

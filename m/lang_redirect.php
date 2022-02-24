@@ -1,4 +1,4 @@
-<?php  
+<? 
     $languages = array('en','en-au','en-bz'	,'en-ca','en-cb','en-gb','en-ie','en-jm','en-nz','en-ph','en-tt','en-us','en-za','en-zw',
                        'ja' , 'ja-jp' ,
     	               'fr','fr-be','fr-ca','fr-ch','fr-fr','fr-lu','fr-mc',

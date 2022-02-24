@@ -1,4 +1,4 @@
-<?php 
+<?
                 $PAGE = 'TopicTagPage';
                 ////TREND
                 $thumaType = 'RR_JoinTheDisc_clk';

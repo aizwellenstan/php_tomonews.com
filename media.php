@@ -1,4 +1,4 @@
-<?php 
+<?
 include_once('configA.php');
 include_once('api_settingA.php');
 include_once('device.php');
@@ -12,24 +12,24 @@ $thisURL='index.php';
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title><?php  site_title() ?></title>
+	<title><? site_title() ?></title>
   <meta name=viewport content="width=1200px">
 	<meta name="apple-itunes-app" content="app-id=633875353">
 	<meta name="google-play-app" content="app-id=com.nextmedia.gan">
 	<meta name="description" content="TomoNews is your daily source for top animated news. We’ve combined animation and video footage with a snarky personality to bring you the biggest and best stories from around the world." />
 	<meta name="keywords" content="news, news videos, funny news, animated news, funny videos, animation, next media animation" />
 	<link rel="apple-touch-icon-precomposed" href=""/>
-	<link rel="icon" href="<?php  echo THIS_SITE; ?>img/favicon.ico" type="image/icon" />
-	<link rel="stylesheet" href="<?php  echo THIS_SITE; ?>stylesheets/style.min.css?nocache=0127">
-  <link rel="stylesheet" href="<?php  echo THIS_SITE; ?>stylesheets/media.min.css?nocache=0127">
-  <?php  include_once("head_scripts.php"); ?>
-	<script src="<?php echo THIS_SITE; ?>js/all.min.js?nocache=0127"></script>
-  <script src="<?php echo THIS_SITE; ?>js/media_nav.min.js?nocache=0127"></script>
+	<link rel="icon" href="<? echo THIS_SITE; ?>img/favicon.ico" type="image/icon" />
+	<link rel="stylesheet" href="<? echo THIS_SITE; ?>stylesheets/style.min.css?nocache=0127">
+  <link rel="stylesheet" href="<? echo THIS_SITE; ?>stylesheets/media.min.css?nocache=0127">
+  <? include_once("head_scripts.php"); ?>
+	<script src="<?echo THIS_SITE; ?>js/all.min.js?nocache=0127"></script>
+  <script src="<?echo THIS_SITE; ?>js/media_nav.min.js?nocache=0127"></script>
 	<script src="http://dev.imp.nextmedia.com/js/nxm_tr_v16_dev.js?t=1119" ></script>  
   <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 
-   <script src="<?php echo THIS_SITE; ?>js/underscore-min.js"></script>
+   <script src="<?echo THIS_SITE; ?>js/underscore-min.js"></script>
 <script type="text/javascript">
 	location.href='about';
 </script>
@@ -38,14 +38,14 @@ $thisURL='index.php';
     { 
       "@context": "http://schema.org", 
       "@type": "Webpage", 
-      "headline": "<?php  site_title();?>", 
-      "url": "<?php  echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];?>", 
+      "headline": "<? site_title();?>", 
+      "url": "<? echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];?>", 
       "thumbnailUrl": "", 
-      <?php $cdate22=date("Y-m-d\TH:i:s") ;   $cdate22= $cdate22.'.000Z';?>
-      "dateCreated": "<?php  echo $cdate22; ?>", 
+      <?$cdate22=date("Y-m-d\TH:i:s") ;   $cdate22= $cdate22.'.000Z';?>
+      "dateCreated": "<? echo $cdate22; ?>", 
       "articleSection": "HOME", 
       "creator": "TOMONEWS", 
-      "keywords": [<?php 
+      "keywords": [<?
                  foreach($META_KW as $i => $value) 
                  {
                  	 if($i==0)
@@ -56,17 +56,17 @@ $thisURL='index.php';
                   ?>] 
     } 
 </script>
-<?php  include_once('ga.php'); ?>	
+<? include_once('ga.php'); ?>	
 </head>
 <body>
 	<div class="wapper"> 
-		<?php  
+		<? 
 		include_once('header.php'); ?>	
   </div>
 	
   <div id="lists">
 	  <!-- NAV BAR -->
-    <?php include_once('./media_nav.php');?>
+    <?include_once('./media_nav.php');?>
      <!-- NAV BAR -->
 
      <div class="right_content">
@@ -80,8 +80,8 @@ $thisURL='index.php';
       
            <div class="block highlight">
                
-               <div class="btn_left btn"><div class="btn_bg"><img src="<?php echo THIS_SITE;?>img/left_ico.gif"></div></div>
-               <div class="btn_right btn"><img src="<?php echo THIS_SITE;?>img/right_ico.gif"></div>
+               <div class="btn_left btn"><div class="btn_bg"><img src="<?echo THIS_SITE;?>img/left_ico.gif"></div></div>
+               <div class="btn_right btn"><img src="<?echo THIS_SITE;?>img/right_ico.gif"></div>
       
                <div class="block_cnt highlight">
                  <div class="items hightlight">
@@ -140,11 +140,11 @@ $thisURL='index.php';
      <div class="cb"></div>       
 	</div>
 	
-	<?php  include_once('footer.php'); ?>
+	<? include_once('footer.php'); ?>
      <div class="POP_CONT loading">
        <div class='POP_BG'></div>
        <div class="POP" id="loading" >        
-          <div > <img src="<?php  echo THIS_SITE;?>img/loading11.gif"></div>  
+          <div > <img src="<? echo THIS_SITE;?>img/loading11.gif"></div>  
        </div>
      </div>
 </body>
@@ -154,12 +154,12 @@ $thisURL='index.php';
   
 
    $(function() {
-    _GLOBAL.base='<?php echo THIS_SITE;?>';
+    _GLOBAL.base='<?echo THIS_SITE;?>';
     _GLOBAL.page='MEDIA';
-    _GLOBAL.tok2 = "<?php echo $_SESSION['token2'];?>";
-    _GLOBAL.MEDIA_Ys = <?php  echo '["' . implode('", "', $MEDIA_Ys) . '"]' ?>;
-    _GLOBAL.ASOT_Chs = <?php  echo '["' . implode('", "', $ASOT_Chs) . '"]' ?>;
-    _GLOBAL.dtype = "<?php echo $_GET['dtype'];?>";
+    _GLOBAL.tok2 = "<?echo $_SESSION['token2'];?>";
+    _GLOBAL.MEDIA_Ys = <?php echo '["' . implode('", "', $MEDIA_Ys) . '"]' ?>;
+    _GLOBAL.ASOT_Chs = <?php echo '["' . implode('", "', $ASOT_Chs) . '"]' ?>;
+    _GLOBAL.dtype = "<?echo $_GET['dtype'];?>";
 
     var _media_nav = new MEDIA_NAV();
     _media_nav.set_model_nav ({'years':_GLOBAL.MEDIA_Ys , 'channel': _GLOBAL.ASOT_Chs}) 
@@ -174,7 +174,7 @@ $thisURL='index.php';
     cnf_1X1.nxmObj={
     "region":"US",
     "prod":"TOMONEWS",
-    "site":"<?php echo THIS_SITE;?>",
+    "site":"<?echo THIS_SITE;?>",
     "platform":"WEB",//WEB | MOBWEB | ANDROID | IPHONE | IPAD | TABLET 
     "section":cnf_1X1.params['ABOUT'].sec, ////每頁
     "media":"TEXT",//Site map
