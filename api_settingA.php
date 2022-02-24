@@ -320,7 +320,7 @@ function show_SmallThumbnail_lazy($video_id,$cateid , $catename,$des,$cdate,$thu
     		echo '<img class="lazy" data-original="'.THIS_SITE.TB_TEST.'" width="320" height="180">';
     		else
 			// echo '<img class="lazy" src=http://cms.nextanimation.com.tw/storage/images/A758DEF0854DE93F55A9B9AA13684627.jpg width="320" height="180">';
-    	    echo '<img class="lazy" src='.$thumb.' width="320" height="180">';
+    	    echo '<img  src=http://cms.nextanimation.com.tw/'.$thumb.' width="320" height="180">';
     }
 
     echo '<div class="movlabel" style="margin-top: -3px;">';
