@@ -310,7 +310,6 @@ function show_SmallThumbnail_lazy($video_id,$cateid , $catename,$des,$cdate,$thu
 	global  $NSFW;
 	
     echo '<a href="'.THIS_SITE.urlencode(str_replace(' ', '-', remove_punc($des))).'-'.$video_id.'">';
-	echo '<img class="lazy" data-original="http://cms.nextanimation.com.tw/'.$thumb.'" width="320" height="180">';
     echo '<div class="index mov" data-id="'.$nail_id.'" >';
 
     if($NSFW && $NSFW_v)
@@ -319,9 +318,9 @@ function show_SmallThumbnail_lazy($video_id,$cateid , $catename,$des,$cdate,$thu
     {
     	    if($NSFW_v)
     		echo '<img class="lazy" data-original="'.THIS_SITE.TB_TEST.'" width="320" height="180">';
-    		/*else
+    		else
     	    // echo '<img class="lazy" data-original="http://cms.nextanimation.com.tw/'.$thumb.'" width="320" height="180">';
-			echo '<img src="http://cms.nextanimation.com.tw/'.$thumb.'" width="320" height="180">';*/
+			echo '<img src="http://cms.nextanimation.com.tw/'.$thumb.'" width="320" height="180" style="display:felx!important;">';
     }
 
     echo '<div class="movlabel" style="margin-top: -3px;">';
