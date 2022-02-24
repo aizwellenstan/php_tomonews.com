@@ -1,4 +1,4 @@
-<?
+<?php 
 ///////////////////////////////
 ///  #3.0測試  
 ///  Program Log .Taboola update.......
@@ -21,7 +21,7 @@ $_SESSION['us'] == 1? 1:0;
 <html>
   <head>
 	
-	<title><? site_title() ?></title>
+	<title><?php  site_title() ?></title>
 	<meta name="google-site-verification" content="LNkk7F3gMpWHgnHPEz5vsFDYBjONRopvjCGwaypBy6c" />
   <meta name=viewport content="width=1200px">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -31,29 +31,29 @@ $_SESSION['us'] == 1? 1:0;
 	<meta name="keywords" content="news, news videos, funny news, animated news, funny videos, animation, next media animation" />
 	<meta property="fb:pages" content="148740698487405" />
 	<link rel="apple-touch-icon-precomposed" href=""/>
-	<link rel="icon" href="<? echo THIS_SITE; ?>img/favicon.ico" type="image/icon" />
-	<link rel="stylesheet" href="<? echo THIS_SITE; ?>stylesheets/style.min.css?nocache=0901">
-  <link rel="stylesheet" href="<? echo THIS_SITE; ?>stylesheets/jquery-ui.min.css">
-  <link rel="stylesheet" href="<? echo THIS_SITE; ?>stylesheets/index.min.css?nocache=1203" type="text/css" media="screen">
-  <? include_once("head_scripts.php"); ?>
-	<script src="<?echo THIS_SITE; ?>js/all.min.js?nocache=2"></script>  
+	<link rel="icon" href="<?php  echo THIS_SITE; ?>img/favicon.ico" type="image/icon" />
+	<link rel="stylesheet" href="<?php  echo THIS_SITE; ?>stylesheets/style.min.css?nocache=0901">
+  <link rel="stylesheet" href="<?php  echo THIS_SITE; ?>stylesheets/jquery-ui.min.css">
+  <link rel="stylesheet" href="<?php  echo THIS_SITE; ?>stylesheets/index.min.css?nocache=1203" type="text/css" media="screen">
+  <?php  include_once("head_scripts.php"); ?>
+	<script src="<?php echo THIS_SITE; ?>js/all.min.js?nocache=2"></script>  
   <!--<script src="http://dev.imp.nextmedia.com/js/nxm_tr_v16_dev.js?t=1119" ></script> -->
   
-   <link rel="canonical" href="<? echo THIS_SITE; ?>" />
-  <link rel="alternate" media="only screen and (max-width: 640px)" href="<? echo THIS_SITE.'m/'; ?>" />
+   <link rel="canonical" href="<?php  echo THIS_SITE; ?>" />
+  <link rel="alternate" media="only screen and (max-width: 640px)" href="<?php  echo THIS_SITE.'m/'; ?>" />
   
   <script type="application/ld+json"> 
     { 
       "@context": "http://schema.org", 
       "@type": "Webpage", 
-      "headline": "<?site_title();?>", 
-      "url": "<? echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];?>", 
+      "headline": "<?php site_title();?>", 
+      "url": "<?php  echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];?>", 
       "thumbnailUrl": "", 
-      <?$cdate22=date("Y-m-d\TH:i:s") ;   $cdate22= $cdate22.'.000Z';?>
-      "dateCreated": "<? echo $cdate22; ?>", 
+      <?php $cdate22=date("Y-m-d\TH:i:s") ;   $cdate22= $cdate22.'.000Z';?>
+      "dateCreated": "<?php  echo $cdate22; ?>", 
       "articleSection": "HOME", 
       "creator": "TOMONEWS", 
-      "keywords": [<?
+      "keywords": [<?php 
                  foreach($META_KW as $i => $value) 
                  {
                    if($i==0)
@@ -69,7 +69,7 @@ $_SESSION['us'] == 1? 1:0;
 <body>
   
 	<div class="wapper"> 
-		<? 
+		<?php  
 		include_once('header.php'); 
 		?>	
 	</div>
@@ -80,7 +80,7 @@ $_SESSION['us'] == 1? 1:0;
 				This content is only available on mobile devices.
 			</div>
 		<div id="vdo_otherlist" >
-			<?			
+			<?php 			
               ////Breaking News
 			include_once('side_thumb_apiAO.php');
             $PAGE = 'Frontpage';
@@ -140,14 +140,14 @@ $_SESSION['us'] == 1? 1:0;
 
   });
 </script>
-<? include_once('footer.php'); ?>
+<?php  include_once('footer.php'); ?>
 
-<script src="<? echo THIS_SITE; ?>js/index.min.js?nocache=1203" defer></script>  
+<script src="<?php  echo THIS_SITE; ?>js/index.min.js?nocache=1203" defer></script>  
 <script type="text/javascript"> 
 var _GLOBAL={};
-_GLOBAL.app_key ="<? echo APPLICATION_KEY;?>";
-_GLOBAL.opt1 = "<?echo $OPT1;?>";
-_GLOBAL.base ='<? echo THIS_SITE; ?>';
+_GLOBAL.app_key ="<?php  echo APPLICATION_KEY;?>";
+_GLOBAL.opt1 = "<?php echo $OPT1;?>";
+_GLOBAL.base ='<?php  echo THIS_SITE; ?>';
 _GLOBAL.page ='INDEX';
 _GLOBAL.NSFW  =0;
   

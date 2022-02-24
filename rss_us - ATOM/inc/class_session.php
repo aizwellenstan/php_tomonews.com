@@ -1,4 +1,4 @@
-<?php
+<?php 
 /***********************************************************************
  * @filename            : class_session.php
  * @author              : Siako Chen

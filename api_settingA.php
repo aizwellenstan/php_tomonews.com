@@ -1,4 +1,4 @@
-<?
+<?php 
 $ts = time();
 
 function curl_info($url, $req) { //anvato
@@ -180,7 +180,7 @@ function category_id2name($id,$topmenu){ //anvato
     if($category_name!=''){
     	return $category_name;
     }else{
-    	?><script>location.href=<? THIS_SITE ?>;</script><?
+    	?><script>location.href=<?php  THIS_SITE ?>;</script><?php 
     }
     unset($category_name);
 }
@@ -310,8 +310,7 @@ function show_SmallThumbnail_lazy($video_id,$cateid , $catename,$des,$cdate,$thu
 	global  $NSFW;
 	
     echo '<a href="'.THIS_SITE.urlencode(str_replace(' ', '-', remove_punc($des))).'-'.$video_id.'">';
-    // echo '<div class="index mov" data-id="'.$nail_id.'" >';
-	echo '<div class="index" data-id="'.$nail_id.'" >';
+    echo '<div class="index mov" data-id="'.$nail_id.'" >';
 
     if($NSFW && $NSFW_v)
     echo '<img class="lazy" data-original="'.$thumb.'" width="320" height="180" data-id="NSFW">';
@@ -320,8 +319,8 @@ function show_SmallThumbnail_lazy($video_id,$cateid , $catename,$des,$cdate,$thu
     	    if($NSFW_v)
     		echo '<img class="lazy" data-original="'.THIS_SITE.TB_TEST.'" width="320" height="180">';
     		else
-    	    // echo '<img class="lazy" data-original="http://cms.nextanimation.com.tw/'.$thumb.'" width="320" height="180">';
-			echo '<img src=http://cms.nextanimation.com.tw/'.$thumb.' width="320" height="180">';
+			// echo '<img class="lazy" src=http://cms.nextanimation.com.tw/storage/images/A758DEF0854DE93F55A9B9AA13684627.jpg width="320" height="180">';
+    	    echo '<img class="lazy" data-original=http://cms.nextanimation.com.tw/'.$thumb.' width="320" height="180">';
     }
 
     echo '<div class="movlabel" style="margin-top: -3px;">';
@@ -341,7 +340,7 @@ function theme_id2name($id,$toptheme){//anvato
     if($theme_name!=''){
     	return $theme_name;
     }else{
-    	?><script>location.href='index.php';</script><?
+    	?><script>location.href='index.php';</script><?php 
     }
     unset($theme_name);
 }	

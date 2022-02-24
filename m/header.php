@@ -1,9 +1,9 @@
 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 
-<script>var thisSite = "<? echo THIS_SITE; ?>";</script>
+<script>var thisSite = "<?php  echo THIS_SITE; ?>";</script>
 
-<?   include_once ('../fb_component.php'); ?>
+<?php    include_once ('../fb_component.php'); ?>
 <script type="text/javascript">
 var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
@@ -59,29 +59,29 @@ function UrlExists(url, _404P) {
 
 <div id="header">
 
-	        <div id="menus1"><img src="<? echo THIS_SITE; ?>img/menu_j.png" class='rwd_image'/></div>
+	        <div id="menus1"><img src="<?php  echo THIS_SITE; ?>img/menu_j.png" class='rwd_image'/></div>
 			<div id="logo">
-				<a href="<? echo THIS_SITE; ?>" onclick="track_menu('MAIN' ,'<? echo THIS_SITE; ?>');return false;"><img src="<? echo THIS_SITE; ?>img/logo.png" class='rwd_image'/></a>
+				<a href="<?php  echo THIS_SITE; ?>" onclick="track_menu('MAIN' ,'<?php  echo THIS_SITE; ?>');return false;"><img src="<?php  echo THIS_SITE; ?>img/logo.png" class='rwd_image'/></a>
 			</div>
-			<div class="passive_icon"><a href="<?echo THIS_SITE;?>tomoplay/" onclick="track_menu('tomoplay' ,'<? echo THIS_SITE; ?>tomoplay/');return false;"><img  class='rwd_image' src="<? echo THIS_SITE; ?>img/tv_off.png"></a></div>
+			<div class="passive_icon"><a href="<?php echo THIS_SITE;?>tomoplay/" onclick="track_menu('tomoplay' ,'<?php  echo THIS_SITE; ?>tomoplay/');return false;"><img  class='rwd_image' src="<?php  echo THIS_SITE; ?>img/tv_off.png"></a></div>
 			
 			
 			<div id="menu_mask"></div>
 			<div id="menus3">
-			    <div id="search_arr" style="position:absolute;top:-3px;left:18px;"><img src="<? echo THIS_SITE; ?>img/search_arrow.png"></div>
+			    <div id="search_arr" style="position:absolute;top:-3px;left:18px;"><img src="<?php  echo THIS_SITE; ?>img/search_arrow.png"></div>
 	            <div id="mainmenus" class="mainmenus_1">
 	            	<!-- <div class="mainmenus_1_scroller" style="width:100% ; height:100%"> -->
 	            <div class="mainmenus_cont" style="position:relative;top:0px;left:0px;height:auto;width:100%;overflow:hidden;">
 
 			    <form id="search_box_form1">
 			        <div id="search1" style="position:relative;">                        
-				       <input type="text" id="search_text" value="<? echo isset($kw) ? urldecode($kw) : ''; ?>" placeholder="Search">				       
+				       <input type="text" id="search_text" value="<?php  echo isset($kw) ? urldecode($kw) : ''; ?>" placeholder="Search">				       
 				        <div id="search_go" style="width:30px;height:30px;top:18px; left:85px"></div>
 			        </div>
 			    </form>
 				<ul id="accordion" >
 					<h1 class="accordion-toggle" data-id='0'><a>NEWSFEED</a></h1>
-					<?
+					<?php 
                     // MobileMenu_MostViewedPage
 					?>
 					<!--<h1 class="accordion-toggle" data-id='0.5'><a>MOST VIEWED</a></h1>-->
@@ -107,8 +107,8 @@ function UrlExists(url, _404P) {
                 <li class="accordion-content db"  data-id='1'>	
                 
 						<ul>
-						<!-- 	<a class="Ca" href="<? echo THIS_SITE; ?>newsfeed/"><li class="Citems w_newsfeed mu_def">NEWSFEED</li></a> -->
-						<?	foreach( $topmenu as $tmv ){
+						<!-- 	<a class="Ca" href="<?php  echo THIS_SITE; ?>newsfeed/"><li class="Citems w_newsfeed mu_def">NEWSFEED</li></a> -->
+						<?php 	foreach( $topmenu as $tmv ){
 						$enTMV  = str_replace('?', '', $tmv[0]);
 						$enTMV  = str_replace(' ', '-', $enTMV );
 						$enTMV  = str_replace('  ', '-', $enTMV );
@@ -146,7 +146,7 @@ function UrlExists(url, _404P) {
                         }
 
 
-						?><a class="Ca" href="<? echo THIS_SITE; ?>category/<? echo strtolower($enTMV); ?>" onclick="track_menu('<? echo $tmv[0]; ?>' ,'<? echo THIS_SITE; ?>category/<? echo strtolower($enTMV); ?>');return false;"><li class="Citems w<? echo $tmv[1]; ?> mu_def"><? echo $tmv[0]; ?></li></a><?
+						?><a class="Ca" href="<?php  echo THIS_SITE; ?>category/<?php  echo strtolower($enTMV); ?>" onclick="track_menu('<?php  echo $tmv[0]; ?>' ,'<?php  echo THIS_SITE; ?>category/<?php  echo strtolower($enTMV); ?>');return false;"><li class="Citems w<?php  echo $tmv[1]; ?> mu_def"><?php  echo $tmv[0]; ?></li></a><?php 
 					}
 					?>
 						</ul>
@@ -154,7 +154,7 @@ function UrlExists(url, _404P) {
 
 					<li class="accordion-content" data-id='2'>
 						<ul id="accordion-content-child2">
-							<?					
+							<?php 					
 					foreach( $toptheme as $thk=>$thv ){						
 						$enTHV = str_replace('?', '', $thv[0]);
 						$enTHV = str_replace(' ', '-', $enTHV);
@@ -194,8 +194,8 @@ function UrlExists(url, _404P) {
 
 
 						?>
-						<a class="Ca" href="<? echo THIS_SITE; ?>theme/<? echo strtolower( $enTHV ); ?>" onclick="track_menu('<? echo $thv[0]; ?>' ,'<? echo THIS_SITE; ?>theme/<? echo strtolower( $enTHV ); ?>');return false;"><li li class="Citems theme"><? echo $thv[0]; ?></li></a>
-						<?
+						<a class="Ca" href="<?php  echo THIS_SITE; ?>theme/<?php  echo strtolower( $enTHV ); ?>" onclick="track_menu('<?php  echo $thv[0]; ?>' ,'<?php  echo THIS_SITE; ?>theme/<?php  echo strtolower( $enTHV ); ?>');return false;"><li li class="Citems theme"><?php  echo $thv[0]; ?></li></a>
+						<?php 
 					}
 					?>
 						</ul>
@@ -203,11 +203,11 @@ function UrlExists(url, _404P) {
 					
 					<li class="accordion-content" data-id='3'>		
 						<ul>
-							<a class="Ca" href="<? echo FB_LINKS ?>" target="_blank"><li class="Citems">FACEBOOK</li></a>
-							<a class="Ca" href="<? echo TWITTER_LINKS ?>" target="_blank"><li class="Citems">TWITTER</li></a>
-							<a class="Ca" href="<? echo GPLUS_LINKS ?>" target="_blank"><li class="Citems">GOOGLE+</li></a>
-							<a class="Ca" href="<? echo YOUTUBE_LINKS ?>" target="_blank"><li class="Citems">YOUTUBE</li></a>
-							<a class="Ca" href="<? echo INSTAGRAM_LINKS ?>" target="_blank"><li class="Citems">INSTAGRAM</li></a>
+							<a class="Ca" href="<?php  echo FB_LINKS ?>" target="_blank"><li class="Citems">FACEBOOK</li></a>
+							<a class="Ca" href="<?php  echo TWITTER_LINKS ?>" target="_blank"><li class="Citems">TWITTER</li></a>
+							<a class="Ca" href="<?php  echo GPLUS_LINKS ?>" target="_blank"><li class="Citems">GOOGLE+</li></a>
+							<a class="Ca" href="<?php  echo YOUTUBE_LINKS ?>" target="_blank"><li class="Citems">YOUTUBE</li></a>
+							<a class="Ca" href="<?php  echo INSTAGRAM_LINKS ?>" target="_blank"><li class="Citems">INSTAGRAM</li></a>
 
 							
 						</ul>
@@ -215,16 +215,16 @@ function UrlExists(url, _404P) {
 					
 					<li class="accordion-content" data-id='4'>		
 						<ul>
-							<a class="Ca" href="<? echo THIS_SITE; ?><? echo ABOUT_PAGE_LINK ?>" onclick="track_menu('ABOUT' ,'<? echo THIS_SITE; ?><? echo ABOUT_PAGE_LINK ?>');return false;"><li class="Citems">About Us</li></a>
-							<a class="Ca" href="<? echo THIS_SITE; ?><? echo MOBILE_PAGE_LINK ?>"   onclick="track_menu('MOBILE' ,'<? echo THIS_SITE; ?><? echo MOBILE_PAGE_LINK ?>');return false;"><li class="Citems">Mobile</li></a>
-							<!--<a class="Ca" href="<? echo THIS_SITE.'wall-of-thanks'?>"><li class="Citems">Wall of Thanks</li></a>-->
+							<a class="Ca" href="<?php  echo THIS_SITE; ?><?php  echo ABOUT_PAGE_LINK ?>" onclick="track_menu('ABOUT' ,'<?php  echo THIS_SITE; ?><?php  echo ABOUT_PAGE_LINK ?>');return false;"><li class="Citems">About Us</li></a>
+							<a class="Ca" href="<?php  echo THIS_SITE; ?><?php  echo MOBILE_PAGE_LINK ?>"   onclick="track_menu('MOBILE' ,'<?php  echo THIS_SITE; ?><?php  echo MOBILE_PAGE_LINK ?>');return false;"><li class="Citems">Mobile</li></a>
+							<!--<a class="Ca" href="<?php  echo THIS_SITE.'wall-of-thanks'?>"><li class="Citems">Wall of Thanks</li></a>-->
 						</ul>
 					</li>
 					
 					<li class="accordion-content" data-id='5'>		
 						<ul>
-							<a class="Ca" href="<? echo US_WEBSITE; ?>" target="_blank"><li class="Citems">US</li></a>
-							<a class="Ca" href="<? echo JP_WEBSITE; ?>" target="_blank"><li class="Citems">JP</li></a>
+							<a class="Ca" href="<?php  echo US_WEBSITE; ?>" target="_blank"><li class="Citems">US</li></a>
+							<a class="Ca" href="<?php  echo JP_WEBSITE; ?>" target="_blank"><li class="Citems">JP</li></a>
 
 							
 						</ul>
@@ -238,9 +238,9 @@ function UrlExists(url, _404P) {
 
 			<div id="fl_icon_pos">
 			    <div id="fl_icon">
-			    	<a class="apple" href="<? echo APP_APPLE_STORE;?>" target="_blank"><img src="<? echo THIS_SITE; ?>img/icon_apple_47x47.png"></a>
+			    	<a class="apple" href="<?php  echo APP_APPLE_STORE;?>" target="_blank"><img src="<?php  echo THIS_SITE; ?>img/icon_apple_47x47.png"></a>
 			    	<br>
-			    	<a class="android" href="<? echo APP_GOOGLE_PLAY;?>" target="_blank"><img src="<? echo THIS_SITE; ?>img/icon_android_47x47.png"></a>
+			    	<a class="android" href="<?php  echo APP_GOOGLE_PLAY;?>" target="_blank"><img src="<?php  echo THIS_SITE; ?>img/icon_android_47x47.png"></a>
 			    </div>	
 		    </div>
 

@@ -1,4 +1,4 @@
-<?
+<?php 
 	require "../configA.php";
 
 	$fileName = 'mrss_'.date('Y').date('m').'.xml';

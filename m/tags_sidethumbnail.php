@@ -1,4 +1,4 @@
-<?
+<?php 
                 $PAGE = 'TopicTagPage';
                 $thumaType = 'RR_MostViewedPage';
                 $getUrls3=get_CategoryList('183755647860736',0,14);

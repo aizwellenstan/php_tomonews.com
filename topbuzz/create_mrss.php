@@ -1,4 +1,4 @@
-<?
+<?php 
 include_once("../configA.php");
 	//API key & alias
 // define('APPLICATION_ALIAS','NMTomoUS-universal-flash');

@@ -1,4 +1,4 @@
-<?
+<?php 
 
 include_once('config.php');
 include_once('api_setting.php');
@@ -10,62 +10,62 @@ include_once('vdo_preprocess.php');
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title><? site_title_name() ?> <? echo $title; ?></title>
+<title><?php  site_title_name() ?> <?php  echo $title; ?></title>
 <meta id="viewport" name="viewport" content="width=device-width, user-scalable=0">
-<meta name="description" content="<? echo str_replace('"','',strip_tags($mobDes)); ?>"/>
-<meta name="keywords" content="<? echo $Keywords_kwstr ?>" />
-<meta name="news_keywords" content="<? echo $Keywords_kwstr ?>" />
+<meta name="description" content="<?php  echo str_replace('"','',strip_tags($mobDes)); ?>"/>
+<meta name="keywords" content="<?php  echo $Keywords_kwstr ?>" />
+<meta name="news_keywords" content="<?php  echo $Keywords_kwstr ?>" />
 <link rel="apple-touch-icon-precomposed" href=""/>
-<link rel="icon" href="<? echo THIS_SITE; ?>img/favicon.png?ver=1" type="image/png" />
+<link rel="icon" href="<?php  echo THIS_SITE; ?>img/favicon.png?ver=1" type="image/png" />
 
-<meta property="article:published_time" content="<? echo $cdate22; ?>" />
+<meta property="article:published_time" content="<?php  echo $cdate22; ?>" />
 	<!-- Facebook Header -->
-<meta property="og:title" content="<? echo strip_tags($title); ?>"/>
+<meta property="og:title" content="<?php  echo strip_tags($title); ?>"/>
 <meta property= "og:type" content= "article"/>
-<meta property="og:description" content="<? echo str_replace('"','',strip_tags($mobDes)); ?>"/>
-<meta property="og:url" content="<? echo THIS_SITE.urlencode(str_replace(' ', '-', remove_punc($title))).'-'.$video_id; ?>"/>
-<meta property="og:image" content="<? echo $thumb; ?>">
+<meta property="og:description" content="<?php  echo str_replace('"','',strip_tags($mobDes)); ?>"/>
+<meta property="og:url" content="<?php  echo THIS_SITE.urlencode(str_replace(' ', '-', remove_punc($title))).'-'.$video_id; ?>"/>
+<meta property="og:image" content="<?php  echo $thumb; ?>">
 <meta property="og:image:width" content="1200" />
-<meta property="og:site_name" content="<? echo strip_tags($title); ?>"/>
+<meta property="og:site_name" content="<?php  echo strip_tags($title); ?>"/>
 <meta property="fb:pages" content="148740698487405" />
 <!-- Facebook Header -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@TomoNewsUS">
-<meta name="twitter:title" content="<? echo strip_tags($title); ?>">
-<meta name="twitter:description" content="<? echo str_replace('"','',strip_tags($mobDes)); ?>">
-<meta name="twitter:image" content="<? echo $thumb; ?>">
+<meta name="twitter:title" content="<?php  echo strip_tags($title); ?>">
+<meta name="twitter:description" content="<?php  echo str_replace('"','',strip_tags($mobDes)); ?>">
+<meta name="twitter:image" content="<?php  echo $thumb; ?>">
 
 <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7365156/7009372/css/fonts.css" />
-<link rel="stylesheet" href="<? echo THIS_SITE; ?>stylesheets/style.min.css">
-<link rel="stylesheet" href="<? echo THIS_SITE; ?>stylesheets/jquery-ui.min.css">
-<link rel="stylesheet" href="<? echo THIS_SITE; ?>stylesheets/video.min.css">
-<? include_once("../head_scripts.php"); ?>  <script src="<?echo THIS_SITE;?>js/all.min.js?nocache=1211"></script>
+<link rel="stylesheet" href="<?php  echo THIS_SITE; ?>stylesheets/style.min.css">
+<link rel="stylesheet" href="<?php  echo THIS_SITE; ?>stylesheets/jquery-ui.min.css">
+<link rel="stylesheet" href="<?php  echo THIS_SITE; ?>stylesheets/video.min.css">
+<?php  include_once("../head_scripts.php"); ?>  <script src="<?php echo THIS_SITE;?>js/all.min.js?nocache=1211"></script>
 
 <!--<script src="http://dev.imp.nextmedia.com/js/nxm_tr_v16_dev.js?t=1119" ></script>-->
-<script src="<?echo THIS_SITE; ?>js/jquery.lazyload.min.js"></script>
-<script src="<?echo THIS_SITE; ?>js/mcp.js?nocache=1010" defer></script>
-<script src="<?echo THIS_SITE; ?>js/jquery-ui.min.js"></script>
+<script src="<?php echo THIS_SITE; ?>js/jquery.lazyload.min.js"></script>
+<script src="<?php echo THIS_SITE; ?>js/mcp.js?nocache=1010" defer></script>
+<script src="<?php echo THIS_SITE; ?>js/jquery-ui.min.js"></script>
 <script src="//code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-<meta name="robots" content="<? echo ROBOT_INDEX ?>">
-<link rel="canonical" href="<? echo THIS_SITE_DESKTOP.urlencode(str_replace(' ', '-', remove_punc($title))).'-'.$video_id; ?>" />
+<meta name="robots" content="<?php  echo ROBOT_INDEX ?>">
+<link rel="canonical" href="<?php  echo THIS_SITE_DESKTOP.urlencode(str_replace(' ', '-', remove_punc($title))).'-'.$video_id; ?>" />
 
 <script type="application/ld+json"> 
     { 
       "@context": "http://schema.org", 
       "@type": "NewsArticle", 
-      "headline": "<?echo $title;?>",
-	  "description": "<?echo str_replace('"','',strip_tags($mobDes));?>", 
-      "url": "<? echo THIS_SITE_DESKTOP.urlencode(str_replace(' ', '-', remove_punc($title_cp))).'-'.$video_id; ?>", 
-      "thumbnailUrl": "<? echo $thumb ?>", 
-      "dateCreated": "<? echo $cdate22;?>", 
-	  "datePublished": "<? echo $cdate22;?>", 
-	  "dateModified": "<? echo $cdate22;?>",
-	 // "article:published_time": "<? echo $cdate22;?>", 
-	  //"uploadDate": "<? echo $cdate22;?>", 	  
-      "articleSection": "<? echo strtoupper ($CateName); ?>", 
+      "headline": "<?php echo $title;?>",
+	  "description": "<?php echo str_replace('"','',strip_tags($mobDes));?>", 
+      "url": "<?php  echo THIS_SITE_DESKTOP.urlencode(str_replace(' ', '-', remove_punc($title_cp))).'-'.$video_id; ?>", 
+      "thumbnailUrl": "<?php  echo $thumb ?>", 
+      "dateCreated": "<?php  echo $cdate22;?>", 
+	  "datePublished": "<?php  echo $cdate22;?>", 
+	  "dateModified": "<?php  echo $cdate22;?>",
+	 // "article:published_time": "<?php  echo $cdate22;?>", 
+	  //"uploadDate": "<?php  echo $cdate22;?>", 	  
+      "articleSection": "<?php  echo strtoupper ($CateName); ?>", 
 	 "mainEntityOfPage": {
 			"@type": "WebPage",
-			"@id": "<? echo THIS_SITE_DESKTOP.urlencode(str_replace(' ', '-', remove_punc($title_cp))).'-'.$video_id; ?>"
+			"@id": "<?php  echo THIS_SITE_DESKTOP.urlencode(str_replace(' ', '-', remove_punc($title_cp))).'-'.$video_id; ?>"
 		  },
       "creator": "TOMONEWS", 
 	  "author": "TOMONEWS", 
@@ -78,9 +78,9 @@ include_once('vdo_preprocess.php');
 		} 
 	  },
 	   "image": [
-				"<? echo $thumb ?>"
+				"<?php  echo $thumb ?>"
 			],
-      "keywords": [<?
+      "keywords": [<?php 
                    $Keywords_kwstr = str_replace ( ',' , '","' , $Keywords_kwstr);
                    echo '"'.$Keywords_kwstr.'"';
                   ?>] 
@@ -92,16 +92,16 @@ include_once('vdo_preprocess.php');
     { 
       "@context": "http://schema.org", 
       "@type": "VideoObject", 
-      "name": "<?echo $title;?>", 
-	  "description": "<?echo str_replace('"','',strip_tags($mobDes));?>", 
-      "thumbnailUrl": "<? echo $thumb; ?>", 
-      "uploadDate": "<? echo $cdate22.'.000Z';?>", 
-	  "duration": "PT<?echo (string)$durMin;?>M<? echo (string)$durSec;?>S",
-	  "contentUrl": "http://video-pdu.us.tomonews.com/encoded-586/media/<? echo $video_id; ?>/819200-854x480.mp4"
-	  //"interactionCount": "<? echo number_format($counter) ?>"
+      "name": "<?php echo $title;?>", 
+	  "description": "<?php echo str_replace('"','',strip_tags($mobDes));?>", 
+      "thumbnailUrl": "<?php  echo $thumb; ?>", 
+      "uploadDate": "<?php  echo $cdate22.'.000Z';?>", 
+	  "duration": "PT<?php echo (string)$durMin;?>M<?php  echo (string)$durSec;?>S",
+	  "contentUrl": "http://video-pdu.us.tomonews.com/encoded-586/media/<?php  echo $video_id; ?>/819200-854x480.mp4"
+	  //"interactionCount": "<?php  echo number_format($counter) ?>"
     } 
 </script>
-<?
+<?php 
 //$vastUrl = "http://ssp.lkqd.net/ad?pid=252&sid=438744&output=vast&execution=any&placement=&playinit=auto&volume=100&width={Player_w}&height={Player_h}&pageurl={pageurl}&ip={ipaddress}&ua={useragent}";
 //$vastUrl = "//ssp.lkqd.net/ad?pid=252&sid=438744&output=vast&execution=any&placement=&playinit=auto&volume=100&width={Player_w}&height={Player_h}&pageurl={pageurl}&ua={useragent}";
 $vastUrl = "//v.lkqd.net/ad?pid=252&sid=504292&output=vastvpaid&support=html5&execution=any&placement=&playinit=auto&volume=100&width={Player_h}&height={Player_h}&pageurl={pageurl}";
@@ -110,15 +110,15 @@ $useragent = urlencode($_SERVER['HTTP_USER_AGENT']);
 ?>
 <script>	
 
-var vastUrl = "<? echo $vastUrl; ?>";
+var vastUrl = "<?php  echo $vastUrl; ?>";
 var Pageurl = encodeURIComponent(document.URL);
-var useragent = "<? echo $useragent; ?>";
+var useragent = "<?php  echo $useragent; ?>";
 
 function preProcessorFunction(vastUrl) {
 	var replaceData = {                                       
-        os: '<? echo $device; ?>',
-        osversion: '<? echo Detect::os();?>',
-        ipaddress: "<? echo  GET_IP_FUNC();?>",
+        os: '<?php  echo $device; ?>',
+        osversion: '<?php  echo Detect::os();?>',
+        ipaddress: "<?php  echo  GET_IP_FUNC();?>",
         pageurl: Pageurl,
         useragent: useragent,
         timestamp: new Date().getTime().toString(),
@@ -143,7 +143,7 @@ anvp.vdoplayer.config = {
 	accessKey : "X8POa4zYBLKbwUqmWLHOUZ9OlGAM9VN3",
     token : "default",
 	//autoplay: true,
-	poster:"<? echo $thumb; ?>",
+	poster:"<?php  echo $thumb; ?>",
 	html5: true,
 	plugins : {
 		dfp: {
@@ -157,7 +157,7 @@ anvp.vdoplayer.config = {
 };
 </script>
 
-<? include_once('../ga.php'); ?>	
+<?php  include_once('../ga.php'); ?>	
 </head>
 <style>
 .taboola_title_contain{width:300px; margin:0 auto;}
@@ -176,7 +176,7 @@ anvp.vdoplayer.config = {
 .social_top .sc_item.invi {display: none;}
 </style>
 <body>
-	<? 
+	<?php  
 	
 	if ( $removeAdd == true){
 					$ad300x250_1 = '<img src="'.THIS_SITE.'img/GIF_300x250-marijuana-and-panda.gif">';
@@ -190,7 +190,7 @@ anvp.vdoplayer.config = {
 	include_once('header.php'); 
 	?>
   <div id="ad2" style=""> 
-	<? 
+	<?php  
 	if ( $removeAdd == true){
 					$ad300x250_1 = '<img src="'.THIS_SITE.'img/GIF_300x250-marijuana-and-panda.gif">';
 					$d300x250_2 = '<img src="'.THIS_SITE.'img/GIF_300x250-Baby-Panda.gif">';
@@ -208,28 +208,28 @@ anvp.vdoplayer.config = {
 			<div id="vdo_content">
 				<div id="vdo_cnt">					
 				    <div id="vdoplayer"></div>	
-					<? //if ($cat_id == 5130) { //shows sponsored content for universiade content?>
+					<?php  //if ($cat_id == 5130) { //shows sponsored content for universiade content?>
 						<!--<div id="sponsored-content">SPONSORED CONTENT</div>-->
-					<? //} ?>
+					<?php  //} ?>
 					<div style="width: 95%; margin: 15px 0 10px 0;" ><div id="viewdeos-player"><script type="text/javascript">(function () {var t = document.createElement('script'), s = document.getElementsByTagName('script')[0];t.src = 'https://app.viewdeos.com/tags/9f7640bc-a620-4806-92bb-c0c1b8e1aced';s.parentNode.insertBefore(t, s);})();</script></div></div>
-					<h1 id="vdo_title"><? echo htmlspecialchars($title); ?>
+					<h1 id="vdo_title"><?php  echo htmlspecialchars($title); ?>
 						<div class="vdo_inf_state">
-						<span  style="font-weight:normal ;font-size:9pt;text-align: right;padding-right:2%;"><? echo $cdate ?></span>             
-						<!-- <img src="img/icon_eye.gif"> <span style="font-weight:normal ;font-size:9pt;text-align: right;"><? //echo number_format($counter) ?></span>-->             
+						<span  style="font-weight:normal ;font-size:9pt;text-align: right;padding-right:2%;"><?php  echo $cdate ?></span>             
+						<!-- <img src="img/icon_eye.gif"> <span style="font-weight:normal ;font-size:9pt;text-align: right;"><?php  //echo number_format($counter) ?></span>-->             
 						</div>
 					</h1>
         
-					<h2 id="vdo_sub" ><? echo htmlspecialchars($mobDes); ?></h2>
+					<h2 id="vdo_sub" ><?php  echo htmlspecialchars($mobDes); ?></h2>
 					<div class="social_top" id="scbar_top">			
-						<div class="sc_item fb "><img img class='rwd_image' src="<?echo THIS_SITE;?>img/fb_64x64.png"></div>
-						  <div class="sc_item twr "><img img class='rwd_image' src="<?echo THIS_SITE;?>img/twr_64x64.png"></div>
-						  <a href="whatsapp://send?text=<?echo THIS_SITE. $video_id?> via @TomoNewsUS" data-action="share/whatsapp/share"> <div class="sc_item wapp " ><img img class='rwd_image' src="<?echo THIS_SITE;?>img/wapp_64x64.png"></div></a>
-						  <div class="sc_item email "><img img class='rwd_image' src="<?echo THIS_SITE;?>img/email_64x64.png"></div>
-						  <div class="sc_item btn_social" ><img img class='rwd_image' src="<?echo THIS_SITE;?>img/plus_64x64.png"></div>
-						  <div class="sc_item url sc_item2 invi "><img img class='rwd_image' src="<?echo THIS_SITE;?>img/url_64x64.png"></div>
-						  <div class="sc_item gplus sc_item2 invi"><img img class='rwd_image' src="<?echo THIS_SITE;?>img/gplus_64x64.png"></div>
-						  <div class="sc_item stum sc_item2 invi"><img img class='rwd_image' src="<?echo THIS_SITE;?>img/StumbleUpon_64x64.png"></div>
-						  <div class="sc_item reddit sc_item2 invi"><img img class='rwd_image' src="<?echo THIS_SITE;?>img/reddit_64x64.png"></div>
+						<div class="sc_item fb "><img img class='rwd_image' src="<?php echo THIS_SITE;?>img/fb_64x64.png"></div>
+						  <div class="sc_item twr "><img img class='rwd_image' src="<?php echo THIS_SITE;?>img/twr_64x64.png"></div>
+						  <a href="whatsapp://send?text=<?php echo THIS_SITE. $video_id?> via @TomoNewsUS" data-action="share/whatsapp/share"> <div class="sc_item wapp " ><img img class='rwd_image' src="<?php echo THIS_SITE;?>img/wapp_64x64.png"></div></a>
+						  <div class="sc_item email "><img img class='rwd_image' src="<?php echo THIS_SITE;?>img/email_64x64.png"></div>
+						  <div class="sc_item btn_social" ><img img class='rwd_image' src="<?php echo THIS_SITE;?>img/plus_64x64.png"></div>
+						  <div class="sc_item url sc_item2 invi "><img img class='rwd_image' src="<?php echo THIS_SITE;?>img/url_64x64.png"></div>
+						  <div class="sc_item gplus sc_item2 invi"><img img class='rwd_image' src="<?php echo THIS_SITE;?>img/gplus_64x64.png"></div>
+						  <div class="sc_item stum sc_item2 invi"><img img class='rwd_image' src="<?php echo THIS_SITE;?>img/StumbleUpon_64x64.png"></div>
+						  <div class="sc_item reddit sc_item2 invi"><img img class='rwd_image' src="<?php echo THIS_SITE;?>img/reddit_64x64.png"></div>
 					</div>
 					
 					      <style>
@@ -272,20 +272,20 @@ anvp.vdoplayer.config = {
      <div class='nxt_vdo_bg'></div>
      <div class="nxt_vdo_slide"></div>
     <div class="btn_left">
-       <img src="<?echo THIS_SITE; ?>img/story_pop_leftV.gif" class="rwd_image">
+       <img src="<?php echo THIS_SITE; ?>img/story_pop_leftV.gif" class="rwd_image">
        <div class='btn_sense'></div>
     </div>
-    <div class="btn_right"> <img src="<?echo THIS_SITE; ?>img/story_pop_rightV.gif" class="rwd_image"><div class='btn_sense'></div></div>
+    <div class="btn_right"> <img src="<?php echo THIS_SITE; ?>img/story_pop_rightV.gif" class="rwd_image"><div class='btn_sense'></div></div>
       
       
   </div>
 					
 					
-					<div  id="vdo_inf" style="display: <? echo (  (!$NSFW || IFNSFW_TEST!=1) && $thmenName=='')?'none':'block' ?>">
-					    <a href="<? echo THIS_SITE; ?>theme/nsfw" style="text-decoration: none;<? if(!$NSFW || IFNSFW_TEST!=1){echo 'display:none;';}?>">
+					<div  id="vdo_inf" style="display: <?php  echo (  (!$NSFW || IFNSFW_TEST!=1) && $thmenName=='')?'none':'block' ?>">
+					    <a href="<?php  echo THIS_SITE; ?>theme/nsfw" style="text-decoration: none;<?php  if(!$NSFW || IFNSFW_TEST!=1){echo 'display:none;';}?>">
                   <span style="color:#FF6600;font-weight:bold;"><b>NSFW&nbsp;&nbsp;&nbsp;</b></span>
               </a>
-						<? $thmenName_title = "";
+						<?php  $thmenName_title = "";
 						if($thmenName!=''){ 
                         $thmenName_title  =$thmenName;
                         $thmenName = str_replace('?', '', $thmenName);
@@ -325,13 +325,13 @@ anvp.vdoplayer.config = {
 
 							?>
             
-							<a href="<? echo THIS_SITE; ?>theme/<? echo strtolower($thmenName); ?>" style="text-decoration: none;">
-                 <span style="color:#FF6600;font-weight:bold;"><b><? echo $thmenName_title; ?></b> </span>
+							<a href="<?php  echo THIS_SITE; ?>theme/<?php  echo strtolower($thmenName); ?>" style="text-decoration: none;">
+                 <span style="color:#FF6600;font-weight:bold;"><b><?php  echo $thmenName_title; ?></b> </span>
               </a>
 							
-						<? } ?>
+						<?php  } ?>
 					</div>
-					<div class="vdo_subT"><? 
+					<div class="vdo_subT"><?php  
               $content = nl2br(htmlspecialchars_decode($des));
               $turned = array( '&lt;a','&lt;/a&gt;' ,'&gt;' , '&quot;');
               $turn_back = array( '<a', '</a>' , '>' , '"' );
@@ -351,7 +351,7 @@ anvp.vdoplayer.config = {
          <div class= "formbox" >
             <!-- <div class="txt_success">Thanks for subscribing!</div> -->
 
-         <img class='rwd_image' src="<? echo THIS_SITE; ?>img/bg_mcp.png" > 
+         <img class='rwd_image' src="<?php  echo THIS_SITE; ?>img/bg_mcp.png" > 
            <div class="mcp_form3">
               <form method="get" id="mc-embedded-subscribe-form3" name="mc-embedded-subscribe-form" class="validate" novalidate data-ajax="false">
                 <div>  
@@ -374,21 +374,21 @@ anvp.vdoplayer.config = {
           <div class="btn_go btn"></div>
           </div>
           <!-- TAG PART -->
-					 <?  include_once('vdo_descript.php');   ?>
+					 <?php   include_once('vdo_descript.php');   ?>
           
          
            
 				</div>
-				 <div><?echo $d300x250_2;?></div> 
+				 <div><?php echo $d300x250_2;?></div> 
        <!--Taboola-->
 		<div id="disqus" style="background:#fff;padding-top:15px;">
-		<!--<h1 class="comm_qa" style=""><? echo $comm_qa; ?></h1>-->
+		<!--<h1 class="comm_qa" style=""><?php  echo $comm_qa; ?></h1>-->
         <div class="fbc-title comm-title" >Facebook Conversation</div>
-           <div class="fb-comments" data-href="<?echo 'http://us.tomonews.com/m/'.$video_id;?>" data-width="320" data-numposts="5" data-colorscheme="light" style="padding: 0px 0px;">
+           <div class="fb-comments" data-href="<?php echo 'http://us.tomonews.com/m/'.$video_id;?>" data-width="320" data-numposts="5" data-colorscheme="light" style="padding: 0px 0px;">
            </div>		
 				</div>
 			<div id="vdo_otherlist">
-				<?
+				<?php 
                 include_once('relativeVideos_api.php');
                // $num_t = 6;
 				if ($tag_topic!=''/* && checkIfinArray($tag_topic , $tags_article)*/ )
@@ -406,32 +406,32 @@ anvp.vdoplayer.config = {
 	<div id="dialog" title="">
   <p></p>
 </div>
-	<? include_once('footer.php'); ?>
+	<?php  include_once('footer.php'); ?>
 
 
-<script data-anvp='{"accessKey": "X8POa4zYBLKbwUqmWLHOUZ9OlGAM9VN3","pInstance":"vdoplayer", "mcp":"next", "video":"<? echo $video_id; ?>"}' src='<? echo ANVATO_PLAYER_SRC;?>'></script>    
-<script src="<?echo THIS_SITE; ?>js/video.min.js?nochache=1111"></script>
+<script data-anvp='{"accessKey": "X8POa4zYBLKbwUqmWLHOUZ9OlGAM9VN3","pInstance":"vdoplayer", "mcp":"next", "video":"<?php  echo $video_id; ?>"}' src='<?php  echo ANVATO_PLAYER_SRC;?>'></script>    
+<script src="<?php echo THIS_SITE; ?>js/video.min.js?nochache=1111"></script>
 <script type='text/javascript'>
-_GLOBAL.base= '<?echo THIS_SITE;?>'
+_GLOBAL.base= '<?php echo THIS_SITE;?>'
       _GLOBAL.page = 'video';
-      _GLOBAL.video_id = '<?echo $video_id;?>';
-      _GLOBAL.title= '<?echo addslashes($title);?>';
-      _GLOBAL.uid = '<? echo session_id(); ?>';
+      _GLOBAL.video_id = '<?php echo $video_id;?>';
+      _GLOBAL.title= '<?php echo addslashes($title);?>';
+      _GLOBAL.uid = '<?php  echo session_id(); ?>';
      /* var ua = new gigya.socialize.UserAction();
-      ua.addActionLink('?‹æ??¥å ±',"http://staging.appledaily.com.tw/livechannel/subject/<?echo $video_id ; ?>");*/
-     <? $PC_SITE = 'http://tomonews.com/' ; ?>
+      ua.addActionLink('?‹æ??¥å ±',"http://staging.appledaily.com.tw/livechannel/subject/<?php echo $video_id ; ?>");*/
+     <?php  $PC_SITE = 'http://tomonews.com/' ; ?>
      
       var commentParams ={
-        categoryID: '<?
+        categoryID: '<?php 
                  if($if_test2)
                  {echo "TomoNews US";}
                  else
                  {echo "TomoNews";} 
               ?>',
-          streamID: "<?echo $PC_SITE.$video_id ; ?>",
+          streamID: "<?php echo $PC_SITE.$video_id ; ?>",
           version: 2,
           containerID: 'commentsBox',
-          cid:"<?echo $video_id;?>",
+          cid:"<?php echo $video_id;?>",
           enabledShareProviders: 'facebook,twitter,googleplus',
           moreEnabledProviders:'facebook,twitter,googleplus,linkedin,guest',
           minShareOptions: 3,
@@ -448,7 +448,7 @@ _GLOBAL.base= '<?echo THIS_SITE;?>'
 
       var _storypop, _storyp_view;
       var cnf_storypop={}; 
-	  cnf_storypop.baseUrl = '<? echo THIS_SITE;  ?>';   
+	  cnf_storypop.baseUrl = '<?php  echo THIS_SITE;  ?>';   
       cnf_storypop.callback = function(){  _storypop.init();}
 	  
 $(function() {
@@ -477,13 +477,13 @@ $(function() {
       cnf_1X1.edm_tag = 'DEFAULT';
       var siteMap_index = '';
       console.log('test:'+cnf_1X1.edm_tag);
-      cnf_1X1.path = '<?echo $file_path; ?>'
+      cnf_1X1.path = '<?php echo $file_path; ?>'
       try{
         var from = (getCookie('track_menu')=="" || !getCookie('track_menu'))? "MAIN":getCookie('track_menu');
-        var theme_tag ='<?echo $thmenName_title;?>';
-        var cate_tag = '<?echo remove_punc(remove_punc($CateName)); ?>';
+        var theme_tag ='<?php echo $thmenName_title;?>';
+        var cate_tag = '<?php echo remove_punc(remove_punc($CateName)); ?>';
         var siteMap_index =''
-        var cdate = "<?echo $cdate;?>";
+        var cdate = "<?php echo $cdate;?>";
         var section_tag,category_tag , channel_tag;
 
         ///siteMap_index
@@ -500,14 +500,14 @@ $(function() {
         cnf_1X1.nxmObj={
         "region":"US",
         "prod":"TOMONEWS",
-        "site":"<?echo THIS_SITE;?>",
+        "site":"<?php echo THIS_SITE;?>",
         "platform":"MOBWEB",  //WEB | MOBWEB | ANDROID | IPHONE | IPAD | TABLET 
         "section":section_tag, ////Site map
         "media":"TEXT",//Site map
         "content":"ARTICLE",  //Site map
         "issueid":cdate.replaceAll("/", ''),      //Aritcle Issue Date or send blank for homepage/index
-        "title":"<? echo urlencode($title_cp); ?>",        //Article Title, Photo Title, etc or send Blank for home page/index page
-        "cid":"<?echo $video_id;?>",          //Article ID/Photo ID or send blank for Menu/Index pages
+        "title":"<?php  echo urlencode($title_cp); ?>",        //Article Title, Photo Title, etc or send Blank for home page/index page
+        "cid":"<?php echo $video_id;?>",          //Article ID/Photo ID or send blank for Menu/Index pages
         "news":"TOMONEWS", //Site map
         "edm":cnf_1X1.edm_tag,          //Site map
         "action":"PAGEVIEW",  //Always send PAGEVIEW

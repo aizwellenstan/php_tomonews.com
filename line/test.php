@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 $getURL = 'https://api.nm.anvato.net/v2/feed/LFKACVUWPSSACSRLARGA?start=0&count=100&filters[]=c_ts_publish_l:[1593874012%20TO%201594003612]&sort=c_ts_publish_l+desc';
 $ww = curl_info($getURL,'','');

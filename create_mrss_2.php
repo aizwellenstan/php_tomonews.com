@@ -1,4 +1,4 @@
-<?
+<?php 
 	//API key & alias
 // define('APPLICATION_ALIAS','NMTomoUS-universal-flash');
 define('APPLICATION_ALIAS','NMTomoUS-universal-flash-P2');

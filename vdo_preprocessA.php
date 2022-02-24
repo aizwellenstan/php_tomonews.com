@@ -1,4 +1,4 @@
-<?
+<?php 
 $vid_Arr=array('34621228072963' ,"154019978657792" ,"115723634327552", "233696988774400","235919634350080" ,"102280118255616");
 $AdImg_arr = array('GIF_300x250-Baby-Panda.gif','GIF_300x250-Baby-Panda-2.gif','GIF_300x250-marijuana-and-panda.gif' ,  'GIF_300x250_marijuana-man.gif');//'GIF_300x250-marijuana-man.gif' ,
 $video_id=$_GET['video_id'];

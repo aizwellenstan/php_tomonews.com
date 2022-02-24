@@ -1,4 +1,4 @@
-<?
+<?php 
 include_once('configA.php');
 include_once('api_settingA.php');
 include_once('device.php');
@@ -39,20 +39,20 @@ if($sdate!=''&&$edate!=''){ $range = '&filters[]=c_ts_publish_l:['.strtotime('+0
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title><? site_title() ?></title>
+	<title><?php  site_title() ?></title>
 <meta name=viewport content="width=1200px">
 	<meta name="apple-itunes-app" content="app-id=633875353">
 	<meta name="google-play-app" content="app-id=com.nextmedia.gan">
 	<meta name="description" content="TomoNews is your daily source for top animated news. We’ve combined animation and video footage with a snarky personality to bring you the biggest and best stories from around the world." />
 	<meta name="keywords" content="news, news videos, funny news, animated news, funny videos, animation, next media animation" />
 	<link rel="apple-touch-icon-precomposed" href=""/>
-	<link rel="icon" href="<? echo THIS_SITE; ?>img/favicon.png?v=1" type="image/png" />
+	<link rel="icon" href="<?php  echo THIS_SITE; ?>img/favicon.png?v=1" type="image/png" />
 	<link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7365156/7009372/css/fonts.css" />
-	<link rel="stylesheet" href="<? echo THIS_SITE; ?>stylesheets/style.min.css">
-	<link rel="stylesheet" href="<? echo THIS_SITE; ?>stylesheets/jquery-ui.min.css">
+	<link rel="stylesheet" href="<?php  echo THIS_SITE; ?>stylesheets/style.min.css">
+	<link rel="stylesheet" href="<?php  echo THIS_SITE; ?>stylesheets/jquery-ui.min.css">
 
-	 <? include_once("head_scripts.php"); ?>
-	<script src="<?echo THIS_SITE; ?>js/all.min.js"></script>
+	 <?php  include_once("head_scripts.php"); ?>
+	<script src="<?php echo THIS_SITE; ?>js/all.min.js"></script>
 	<script src="http://dev.imp.nextmedia.com/js/nxm_tr_v16_dev.js?t=1119" ></script>      
     <script src="//code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
    
@@ -60,14 +60,14 @@ if($sdate!=''&&$edate!=''){ $range = '&filters[]=c_ts_publish_l:['.strtotime('+0
     { 
       "@context": "http://schema.org", 
       "@type": "Webpage", 
-      "headline": "<?site_title();?>", 
-      "url": "<? echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];?>", 
+      "headline": "<?php site_title();?>", 
+      "url": "<?php  echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];?>", 
       "thumbnailUrl": "", 
-      <?$cdate22=date("Y-m-d\TH:i:s") ;   $cdate22= $cdate22.'.000Z';?>
-      "dateCreated": "<? echo $cdate22; ?>", 
+      <?php $cdate22=date("Y-m-d\TH:i:s") ;   $cdate22= $cdate22.'.000Z';?>
+      "dateCreated": "<?php  echo $cdate22; ?>", 
       "articleSection": "SEARCH", 
       "creator": "TOMONEWS", 
-      "keywords": [<?
+      "keywords": [<?php 
                  foreach($META_KW as $i => $value) 
                  {
                    if($i==0)
@@ -78,11 +78,11 @@ if($sdate!=''&&$edate!=''){ $range = '&filters[]=c_ts_publish_l:['.strtotime('+0
                   ?>] 
     } 
 </script>
-<? include_once('ga.php'); ?>	
+<?php  include_once('ga.php'); ?>	
 </head>
 <body>
 	<div class="wapper"> 
-		<? 
+		<?php  
 		include_once('header.php'); 
 		?>
 	</div>
@@ -91,49 +91,49 @@ if($sdate!=''&&$edate!=''){ $range = '&filters[]=c_ts_publish_l:['.strtotime('+0
 			<div id="search_txt"> your search </div>
 			<div id="search_sec">
 				<form id="search_box_form2">
-					<input type="text" id="search2" name="search2" value="<? echo urldecode($kw);?>">
+					<input type="text" id="search2" name="search2" value="<?php  echo urldecode($kw);?>">
 				</form>
 				<div id="search_btn2"></div>
 			</div>
 	</div>
 	
-	<? $ad728x90=$ad_search_728x90;?>
+	<?php  $ad728x90=$ad_search_728x90;?>
 	<div id="lists" style="padding-top:30px;width:970px;top: 100px;margin-bottom: 100px;" class="srh_lis_bg">
-		<div class="mov" style="width: 728px; height: 90px;background:#ccc;display: block;margin: auto;margin-bottom:20px;"><? echo $ad728x90;?></div>
+		<div class="mov" style="width: 728px; height: 90px;background:#ccc;display: block;margin: auto;margin-bottom:20px;"><?php  echo $ad728x90;?></div>
 		<div id="search_wapper">
 			<div id="search_term">
 				<div id="search_term_1">
 					<span class="search_term_til">Date Range</span>
-					<br><img src="<? echo THIS_SITE; ?>img/datepicker_line.gif"><br>
-					<a href="<? echo THIS_SITE; ?>search?kw=<? echo $kw; ?>&dterm=1"><span>Past 24 Hours</span></a>
-					<br><img src="<? echo THIS_SITE; ?>img/datepicker_line.gif"><br>
-					<a href="<? echo THIS_SITE; ?>search?kw=<? echo $kw; ?>&dterm=2"><span>Past 7 Days</span></a>
-					<br><img src="<? echo THIS_SITE; ?>img/datepicker_line.gif"><br>
-					<a href="<? echo THIS_SITE; ?>search?kw=<? echo $kw; ?>&dterm=3"><span>Past 12 Months</span></a>
-					<br><img src="<? echo THIS_SITE; ?>img/datepicker_line.gif"><br>
+					<br><img src="<?php  echo THIS_SITE; ?>img/datepicker_line.gif"><br>
+					<a href="<?php  echo THIS_SITE; ?>search?kw=<?php  echo $kw; ?>&dterm=1"><span>Past 24 Hours</span></a>
+					<br><img src="<?php  echo THIS_SITE; ?>img/datepicker_line.gif"><br>
+					<a href="<?php  echo THIS_SITE; ?>search?kw=<?php  echo $kw; ?>&dterm=2"><span>Past 7 Days</span></a>
+					<br><img src="<?php  echo THIS_SITE; ?>img/datepicker_line.gif"><br>
+					<a href="<?php  echo THIS_SITE; ?>search?kw=<?php  echo $kw; ?>&dterm=3"><span>Past 12 Months</span></a>
+					<br><img src="<?php  echo THIS_SITE; ?>img/datepicker_line.gif"><br>
 					<span>Specific Dates</span>
-					<br><img src="<? echo THIS_SITE; ?>img/datepicker_line.gif"><br>
+					<br><img src="<?php  echo THIS_SITE; ?>img/datepicker_line.gif"><br>
 					<span class="search_term_til">From</span><br>
 						<div class="dtpicker">
-							<input type="text" id="sdate" name="sdate" value="<? echo $sdate; ?>">
+							<input type="text" id="sdate" name="sdate" value="<?php  echo $sdate; ?>">
 
 						</div>
-						<input type="hidden" id="kw" name="kw" value="<? echo $kw; ?>">
+						<input type="hidden" id="kw" name="kw" value="<?php  echo $kw; ?>">
 					<span class="search_term_til">to</span><br>
 						<div class="dtpicker">
-							<input type="text" id="edate" name="edate" value="<? echo $edate; ?>">
+							<input type="text" id="edate" name="edate" value="<?php  echo $edate; ?>">
 
 						</div>
-					<div align="center"><br><img src="<? echo THIS_SITE; ?>img/datepick_btn.png" id="datepick_btn" ></div>
+					<div align="center"><br><img src="<?php  echo THIS_SITE; ?>img/datepick_btn.png" id="datepick_btn" ></div>
 						</div>
 						
 			
-				<? 
+				<?php  
 				$ad300x250_1 = $ad_search_300x250;
 				echo '<div class="mov" style="width: 300px; height:250px;margin:10px 0 0 0;">'.$ad300x250_1.'</div>';?>
 			</div>
 			<div id="search_result">
-				<?
+				<?php 
 				/*$getUrls=get_searchList($kw,($page-1),10,$sdate,$edate);
 				if($debug_mode=='1'){ echo 'getUrls : <br>',$getUrls,'<hr>'; }	
 				$data=curl_info($getUrls);
@@ -196,30 +196,30 @@ if($sdate!=''&&$edate!=''){ $range = '&filters[]=c_ts_publish_l:['.strtotime('+0
 
 				
 				<div class="cb"><br><br><br></div>
-				<? if( $totalPage>=1 ){ ?>
+				<?php  if( $totalPage>=1 ){ ?>
 				<div class="pager">
-					<div class="pager_cnt"><a href="<? echo $thisURL; ?>&page=1"><span>&lt;&lt;First</span></a></div>
-					<div class="pager_cnt"><a href="<? echo $thisURL; ?>&page=<? echo $prePage; ?>"><span>&lt;Previous</span></a></div>
+					<div class="pager_cnt"><a href="<?php  echo $thisURL; ?>&page=1"><span>&lt;&lt;First</span></a></div>
+					<div class="pager_cnt"><a href="<?php  echo $thisURL; ?>&page=<?php  echo $prePage; ?>"><span>&lt;Previous</span></a></div>
 					<div class="pager_cnt">
 						
-						<?
+						<?php 
 						for($i=$showStart;$i<=$showEnd;$i++  ){
 							?>
-							<a href="<? echo $thisURL; ?>&page=<? echo $i; ?>"><span class="pgcount <? if($i==$page){ ?>current<? } ?> "><? echo $i; ?></span></a>
-							<?
+							<a href="<?php  echo $thisURL; ?>&page=<?php  echo $i; ?>"><span class="pgcount <?php  if($i==$page){ ?>current<?php  } ?> "><?php  echo $i; ?></span></a>
+							<?php 
 						}
 						?>
 					</div>
-					<div class="pager_cnt"><a href="<? echo $thisURL; ?>&page=<? echo $nexPage; ?>"><span>Next&gt;</span></a></div>
-					<div class="pager_cnt"><a href="<? echo $thisURL; ?>&page=<? echo $totalPage; ?>"><span>Last&gt;&gt;</span></a></div>
+					<div class="pager_cnt"><a href="<?php  echo $thisURL; ?>&page=<?php  echo $nexPage; ?>"><span>Next&gt;</span></a></div>
+					<div class="pager_cnt"><a href="<?php  echo $thisURL; ?>&page=<?php  echo $totalPage; ?>"><span>Last&gt;&gt;</span></a></div>
 				</div>
-				<? } ?>
+				<?php  } ?>
 			</div>
 		</div>
 
 	</div>
 	
-	<? include_once('footer.php'); ?>
+	<?php  include_once('footer.php'); ?>
 	<script>
 		// search datepicker 
 		$('#sdate').datepicker({ dateFormat: "yy-mm-dd" });
@@ -228,13 +228,13 @@ if($sdate!=''&&$edate!=''){ $range = '&filters[]=c_ts_publish_l:['.strtotime('+0
 		$('#datepick_btn').click(function(){
 			var sdate=$('#sdate').val(),edate=$('#edate').val(),kw=$('#kw').val();
 			if(kw!=''&&sdate!=''&&edate!=''){
-				location.href='<? echo THIS_SITE; ?>search?kw='+encodeURI(kw)+'&edate='+edate+'&sdate='+sdate;
+				location.href='<?php  echo THIS_SITE; ?>search?kw='+encodeURI(kw)+'&edate='+edate+'&sdate='+sdate;
 			}
 		})
 		var v1=$("#search_text").val();
 		var v2=$("#search2").val();
-		if(v1!=''){ $('#search1').css('background','url("<? echo THIS_SITE; ?>img/input_o.gif")') }
-		if(v2!=''){ $('#search_sec').css('background','url("<? echo THIS_SITE; ?>img/search_1o.gif")') }
+		if(v1!=''){ $('#search1').css('background','url("<?php  echo THIS_SITE; ?>img/input_o.gif")') }
+		if(v2!=''){ $('#search_sec').css('background','url("<?php  echo THIS_SITE; ?>img/search_1o.gif")') }
 	</script>
 </body>
 <script>
@@ -247,7 +247,7 @@ $(function() {
           cnf_1X1.nxmObj={
         "region":"US",
         "prod":"TOMONEWS",
-        "site":"<?echo THIS_SITE;?>",
+        "site":"<?php echo THIS_SITE;?>",
         "platform":"WEB",  //WEB | MOBWEB | ANDROID | IPHONE | IPAD | TABLET 
         "section":cnf_1X1.params[siteMap_index].sec, ////Site map
         "media":"TEXT",//Site map
@@ -256,7 +256,7 @@ $(function() {
         "title":"",        //Article Title, Photo Title, etc or send Blank for home page/index page
         "cid":"",          //Article ID/Photo ID or send blank for Menu/Index pages
         "news":"TOMONEWS", //Site map
-        /*"edm":"<?echo ($cate_title=='us')? 'RECOMM':($cate_title=='world')?  'TOPIC': '';?>",          //Site map*/
+        /*"edm":"<?php echo ($cate_title=='us')? 'RECOMM':($cate_title=='world')?  'TOPIC': '';?>",          //Site map*/
         "action":"PAGEVIEW",  //Always send PAGEVIEW
         //"uid":"", //
         "subsect":"", //Site map

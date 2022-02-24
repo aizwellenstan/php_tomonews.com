@@ -1,4 +1,4 @@
-<?php
+<?php 
 header('Content-type: application/xml');
 $pub_key = "8353B77A240044B1BA565E0393C18E88";
 $pri_key = "3B80540E925B4BB6B5AE7A363AA551C8";
@@ -14,7 +14,7 @@ if ($page != "" && $pagesize !="" ){
 }
 
 $ts = time();
-$req =  '<?xml version="1.0" ?><request><type>LIST_VIDEOS</type><params></params></request>';
+$req =  '<?php xml version="1.0" ?><request><type>LIST_VIDEOS</type><params></params></request>';
 $str = $req.$ts;
 $sgn = base64_encode (hash_hmac ( "sha256", $str, $pri_key, true) );
 

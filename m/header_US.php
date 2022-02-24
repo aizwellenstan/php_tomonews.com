@@ -48,29 +48,29 @@ function _jellipsis(){
     <div style="width:100% ; background:#fff;height:auto;">
 	<div class="content">
 	        <div id="head_top">
-	        <div id="menus1"><img src="<? echo THIS_SITE; ?>img/menu_j.gif" class='rwd_image'/></div>
+	        <div id="menus1"><img src="<?php  echo THIS_SITE; ?>img/menu_j.gif" class='rwd_image'/></div>
 			<!--<div id="menus1_o"></div>-->
 			<div id="logo">
-				<a href="<? echo THIS_SITE; ?>"><img src="<? echo THIS_SITE; ?>img/logo.gif" class='rwd_image'/></a>
+				<a href="<?php  echo THIS_SITE; ?>"><img src="<?php  echo THIS_SITE; ?>img/logo.gif" class='rwd_image'/></a>
 			</div>
 			</div>
 			<div id="icons" align="right"> 
 				FOLLOW US
-				<a href="<? echo GPLUS_LINKS; ?>" target="_blank" ><div id="mico3" class="menu_icon"></div></a>
-				<img src="<? echo THIS_SITE; ?>img/menu_line.gif" alt="">
-				<a href="<? echo TWITTER_LINKS; ?>" target="_blank" ><div id="mico2" class="menu_icon"></div></a>
-				<img src="<? echo THIS_SITE; ?>img/menu_line.gif" alt="">
-				<a href="<? echo FB_LINKS; ?>" target="_blank"><div id="mico1" class="menu_icon"></div></a>
+				<a href="<?php  echo GPLUS_LINKS; ?>" target="_blank" ><div id="mico3" class="menu_icon"></div></a>
+				<img src="<?php  echo THIS_SITE; ?>img/menu_line.gif" alt="">
+				<a href="<?php  echo TWITTER_LINKS; ?>" target="_blank" ><div id="mico2" class="menu_icon"></div></a>
+				<img src="<?php  echo THIS_SITE; ?>img/menu_line.gif" alt="">
+				<a href="<?php  echo FB_LINKS; ?>" target="_blank"><div id="mico1" class="menu_icon"></div></a>
 			</div>
 			
 			
 			<div id="menus2">
 			
-				<img src="<? echo THIS_SITE; ?>img/menu2.png" width="598" height="540">
+				<img src="<?php  echo THIS_SITE; ?>img/menu2.png" width="598" height="540">
 				<div id="m21">
 					<ul>
 
-					<?
+					<?php 
 					foreach( $topmenu as $tmv ){
 					    $enTMV  = str_replace('?', '', $tmv[0]);
 						$enTMV  = str_replace(' ', '-', $enTMV );
@@ -109,14 +109,14 @@ function _jellipsis(){
                         }
 
 
-						?><a href="<? echo THIS_SITE; ?>category/<? echo strtolower($enTMV); ?>"><li class="w<? echo $tmv[1]; ?> mu_def"><? echo $tmv[0]; ?></li></a><?
+						?><a href="<?php  echo THIS_SITE; ?>category/<?php  echo strtolower($enTMV); ?>"><li class="w<?php  echo $tmv[1]; ?> mu_def"><?php  echo $tmv[0]; ?></li></a><?php 
 					}
 					?>
 					</ul>
 					
 				</div>
 				<div id="m22">
-					<?
+					<?php 
 					
 					foreach( $toptheme as $thk=>$thv ){						
 						$enTHV = str_replace('?', '', $thv[0]);
@@ -157,40 +157,40 @@ function _jellipsis(){
 
 
 						?>
-						<a href="<? echo THIS_SITE; ?>theme/<? echo strtolower( $enTHV ); ?>"><p><? echo $thv[0]; ?></p></a>
-						<?
+						<a href="<?php  echo THIS_SITE; ?>theme/<?php  echo strtolower( $enTHV ); ?>"><p><?php  echo $thv[0]; ?></p></a>
+						<?php 
 					}
 					?>
 					
 				</div>
 				<div id="m23">
-					<a href="<? echo FB_LINKS ?>" target="_blank"><img src="<? echo THIS_SITE; ?>img/icon_fb.gif"></a>
-					<a href="<? echo TWITTER_LINKS ?>" target="_blank"><img src="<? echo THIS_SITE; ?>img/icon_twitter.gif"></a>
-					<a href="<? echo GPLUS_LINKS ?>" target="_blank"><img src="<? echo THIS_SITE; ?>img/icon_gplus.gif"></a>
-					<a href="<? echo YOUTUBE_LINKS ?>" target="_blank"><img src="<? echo THIS_SITE; ?>img/icon_youtube.gif"></a>
-					<a href="<? echo INSTAGRAM_LINKS ?>" target="_blank"><img src="<? echo THIS_SITE; ?>img/icon_ins.gif"></a>
+					<a href="<?php  echo FB_LINKS ?>" target="_blank"><img src="<?php  echo THIS_SITE; ?>img/icon_fb.gif"></a>
+					<a href="<?php  echo TWITTER_LINKS ?>" target="_blank"><img src="<?php  echo THIS_SITE; ?>img/icon_twitter.gif"></a>
+					<a href="<?php  echo GPLUS_LINKS ?>" target="_blank"><img src="<?php  echo THIS_SITE; ?>img/icon_gplus.gif"></a>
+					<a href="<?php  echo YOUTUBE_LINKS ?>" target="_blank"><img src="<?php  echo THIS_SITE; ?>img/icon_youtube.gif"></a>
+					<a href="<?php  echo INSTAGRAM_LINKS ?>" target="_blank"><img src="<?php  echo THIS_SITE; ?>img/icon_ins.gif"></a>
 				</div>
 				<div id="m24">
-					<p><a href="<? echo THIS_SITE; ?><? echo ABOUT_PAGE_LINK ?>">About Us</a></p>
-					<p><a href="<? echo THIS_SITE; ?><? echo MOBILE_PAGE_LINK ?>">Mobile</a></p> 
-					<p><a href="<? echo THIS_SITE; ?><? echo GIVEAWAY_PAGE_LINK ?>">giveaway</a></p> 
+					<p><a href="<?php  echo THIS_SITE; ?><?php  echo ABOUT_PAGE_LINK ?>">About Us</a></p>
+					<p><a href="<?php  echo THIS_SITE; ?><?php  echo MOBILE_PAGE_LINK ?>">Mobile</a></p> 
+					<p><a href="<?php  echo THIS_SITE; ?><?php  echo GIVEAWAY_PAGE_LINK ?>">giveaway</a></p> 
 				</div>
 				<div id="m25">
-					<a href="<? echo US_WEBSITE; ?>" target="_blank"><img src="<? echo THIS_SITE; ?>img/hd_fg_us.gif" width="57" height="22"></a><br><br>
-					<a href="<? echo JP_WEBSITE; ?>" target="_blank"><img src="<? echo THIS_SITE; ?>img/hd_fg_jp.gif" width="69" height="22"></a>
+					<a href="<?php  echo US_WEBSITE; ?>" target="_blank"><img src="<?php  echo THIS_SITE; ?>img/hd_fg_us.gif" width="57" height="22"></a><br><br>
+					<a href="<?php  echo JP_WEBSITE; ?>" target="_blank"><img src="<?php  echo THIS_SITE; ?>img/hd_fg_jp.gif" width="69" height="22"></a>
 				</div>
 
 			</div>
 			<div id="menu_mask"></div>
 			<div id="menus3">
-			    <div id="search_arr" style="position:absolute;top:-5px;left:18px;"><img src="<? echo THIS_SITE; ?>img/search_arrow.gif"></div>
+			    <div id="search_arr" style="position:absolute;top:-5px;left:18px;"><img src="<?php  echo THIS_SITE; ?>img/search_arrow.gif"></div>
 	            <div id="mainmenus" class="mainmenus_1">
 	            	<!-- <div class="mainmenus_1_scroller" style="width:100% ; height:100%"> -->
 	            <div class="mainmenus_cont" style="position:relative;top:0px;left:0px;height:auto;width:100%;overflow:hidden;">
 
 			    <form id="search_box_form1">
 			        <div id="search1" style="position:relative;">                        
-				       <input type="text" id="search_text" value="<? echo str_replace('+',' ',$kw);?>" placeholder="Search">				       
+				       <input type="text" id="search_text" value="<?php  echo str_replace('+',' ',$kw);?>" placeholder="Search">				       
 				        <div id="search_go" style="width:30px;height:30px;top:18px; left:85px"></div>
 			        </div>
 			    </form>
@@ -219,8 +219,8 @@ function _jellipsis(){
                 <li class="accordion-content db"  data-id='1'>	
                 
 						<ul>
-						<!-- 	<a class="Ca" href="<? echo THIS_SITE; ?>newsfeed/"><li class="Citems w_newsfeed mu_def">NEWSFEED</li></a> -->
-						<?
+						<!-- 	<a class="Ca" href="<?php  echo THIS_SITE; ?>newsfeed/"><li class="Citems w_newsfeed mu_def">NEWSFEED</li></a> -->
+						<?php 
 					foreach( $topmenu as $tmv ){
 					    $enTMV  = str_replace('?', '', $tmv[0]);
 						$enTMV  = str_replace(' ', '-', $enTMV );
@@ -259,7 +259,7 @@ function _jellipsis(){
                         }
 
 
-						?><a class="Ca" href="<? echo THIS_SITE; ?>category/<? echo strtolower($enTMV); ?>"><li class="Citems w<? echo $tmv[1]; ?> mu_def"><? echo $tmv[0]; ?></li></a><?
+						?><a class="Ca" href="<?php  echo THIS_SITE; ?>category/<?php  echo strtolower($enTMV); ?>"><li class="Citems w<?php  echo $tmv[1]; ?> mu_def"><?php  echo $tmv[0]; ?></li></a><?php 
 					}
 					?>
 						</ul>
@@ -267,7 +267,7 @@ function _jellipsis(){
 
 					<li class="accordion-content" data-id='2'>
 						<ul>
-							<?					
+							<?php 					
 					foreach( $toptheme as $thk=>$thv ){						
 						$enTHV = str_replace('?', '', $thv[0]);
 						$enTHV = str_replace(' ', '-', $enTHV);
@@ -307,8 +307,8 @@ function _jellipsis(){
 
 
 						?>
-						<a class="Ca" href="<? echo THIS_SITE; ?>theme/<? echo strtolower( $enTHV ); ?>"><li li class="Citems"><? echo $thv[0]; ?></li></a>
-						<?
+						<a class="Ca" href="<?php  echo THIS_SITE; ?>theme/<?php  echo strtolower( $enTHV ); ?>"><li li class="Citems"><?php  echo $thv[0]; ?></li></a>
+						<?php 
 					}
 					?>
 						</ul>
@@ -316,11 +316,11 @@ function _jellipsis(){
 					
 					<li class="accordion-content" data-id='3'>		
 						<ul>
-							<a class="Ca" href="<? echo FB_LINKS ?>" target="_blank"><li class="Citems">FACEBOOK</li></a>
-							<a class="Ca" href="<? echo TWITTER_LINKS ?>" target="_blank"><li class="Citems">TWITTER</li></a>
-							<a class="Ca" href="<? echo GPLUS_LINKS ?>" target="_blank"><li class="Citems">GOOGLE+</li></a>
-							<a class="Ca" href="<? echo YOUTUBE_LINKS ?>" target="_blank"><li class="Citems">YOUTUBE</li></a>
-							<a class="Ca" href="<? echo INSTAGRAM_LINKS ?>" target="_blank"><li class="Citems">INSTAGRAM</li></a>
+							<a class="Ca" href="<?php  echo FB_LINKS ?>" target="_blank"><li class="Citems">FACEBOOK</li></a>
+							<a class="Ca" href="<?php  echo TWITTER_LINKS ?>" target="_blank"><li class="Citems">TWITTER</li></a>
+							<a class="Ca" href="<?php  echo GPLUS_LINKS ?>" target="_blank"><li class="Citems">GOOGLE+</li></a>
+							<a class="Ca" href="<?php  echo YOUTUBE_LINKS ?>" target="_blank"><li class="Citems">YOUTUBE</li></a>
+							<a class="Ca" href="<?php  echo INSTAGRAM_LINKS ?>" target="_blank"><li class="Citems">INSTAGRAM</li></a>
 
 							
 						</ul>
@@ -328,9 +328,9 @@ function _jellipsis(){
 					
 					<li class="accordion-content" data-id='4'>		
 						<ul>
-							<a class="Ca" href="<? echo THIS_SITE; ?><? echo ABOUT_PAGE_LINK ?>"><li class="Citems">About Us</li></a>
-							<a class="Ca" href="<? echo THIS_SITE; ?><? echo MOBILE_PAGE_LINK ?>"><li class="Citems">Mobile</li></a>
-							<a class="Ca" href="<? echo THIS_SITE; ?><? echo GIVEAWAY_PAGE_LINK ?>"><li class="Citems">giveaway</li></a>
+							<a class="Ca" href="<?php  echo THIS_SITE; ?><?php  echo ABOUT_PAGE_LINK ?>"><li class="Citems">About Us</li></a>
+							<a class="Ca" href="<?php  echo THIS_SITE; ?><?php  echo MOBILE_PAGE_LINK ?>"><li class="Citems">Mobile</li></a>
+							<a class="Ca" href="<?php  echo THIS_SITE; ?><?php  echo GIVEAWAY_PAGE_LINK ?>"><li class="Citems">giveaway</li></a>
 							
 							
 						</ul>
@@ -338,11 +338,11 @@ function _jellipsis(){
 					
 					<li class="accordion-content" data-id='5'>		
 						<ul>
-							<a class="Ca" href="<? echo US_WEBSITE; ?>" target="_blank"><li class="Citems">US</li></a>
-							<a class="Ca" href="<? echo JP_WEBSITE; ?>" target="_blank"><li class="Citems">JP</li></a>
-							<a class="Ca" href="<? echo FR_WEBSITE; ?>" target="_blank"><li class="Citems">FR</li></a>
+							<a class="Ca" href="<?php  echo US_WEBSITE; ?>" target="_blank"><li class="Citems">US</li></a>
+							<a class="Ca" href="<?php  echo JP_WEBSITE; ?>" target="_blank"><li class="Citems">JP</li></a>
+							<a class="Ca" href="<?php  echo FR_WEBSITE; ?>" target="_blank"><li class="Citems">FR</li></a>
 							<a class="Ca" href="http://www.appledaily.com.tw/animation/topics/504" target="_blank"><li class="Citems">TW</li></a>
-							<a class="Ca" href="<? echo HK_WEBSITE; ?>" target="_blank"><li class="Citems">HK</li></a>
+							<a class="Ca" href="<?php  echo HK_WEBSITE; ?>" target="_blank"><li class="Citems">HK</li></a>
 
 							
 						</ul>
@@ -354,21 +354,21 @@ function _jellipsis(){
 			
 			<div id="header_flag">
 				EDITION <br>
-				<a class="us" href="<? echo US_WEBSITE; ?>" target="_blank"><img src="<? echo THIS_SITE; ?>img/hd_fg_us.gif" /></a>
-				<a class="jp" href="<? echo JP_WEBSITE; ?>" target="_blank"><img src="<? echo THIS_SITE; ?>img/hd_fg_jp.gif" /></a>
-				<a class="sub" href="<? echo SUBSCRIBE_TOP_LINKS; ?>" target="_blank"><img src="<? echo THIS_SITE; ?>img/hd_subscribe.gif" width="115" height="22"></a>
+				<a class="us" href="<?php  echo US_WEBSITE; ?>" target="_blank"><img src="<?php  echo THIS_SITE; ?>img/hd_fg_us.gif" /></a>
+				<a class="jp" href="<?php  echo JP_WEBSITE; ?>" target="_blank"><img src="<?php  echo THIS_SITE; ?>img/hd_fg_jp.gif" /></a>
+				<a class="sub" href="<?php  echo SUBSCRIBE_TOP_LINKS; ?>" target="_blank"><img src="<?php  echo THIS_SITE; ?>img/hd_subscribe.gif" width="115" height="22"></a>
 			</div>
 
 			<div id="appstore">
-				<a href="<? echo APP_APPLE_STORE; ?>" target="_blank"><img src="<? echo THIS_SITE; ?>img/hd_as.jpg" width="155" height="50" ></a>
-				<a href="<? echo APP_GOOGLE_PLAY; ?>" target="_blank"><img src="<? echo THIS_SITE; ?>img/hd_gp.jpg" width="155" height="50" ></a>
-				<!-- <a href="<? echo MOBILE_PAGE_LINK; ?>" target="_blank"><img src="img/hd_dw.jpg" width="50" height="50"></a> -->
+				<a href="<?php  echo APP_APPLE_STORE; ?>" target="_blank"><img src="<?php  echo THIS_SITE; ?>img/hd_as.jpg" width="155" height="50" ></a>
+				<a href="<?php  echo APP_GOOGLE_PLAY; ?>" target="_blank"><img src="<?php  echo THIS_SITE; ?>img/hd_gp.jpg" width="155" height="50" ></a>
+				<!-- <a href="<?php  echo MOBILE_PAGE_LINK; ?>" target="_blank"><img src="img/hd_dw.jpg" width="50" height="50"></a> -->
 			</div>
 			<div id="fl_icon_pos">
 			    <div id="fl_icon">
-			    	<a class="apple" href="<? echo APP_APPLE_STORE;?>" target="_blank"><img src="<? echo THIS_SITE; ?>img/icon_apple_47x47.png"></a>
+			    	<a class="apple" href="<?php  echo APP_APPLE_STORE;?>" target="_blank"><img src="<?php  echo THIS_SITE; ?>img/icon_apple_47x47.png"></a>
 			    	<br>
-			    	<a class="android" href="<? echo APP_GOOGLE_PLAY;?>" target="_blank"><img src="<? echo THIS_SITE; ?>img/icon_android_47x47.png"></a>
+			    	<a class="android" href="<?php  echo APP_GOOGLE_PLAY;?>" target="_blank"><img src="<?php  echo THIS_SITE; ?>img/icon_android_47x47.png"></a>
 			    </div>	
 		    </div>
 			

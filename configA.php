@@ -1,4 +1,4 @@
-<?
+<?php 
 	//API key & alias
 define('APPLICATION_URL','https://nextmedia-mcp.anvato.net/api?');
 define('APPLICATION_FRONT_PAGE_URL','sa-mcp.storage.googleapis.com/playlists/feeds/js/233.js');
@@ -11,10 +11,10 @@ define('ANVATO_PLAYER_SRC','//w3.cdn.anvato.net/player/prod/v3/scripts/anvload.j
 //define('ANVATO_PLAYER_SRC','//w3.cdn.anvato.net/player/prod/scripts/anvload.js');
 
 //METHODS
-define('LIST_VIDEOS','<?xml version="1.0" ?><request><type>list_videos</type><params></params></request>');
-define('LIST_VIDEO_IMAGES','<?xml version="1.0" ?><request><type>list_video_images</type><params></params></request>');
-define('LIST_CATEGORIES','<?xml version="1.0" ?><request><type>list_categories</type><params></params></request>');
-define('LIST_PLAYER','<?xml version="1.0" ?><request><type>list_playlists</type><params></params></request>');
+define('LIST_VIDEOS','<?php xml version="1.0" ?><request><type>list_videos</type><params></params></request>');
+define('LIST_VIDEO_IMAGES','<?php xml version="1.0" ?><request><type>list_video_images</type><params></params></request>');
+define('LIST_CATEGORIES','<?php xml version="1.0" ?><request><type>list_categories</type><params></params></request>');
+define('LIST_PLAYER','<?php xml version="1.0" ?><request><type>list_playlists</type><params></params></request>');
  
 define('SESSION_LIFETIME',2400); 
 define('PAGE_INDEX_MOV',50); 

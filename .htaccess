@@ -12,7 +12,6 @@
   #RewriteRule ^(.*)\.html$ $1.php [nc]
 
   #RewriteRule ^l6w4pj(.*)$ /var/www/html/tomo_us/cnn/mrss/l6w4pj.xml [NC,L]
-  RewriteRule ^storage/(.*)$ http://cms.nextanimation.com.tw/storage/$1 [P]
   RewriteRule ^category/([^/]*)$ category.php?cate_title=$1 [L]
   RewriteRule ^category/([^/]*)/([^/]*)$ category.php?cate_title=$1&page=$2 [L]
 

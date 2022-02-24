@@ -1,4 +1,4 @@
-<?
+<?php 
 
 $video_id=$_GET['video_id'];
 

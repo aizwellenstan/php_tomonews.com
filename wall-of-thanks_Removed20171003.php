@@ -1,4 +1,4 @@
-<?
+<?php 
 ///////////////////////////////
 ///  #3.0測試  
 ///  Program Log .Taboola update.......
@@ -16,7 +16,7 @@ $thisURL=THIS_SITE;
 <html>
   <head>
 	
-	<title><? site_title() ?></title>
+	<title><?php  site_title() ?></title>
 	<meta name="google-site-verification" content="LNkk7F3gMpWHgnHPEz5vsFDYBjONRopvjCGwaypBy6c" />
   <meta name=viewport content="width=1200px">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -27,18 +27,18 @@ $thisURL=THIS_SITE;
 	<meta property="fb:pages" content="148740698487405" />
 	<link rel="apple-touch-icon-precomposed" href=""/>
 	<link rel="apple-touch-icon-precomposed" href=""/>
-	<link rel="icon" href="<? echo THIS_SITE; ?>img/favicon.png?v=1" type="image/png" />
+	<link rel="icon" href="<?php  echo THIS_SITE; ?>img/favicon.png?v=1" type="image/png" />
 	<link rel="stylesheet" type="text/css" href="//cloud.typography.com/7365156/7009372/css/fonts.css" />
 	<link href="//fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
-	<link rel="stylesheet" href="<? echo THIS_SITE; ?>stylesheets/style.min.css?nocache=0901">
-  <link rel="stylesheet" href="<? echo THIS_SITE; ?>stylesheets/jquery-ui.min.css">
-  <link rel="stylesheet" href="<? echo THIS_SITE; ?>stylesheets/index.min.css?nocache=1203" type="text/css" media="screen">
-  <? include_once("head_scripts.php"); ?>
-	<script src="<?echo THIS_SITE; ?>js/all.min.js?nocache=2"></script>  
+	<link rel="stylesheet" href="<?php  echo THIS_SITE; ?>stylesheets/style.min.css?nocache=0901">
+  <link rel="stylesheet" href="<?php  echo THIS_SITE; ?>stylesheets/jquery-ui.min.css">
+  <link rel="stylesheet" href="<?php  echo THIS_SITE; ?>stylesheets/index.min.css?nocache=1203" type="text/css" media="screen">
+  <?php  include_once("head_scripts.php"); ?>
+	<script src="<?php echo THIS_SITE; ?>js/all.min.js?nocache=2"></script>  
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   
-   <link rel="canonical" href="<? echo THIS_SITE; ?>" />
-  <link rel="alternate" media="only screen and (max-width: 640px)" href="<? echo THIS_SITE.'m/'; ?>" />
+   <link rel="canonical" href="<?php  echo THIS_SITE; ?>" />
+  <link rel="alternate" media="only screen and (max-width: 640px)" href="<?php  echo THIS_SITE.'m/'; ?>" />
   <script>
   var controlWOT = true;
  // $(document).ready(function () {
@@ -88,7 +88,7 @@ div#vdo_inf{ font-size:17px;font-weight: 600; }
 <body>
 
 	<div id ="wapper" class="wapper"> 
-		<? include_once('header.php'); ?>	
+		<?php  include_once('header.php'); ?>	
 	</div>
 
     <div id="vdo_wapper" style="top:50px;">
@@ -163,11 +163,11 @@ div#vdo_inf{ font-size:17px;font-weight: 600; }
 	</div>
 
 
-  <script src="<?echo THIS_SITE; ?>js/config.js?nocache=1112" defer></script>
-  <script src="<?echo THIS_SITE; ?>js/basic.min.js?nocache=1219" defer></script>    
-	<script src="<?echo THIS_SITE; ?>js/jquery-ui.min.js"></script>
-  <script src="<?echo THIS_SITE; ?>js/common.min.js" defer></script>  
-  <script src="<?echo THIS_SITE; ?>js/cookies.js" defer></script>
+  <script src="<?php echo THIS_SITE; ?>js/config.js?nocache=1112" defer></script>
+  <script src="<?php echo THIS_SITE; ?>js/basic.min.js?nocache=1219" defer></script>    
+	<script src="<?php echo THIS_SITE; ?>js/jquery-ui.min.js"></script>
+  <script src="<?php echo THIS_SITE; ?>js/common.min.js" defer></script>  
+  <script src="<?php echo THIS_SITE; ?>js/cookies.js" defer></script>
 <script>
 
   $(document).ready(function() {
@@ -181,7 +181,7 @@ div#vdo_inf{ font-size:17px;font-weight: 600; }
 
   });
 </script>
-<? //include_once('footer.php'); ?>
+<?php  //include_once('footer.php'); ?>
 
 </body>
 </html>

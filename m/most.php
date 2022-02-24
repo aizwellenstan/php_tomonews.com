@@ -1,4 +1,4 @@
-<?
+<?php 
 include_once('config.php');
 include_once('api_setting.php');
 include_once('mvp_preprocess.php');
@@ -7,35 +7,35 @@ include_once('mvp_preprocess.php');
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title><? echo $page_name; ?> | <? site_title() ?></title>
+<title><?php  echo $page_name; ?> | <?php  site_title() ?></title>
 <meta id ="viewport" name="viewport" content="width=device-width">
 <meta name="description" content="TomoNews is your daily source for top animated news. We?™ve combined animation and video footage with a snarky personality to bring you the biggest and best stories from around the world." />
 <meta name="keywords" content="news, news videos, funny news, animated news, funny videos, animation, next media animation" />
 <meta property="fb:pages" content="148740698487405" />
 <link rel="apple-touch-icon-precomposed" href=""/>
-<link rel="icon" href="<? echo THIS_SITE; ?>img/favicon.ico" type="image/icon" />
-<link rel="stylesheet" href="<? echo THIS_SITE; ?>stylesheets/style.min.css">
-<link rel="stylesheet" href="<? echo THIS_SITE; ?>stylesheets/jquery-ui.min.css" />	
-<? include_once("../head_scripts.php"); ?> 
-<script src="<?echo THIS_SITE;?>js/all.min.js"></script>
+<link rel="icon" href="<?php  echo THIS_SITE; ?>img/favicon.ico" type="image/icon" />
+<link rel="stylesheet" href="<?php  echo THIS_SITE; ?>stylesheets/style.min.css">
+<link rel="stylesheet" href="<?php  echo THIS_SITE; ?>stylesheets/jquery-ui.min.css" />	
+<?php  include_once("../head_scripts.php"); ?> 
+<script src="<?php echo THIS_SITE;?>js/all.min.js"></script>
 <script src="http://dev.imp.nextmedia.com/js/nxm_tr_v16_dev.js?t=1119" ></script>
-<script src="<? echo THIS_SITE; ?>js/jquery.lazyload.min.js"></script>
+<script src="<?php  echo THIS_SITE; ?>js/jquery.lazyload.min.js"></script>
 
-<? echo '<script>'; ?>
-<? echo 'var _token="'.$_SESSION['token'].'";'; ?>
-<? echo '</script>'; ?>
+<?php  echo '<script>'; ?>
+<?php  echo 'var _token="'.$_SESSION['token'].'";'; ?>
+<?php  echo '</script>'; ?>
 <script type="application/ld+json"> 
     { 
       "@context": "http://schema.org", 
       "@type": "Webpage", 
-      "headline": "<?echo $page_name; ?>", 
-      "url": "<? echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];?>", 
+      "headline": "<?php echo $page_name; ?>", 
+      "url": "<?php  echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];?>", 
       "thumbnailUrl": "", 
-      <?$cdate22=date("Y-m-d\TH:i:s") ;   $cdate22= $cdate22.'.000Z';?>
-      "dateCreated": "<? echo $cdate22; ?>", 
+      <?php $cdate22=date("Y-m-d\TH:i:s") ;   $cdate22= $cdate22.'.000Z';?>
+      "dateCreated": "<?php  echo $cdate22; ?>", 
       "articleSection": 'MOST VIEWED', 
       "creator": "TOMONEWS", 
-      "keywords": [<?
+      "keywords": [<?php 
                  foreach($META_KW as $i => $value) 
                  {
                    if($i==0)
@@ -84,13 +84,13 @@ include_once('mvp_preprocess.php');
 </style>
 <body>
 <div class="preload">
-<img  src="<? echo THIS_SITE;?>img/loading11.png" width='32' height='32'>
+<img  src="<?php  echo THIS_SITE;?>img/loading11.png" width='32' height='32'>
 </div>
   <div class="POP_CONT invi">
   <div class="POP" >        
-    <div ><img src="<? echo THIS_SITE;?>img/loading11.png" width='32' height='32'></div>  
+    <div ><img src="<?php  echo THIS_SITE;?>img/loading11.png" width='32' height='32'></div>  
   </div></div>
-		<?
+		<?php 
 		$ad300x50 = $ad_mv_320X501; 		
 		$ad300x250_1=$ad_mv_300X250_1;
 		$ad300x250_2=$ad_mv_300X250_2;
@@ -98,12 +98,12 @@ include_once('mvp_preprocess.php');
 		?>
 	<div class="wapper"> 
 	</div>
-	<!-- <div id="ad2" style=""> <?/*echo $ad300x50;*/?></div> -->
+	<!-- <div id="ad2" style=""> <?php /*echo $ad300x50;*/?></div> -->
 	<div id="lists">
 		<div id="cate_lab">
-			<span ><? echo strtoupper('Most Viewed') ; ?></span>
+			<span ><?php  echo strtoupper('Most Viewed') ; ?></span>
 			 <div class="styleSelect">
-			 	<img src="<? echo THIS_SITE;?>img/select.gif">
+			 	<img src="<?php  echo THIS_SITE;?>img/select.gif">
              <select id="mv_date">
                 <option value='day' id='day'   data-type="day">Past 24 Hours</option>
                 <option value='week' id='week'  data-type="week">Past 7 Days</option>
@@ -111,7 +111,7 @@ include_once('mvp_preprocess.php');
              </select>
              </div>
 	    </div>
-		<?
+		<?php 
 		switch ($dtype) {
 				case 'day':
 					$_timestamp = strtotime('-1 day',time());
@@ -179,11 +179,11 @@ include_once('mvp_preprocess.php');
 	<div class="pager"style="display:table;width:320px;height:60px;">
 		
 	</div>
-	<? include_once('footer.php'); ?>
+	<?php  include_once('footer.php'); ?>
 </body>
 <script type="text/javascript">
 		
-_GLOBAL.base ='<? echo THIS_SITE; ?>';
+_GLOBAL.base ='<?php  echo THIS_SITE; ?>';
  $(function() {
 
      $("img.lazy").lazyload({
@@ -192,9 +192,9 @@ _GLOBAL.base ='<? echo THIS_SITE; ?>';
      setTimeout(function() {
         $("img.lazy").trigger("sporty")
     }, 2000);
-       $("#mv_date").val("<?echo $dtype;?>");
+       $("#mv_date").val("<?php echo $dtype;?>");
 
-     //$("#mv_date").find("option#<?echo $dtype;?>").attr("selected", true);
+     //$("#mv_date").find("option#<?php echo $dtype;?>").attr("selected", true);
 
      $("#mv_date").change(function (){
         var _typ =   $( "select option:selected" ).data('type');
@@ -209,7 +209,7 @@ _GLOBAL.base ='<? echo THIS_SITE; ?>';
           cnf_1X1.nxmObj={
         "region":"US",
         "prod":"TOMONEWS",
-        "site":"<?echo THIS_SITE;?>",
+        "site":"<?php echo THIS_SITE;?>",
         "platform":"MOBWEB",  //WEB | MOBWEB | ANDROID | IPHONE | IPAD | TABLET 
         "section":cnf_1X1.params[siteMap_index].sec, ////Site map
         "media":"TEXT",//Site map

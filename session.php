@@ -1,4 +1,4 @@
-<?
+<?php 
 start_session(7200);
 //session_start();
 ini_set('session.cookie_lifetime', 0);
@@ -16,7 +16,7 @@ echo '{"rtn":"'.$_SESSION['open_ad'].'"}';
 
 
 ?>
-<?php
+<?php 
 function start_session($expire = 0)
 {
     if ($expire == 0) {

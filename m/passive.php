@@ -1,4 +1,4 @@
-<?
+<?php 
 include_once('config.php');
 include_once('api_setting.php');
 include_once('device.php');
@@ -11,37 +11,37 @@ $title = 'TEST';
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title><? echo $page_name; ?> | <? site_title() ?></title>
+<title><?php  echo $page_name; ?> | <?php  site_title() ?></title>
 <meta id="viewport" name="viewport" content="width=device-width, user-scalable=0;">
-<meta name="description" content="<? echo str_replace('"','',strip_tags($mobDes)); ?>"/>
-<meta name="keywords" content="<? echo $Keywords_kwstr ?>" />
-<meta name="news_keywords" content="<? echo $Keywords_kwstr ?>" />
+<meta name="description" content="<?php  echo str_replace('"','',strip_tags($mobDes)); ?>"/>
+<meta name="keywords" content="<?php  echo $Keywords_kwstr ?>" />
+<meta name="news_keywords" content="<?php  echo $Keywords_kwstr ?>" />
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link rel="apple-touch-icon-precomposed" href=""/>
-<link rel="icon" href="<? echo THIS_SITE; ?>img/favicon.png?ver=1" type="image/png" />
+<link rel="icon" href="<?php  echo THIS_SITE; ?>img/favicon.png?ver=1" type="image/png" />
 	<!-- Facebook Header -->
-<meta property="og:title" content="<? echo strip_tags($meta_tit); ?>"/>
+<meta property="og:title" content="<?php  echo strip_tags($meta_tit); ?>"/>
 <meta property="og:type" content="website"/>
-<meta property="og:description" content="<? echo str_replace('"','',strip_tags($mobDes)); ?>"/>
-<meta property="og:url" content="<? echo THIS_SITE.urlencode(str_replace(' ', '-', remove_punc($meta_tit))).'-'.$meta_vid; ?>"/>
-<meta property="og:image" content="<? echo $thumb; ?>" />
-<meta property="og:site_name" content="<? echo strip_tags($meta_tit); ?>"/>
+<meta property="og:description" content="<?php  echo str_replace('"','',strip_tags($mobDes)); ?>"/>
+<meta property="og:url" content="<?php  echo THIS_SITE.urlencode(str_replace(' ', '-', remove_punc($meta_tit))).'-'.$meta_vid; ?>"/>
+<meta property="og:image" content="<?php  echo $thumb; ?>" />
+<meta property="og:site_name" content="<?php  echo strip_tags($meta_tit); ?>"/>
 <meta property="fb:pages" content="148740698487405" />
 
 <!-- Facebook Header -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@TomoNewsUS">
-<meta name="twitter:title" content="<? echo strip_tags($meta_tit); ?>">
-<meta name="twitter:description" content="<? echo str_replace('"','',strip_tags($mobDes)); ?>">
-<meta name="twitter:image:src" content="<? echo $thumb; ?>">
+<meta name="twitter:title" content="<?php  echo strip_tags($meta_tit); ?>">
+<meta name="twitter:description" content="<?php  echo str_replace('"','',strip_tags($mobDes)); ?>">
+<meta name="twitter:image:src" content="<?php  echo $thumb; ?>">
 <meta name="twitter:image:width" content="480">
 <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7365156/7009372/css/fonts.css" />
-<link rel="stylesheet" href="<? echo THIS_SITE; ?>stylesheets/style.min.css">
-<link rel="stylesheet" href="<? echo THIS_SITE; ?>stylesheets/passive.min.css">
-<? include_once("../head_scripts.php"); ?> 
-<script src="<?echo THIS_SITE;?>js/all.min.js?cache=0922"></script>
+<link rel="stylesheet" href="<?php  echo THIS_SITE; ?>stylesheets/style.min.css">
+<link rel="stylesheet" href="<?php  echo THIS_SITE; ?>stylesheets/passive.min.css">
+<?php  include_once("../head_scripts.php"); ?> 
+<script src="<?php echo THIS_SITE;?>js/all.min.js?cache=0922"></script>
 <script src="http://dev.imp.nextmedia.com/js/nxm_tr_v16_dev.js?t=1119" ></script>
-<script src="<?echo THIS_SITE; ?>js/jquery.lazyload.min.js"></script>
+<script src="<?php echo THIS_SITE; ?>js/jquery.lazyload.min.js"></script>
 
 <!--<script src="http://10.95.20.5:8080/target/target-script-min.js#anonymous"></script>-->
 
@@ -50,17 +50,17 @@ $title = 'TEST';
 	{ 
       "@context": "http://schema.org", 
       "@type": "VideoObject", 
-      "name": "<?echo $meta_tit;?>", 
-	  "description": "<? echo str_replace('"','',strip_tags($meta_desc)); ?>", 
-      "thumbnailUrl": "<? echo $thumb; ?>", 
-      "uploadDate": "<? echo $cdate22.'.000Z';?>", 
-	  "duration": "PT<?echo (string)$parseDur[0];?>M<? echo (string)$parseDur[1];?>S",
-	  "contentUrl": "http://video-pdu.us.tomonews.com/encoded-586/media/<? echo $meta_vid; ?>/819200-854x480.mp4",
-	  "interactionCount": "<? echo number_format($counter) ?>"
+      "name": "<?php echo $meta_tit;?>", 
+	  "description": "<?php  echo str_replace('"','',strip_tags($meta_desc)); ?>", 
+      "thumbnailUrl": "<?php  echo $thumb; ?>", 
+      "uploadDate": "<?php  echo $cdate22.'.000Z';?>", 
+	  "duration": "PT<?php echo (string)$parseDur[0];?>M<?php  echo (string)$parseDur[1];?>S",
+	  "contentUrl": "http://video-pdu.us.tomonews.com/encoded-586/media/<?php  echo $meta_vid; ?>/819200-854x480.mp4",
+	  "interactionCount": "<?php  echo number_format($counter) ?>"
     } 
 	
 </script>
-<?
+<?php 
 $vastUrl = '';
 if ($device == 'ios'){
 	$vastUrl = 'http://mobile.btrll.com/vast?siteId=3868221&it=w&platform={os}&n={timestamp}&br_ip={ipaddress}&br_pageurl={pageurl}&br_ua={useragent}'; 
@@ -70,16 +70,16 @@ if ($device == 'ios'){
 ?>
 <script>	
 
-var vastUrl = '<? echo $vastUrl; ?>';
+var vastUrl = '<?php  echo $vastUrl; ?>';
 var Pageurl = encodeURIComponent(document.URL);
 
 function preProcessorFunction(vastUrl) {
 	var replaceData = {                                       
-        os: '<? echo $device; ?>',
-        osversion: '<? echo Detect::os();?>',
-        ipaddress: "<? echo  GET_IP_FUNC();?>",
+        os: '<?php  echo $device; ?>',
+        osversion: '<?php  echo Detect::os();?>',
+        ipaddress: "<?php  echo  GET_IP_FUNC();?>",
         pageurl: Pageurl,
-        useragent: "<?echo $_SERVER['HTTP_USER_AGENT'];?>",
+        useragent: "<?php echo $_SERVER['HTTP_USER_AGENT'];?>",
         timestamp: new Date().getTime().toString()
 	};
  
@@ -98,7 +98,7 @@ var anvp = {};
 anvp.vdoplayer = {};
 anvp.vdoplayer.config = {
 	//autoplay: true,
-	poster:"<? echo $thumb; ?>",
+	poster:"<?php  echo $thumb; ?>",
 	html5: true,
 	plugins : {
 		dfp: {
@@ -111,10 +111,10 @@ anvp.vdoplayer.config = {
 	}
 };
 </script>
-<? include_once('../ga.php'); ?>	
+<?php  include_once('../ga.php'); ?>	
 </head>
 <style>
-#pllist_select{background: #fff url("<?echo THIS_SITE;?>img/select2.png") no-repeat 100% 50%;}
+#pllist_select{background: #fff url("<?php echo THIS_SITE;?>img/select2.png") no-repeat 100% 50%;}
 .bar{width:321px;height:30px;bottom:0px;background:#f5f3f4;z-index:999999;}
 #dots_bottom{position: relative;}
 .social_top{width:100%;margin:10px 0;}
@@ -123,7 +123,7 @@ anvp.vdoplayer.config = {
 
 </style>
 <body>
-	<? 
+	<?php  
 	$ad300x50 = $ad_passive_300x50;
 	include_once('header.php'); 
 	?>
@@ -135,19 +135,19 @@ anvp.vdoplayer.config = {
 				<div itemscope itemtype="http://schema.org/Article"  id="vdo_cnt">
 				    <div id="vdoplayer" ></div>	
 		            <div class="btns_containv vdo">
-						 <div class="btn_prev"><img src="<? echo THIS_SITE;?>img/vdo_icn_lft.png" class='rwd_image'></div>
-						 <div class="btn_next"><img src="<? echo THIS_SITE;?>img/vdo_icn_rt.png" class='rwd_image'></div>
+						 <div class="btn_prev"><img src="<?php  echo THIS_SITE;?>img/vdo_icn_lft.png" class='rwd_image'></div>
+						 <div class="btn_next"><img src="<?php  echo THIS_SITE;?>img/vdo_icn_rt.png" class='rwd_image'></div>
 					</div> 
 					<div id="dots_bottom">
 		               <div class="dots">			
 		               </div>
 	                </div>
-					<div id="" style="width: 351px;height: 51px;overflow: hidden;margin: auto;margin-bottom:15px;"> <? echo $ad300x50 ?></div>					
+					<div id="" style="width: 351px;height: 51px;overflow: hidden;margin: auto;margin-bottom:15px;"> <?php  echo $ad300x50 ?></div>					
                     <div class="btns_contain">
 					  <div class="styleSelect">
 
                             <select id="pllist_select">
-                               <?
+                               <?php 
 							   
                                foreach( $plTitles_arr as $key => $value)
                                {
@@ -164,39 +164,39 @@ anvp.vdoplayer.config = {
 
 					<div class="social_top" id="scbar_top" style="display:table;margin:10px">		
 						<div class="shareBarbox"  id ='social_top'>
-						  <div class="sc_item fb "><img img class='rwd_image' src="<?echo THIS_SITE;?>img/fb_64x64.png"></div>
-						  <div class="sc_item twr "><img img class='rwd_image' src="<?echo THIS_SITE;?>img/twr_64x64.png"></div>
-						  <a href="whatsapp://send?text=<?echo THIS_SITE. $video_id?> via @TomoNewsUS" data-action="share/whatsapp/share"> <div class="sc_item wapp " ><img img class='rwd_image' src="<?echo THIS_SITE;?>img/wapp_64x64.png"></div></a>
-						  <div class="sc_item email "><img img class='rwd_image' src="<?echo THIS_SITE;?>img/email_64x64.png"></div>
-						  <div class="sc_item btn_social" ><img img class='rwd_image' src="<?echo THIS_SITE;?>img/plus_64x64.png"></div>
-						  <div class="sc_item url sc_item2 invi "><img img class='rwd_image' src="<?echo THIS_SITE;?>img/url_64x64.png"></div>
-						  <div class="sc_item gplus sc_item2 invi"><img img class='rwd_image' src="<?echo THIS_SITE;?>img/gplus_64x64.png"></div>
-						  <div class="sc_item stum sc_item2 invi"><img img class='rwd_image' src="<?echo THIS_SITE;?>img/StumbleUpon_64x64.png"></div>
-						  <div class="sc_item reddit sc_item2 invi"><img img class='rwd_image' src="<?echo THIS_SITE;?>img/reddit_64x64.png"></div>
+						  <div class="sc_item fb "><img img class='rwd_image' src="<?php echo THIS_SITE;?>img/fb_64x64.png"></div>
+						  <div class="sc_item twr "><img img class='rwd_image' src="<?php echo THIS_SITE;?>img/twr_64x64.png"></div>
+						  <a href="whatsapp://send?text=<?php echo THIS_SITE. $video_id?> via @TomoNewsUS" data-action="share/whatsapp/share"> <div class="sc_item wapp " ><img img class='rwd_image' src="<?php echo THIS_SITE;?>img/wapp_64x64.png"></div></a>
+						  <div class="sc_item email "><img img class='rwd_image' src="<?php echo THIS_SITE;?>img/email_64x64.png"></div>
+						  <div class="sc_item btn_social" ><img img class='rwd_image' src="<?php echo THIS_SITE;?>img/plus_64x64.png"></div>
+						  <div class="sc_item url sc_item2 invi "><img img class='rwd_image' src="<?php echo THIS_SITE;?>img/url_64x64.png"></div>
+						  <div class="sc_item gplus sc_item2 invi"><img img class='rwd_image' src="<?php echo THIS_SITE;?>img/gplus_64x64.png"></div>
+						  <div class="sc_item stum sc_item2 invi"><img img class='rwd_image' src="<?php echo THIS_SITE;?>img/StumbleUpon_64x64.png"></div>
+						  <div class="sc_item reddit sc_item2 invi"><img img class='rwd_image' src="<?php echo THIS_SITE;?>img/reddit_64x64.png"></div>
 						</div>
 					</div>
 								
 				</div>
        <!--Taboola-->
-       <? include_once('footer.php'); ?>
-<script src="<?echo THIS_SITE;?>libs/jquery.touchSwipe.min.js"></script>       
-<script src="<?echo THIS_SITE;?>js/passive_touch.min.js?nocache=0119"></script>
-<script src="<?echo THIS_SITE;?>js/passive.min.js?nocache=0119"></script>
+       <?php  include_once('footer.php'); ?>
+<script src="<?php echo THIS_SITE;?>libs/jquery.touchSwipe.min.js"></script>       
+<script src="<?php echo THIS_SITE;?>js/passive_touch.min.js?nocache=0119"></script>
+<script src="<?php echo THIS_SITE;?>js/passive.min.js?nocache=0119"></script>
 <script>
 
 
-<? echo 'var _token="'.$_SESSION['token'].'";'; ?>
+<?php  echo 'var _token="'.$_SESSION['token'].'";'; ?>
 _GLOBAL.page = 'passive';
-_GLOBAL.base ='<? echo THIS_SITE; ?>';
-_GLOBAL.app_key ="<? echo APPLICATION_KEY;?>";
-_GLOBAL.searchTerm='<?echo $KW_THEME;?>';
-_GLOBAL.pic_cdn = '<?echo PIC_CDN;?>';
-  _GLOBAL.list_id = '<?echo $PL;?>';
-_GLOBAL.anvato_player  = '<? echo ANVATO_PLAYER_SRC;?>';
+_GLOBAL.base ='<?php  echo THIS_SITE; ?>';
+_GLOBAL.app_key ="<?php  echo APPLICATION_KEY;?>";
+_GLOBAL.searchTerm='<?php echo $KW_THEME;?>';
+_GLOBAL.pic_cdn = '<?php echo PIC_CDN;?>';
+  _GLOBAL.list_id = '<?php echo $PL;?>';
+_GLOBAL.anvato_player  = '<?php  echo ANVATO_PLAYER_SRC;?>';
 
-_GLOBAL.osversion= '<? echo Detect::os();?>';
-_GLOBAL.ipaddress= "<? echo  GET_IP_FUNC();?>";
-_GLOBAL.useragent= "<?echo $_SERVER['HTTP_USER_AGENT'];?>";
+_GLOBAL.osversion= '<?php  echo Detect::os();?>';
+_GLOBAL.ipaddress= "<?php  echo  GET_IP_FUNC();?>";
+_GLOBAL.useragent= "<?php echo $_SERVER['HTTP_USER_AGENT'];?>";
 
 var _tbns_pl
 $(function() {
@@ -212,9 +212,9 @@ $(function() {
         _social1.init();
 		
      _tbns_pl = new TBNS_PL() ;
-     _tbns_pl.init(_GLOBAL.list_id, <?echo $page;?> ,'<?echo $video_id;?>' ,'.thumbnails_container.current');
+     _tbns_pl.init(_GLOBAL.list_id, <?php echo $page;?> ,'<?php echo $video_id;?>' ,'.thumbnails_container.current');
 		
-     $("#pllist_select").val("<?echo $current_title;?>");
+     $("#pllist_select").val("<?php echo $current_title;?>");
      $('#pllist_select').change(function (){
         var _id = $( "select option:selected").data('id');
         //location.href=_GLOBAL.base +"tomoplay/"+ _id;
@@ -233,7 +233,7 @@ $(function() {
                 cnf_1X1.nxmObj={
               "region":"US",
               "prod":"TOMONEWS",
-              "site":"<?echo THIS_SITE;?>",
+              "site":"<?php echo THIS_SITE;?>",
               "platform":"MOBWEB",  //WEB | MOBWEB | ANDROID | IPHONE | IPAD | TABLET 
               "section":cnf_1X1.params[siteMap_index].sec, ////Site map
               "media":"TEXT",//Site map

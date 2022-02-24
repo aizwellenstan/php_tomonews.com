@@ -1,4 +1,4 @@
-<?
+<?php 
 include_once('config.php');
 include_once('api_setting.php');
 include_once('device.php');
@@ -13,7 +13,7 @@ $thisURL=THIS_SITE.'newsfeed';
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title><? echo $cate_name; ?> | <? site_title() ?></title>
+	<title><?php  echo $cate_name; ?> | <?php  site_title() ?></title>
     <meta id ="viewport" name="viewport" content="width=device-width">
 
 	<meta property="fb:pages" content="148740698487405" />
@@ -21,26 +21,26 @@ $thisURL=THIS_SITE.'newsfeed';
 	<meta name="keywords" content="news, news videos, funny news, animated news, funny videos, animation, next media animation" />
 	<link rel="apple-touch-icon-precomposed" href=""/>
 	<link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7365156/7009372/css/fonts.css" />
-	<link rel="icon" href="<? echo THIS_SITE; ?>img/favicon.png?ver=1" type="image/png" />
-	<link rel="stylesheet" href="<? echo THIS_SITE; ?>stylesheets/style.min.css">
+	<link rel="icon" href="<?php  echo THIS_SITE; ?>img/favicon.png?ver=1" type="image/png" />
+	<link rel="stylesheet" href="<?php  echo THIS_SITE; ?>stylesheets/style.min.css">
    
- <? include_once("../head_scripts.php"); ?> 
-    <script src="<?echo THIS_SITE;?>js/all.min.js"></script>
+ <?php  include_once("../head_scripts.php"); ?> 
+    <script src="<?php echo THIS_SITE;?>js/all.min.js"></script>
 	<script src="http://dev.imp.nextmedia.com/js/nxm_tr_v16_dev.js?t=1119" ></script>   	
-    <script src="<? echo THIS_SITE; ?>js/jquery.lazyload.min.js"></script>
+    <script src="<?php  echo THIS_SITE; ?>js/jquery.lazyload.min.js"></script>
  
   	<script type="application/ld+json"> 
     { 
       "@context": "http://schema.org", 
       "@type": "Webpage", 
-      "headline": "<?echo $cate_name;?>", 
-      "url": "<? echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];?>", 
+      "headline": "<?php echo $cate_name;?>", 
+      "url": "<?php  echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];?>", 
       "thumbnailUrl": "", 
-      <?$cdate22=date("Y-m-d\TH:i:s") ;   $cdate22= $cdate22.'.000Z';?>
-      "dateCreated": "<? echo $cdate22; ?>",  
+      <?php $cdate22=date("Y-m-d\TH:i:s") ;   $cdate22= $cdate22.'.000Z';?>
+      "dateCreated": "<?php  echo $cdate22; ?>",  
       "articleSection": 'NEWSFEED', 
       "creator": "TOMONEWS", 
-      "keywords": [<?
+      "keywords": [<?php 
                  foreach($META_KW as $i => $value) 
                  {
                    if($i==0)
@@ -51,13 +51,13 @@ $thisURL=THIS_SITE.'newsfeed';
                   ?>] 
     } 
 </script>
-<? include_once('../ga.php'); ?>	
+<?php  include_once('../ga.php'); ?>	
 </head>
 <style>
 .mov{margin-left: 10px;}
 </style>
 <body>
-		<?
+		<?php 
 		$ad300x50 = $ad_nf_300x50; 
 		$ad300x250_1 = $ad_nf_300x250_1;
 		$ad300x250_2 = $ad_nf_300x250_2;
@@ -65,12 +65,12 @@ $thisURL=THIS_SITE.'newsfeed';
 		?>
 	<div class="wapper"> 
 	</div>
-	<!-- <div id="ad2" style=""> <? /*echo $ad300x50*/ ?></div> -->
+	<!-- <div id="ad2" style=""> <?php  /*echo $ad300x50*/ ?></div> -->
 	<div id="lists3">
 		<div id="cate_lab" class="" align="center" style="background:#e90167; text-trans; top:0px;margin-bottom:10px;">
-			<? echo $cate_name ; ?>
+			<?php  echo $cate_name ; ?>
 	    </div>
-		<?
+		<?php 
 		$sdate='*';
 		$edate=strtotime(date('Y-m-d h:i:sa'));
 		$getUrls=APPLICATION_FEED_URL.'KBJRKBD5PNUFPGRALF?start=0&count='.PAGE_LIMIT_NEWSFEED.'&filters[]=c_ts_publish_l:['.$sdate.'%20TO%20'.$edate.']&sort=c_ts_publish_l+desc';		
@@ -90,9 +90,9 @@ $thisURL=THIS_SITE.'newsfeed';
             $cate_name='';
             $cate_id='';
 			
-			if($i==1){ ?><div id="" style="width: 351px;height: 51px;overflow: hidden;margin: auto;margin-bottom:15px;"> <? echo $ad300x50 ?></div> <? }
-			if($i==3){ ?><div id="" style="width: 300px;height: 251px;overflow: hidden;margin: auto;margin-bottom:15px;"> <? echo $ad300x250_1 ?></div> <? }
-			if($i==6){ ?><div id="" style="width: 300px;height: 251px;overflow: hidden;margin: auto;margin-bottom:15px;"> <? echo $ad300x250_2 ?></div> <? }
+			if($i==1){ ?><div id="" style="width: 351px;height: 51px;overflow: hidden;margin: auto;margin-bottom:15px;"> <?php  echo $ad300x50 ?></div> <?php  }
+			if($i==3){ ?><div id="" style="width: 300px;height: 251px;overflow: hidden;margin: auto;margin-bottom:15px;"> <?php  echo $ad300x250_1 ?></div> <?php  }
+			if($i==6){ ?><div id="" style="width: 300px;height: 251px;overflow: hidden;margin: auto;margin-bottom:15px;"> <?php  echo $ad300x250_2 ?></div> <?php  }
 			
 			$NSFW_v = false;
 				  $mobile_headline=array('tit'=>$value ['c_title_s'], 'mb_tit'=> $value ['c_title_s']);
@@ -127,7 +127,7 @@ $thisURL=THIS_SITE.'newsfeed';
 
 		<div class="cb"></div>
 	</div>
-	<? include_once('footer.php'); ?>
+	<?php  include_once('footer.php'); ?>
 </body>
 <script type="text/javascript">
 		
@@ -148,7 +148,7 @@ $thisURL=THIS_SITE.'newsfeed';
           cnf_1X1.nxmObj={
         "region":"US",
         "prod":"TOMONEWS",
-        "site":"<?echo THIS_SITE;?>",
+        "site":"<?php echo THIS_SITE;?>",
         "platform":"MOBWEB",  //WEB | MOBWEB | ANDROID | IPHONE | IPAD | TABLET 
         "section":cnf_1X1.params[siteMap_index].sec, ////Site map
         "media":"TEXT",//Site map

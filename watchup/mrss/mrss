@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?php xml version="1.0"?>
 <rss xmlns:media="http://search.yahoo.com/mrss/" xmlns:mcp="http://schema.anvato.com/mcp/" version="2.0">  <channel>
     <title>z_Watchup_Content_Feed</title>
     <link>//api.nm.anvato.net/v2/feed/KJJAAX47PJSRRUTTA5GA?fmt=mrss</link>

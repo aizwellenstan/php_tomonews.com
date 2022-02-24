@@ -1,4 +1,4 @@
-<?
+<?php 
 
                
                if(($tag_topic!='' /*&& checkIfinArray($tag_topic , $tags_article)*/ )) 
@@ -12,7 +12,7 @@
 			   $Addtional_heads_len =count($Addtional_heads);
                            for($key=2 ; $key<=3 ;$key++)
                           {
-							  if ($key == 3){ ?><div class="headline_img" style="width:300px; margin-left:-2px"> <? echo $ad300x250_1 ?></div> <?}
+							  if ($key == 3){ ?><div class="headline_img" style="width:300px; margin-left:-2px"> <?php  echo $ad300x250_1 ?></div> <?php }
                              $ind_str = $key; //+ 2;
                               if($Addtional_pics[$key] != '' ||  $Addtional_heads[$key]!=''){
                                       echo '<div class="headline">';                          

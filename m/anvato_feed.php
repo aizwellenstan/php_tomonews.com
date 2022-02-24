@@ -1,4 +1,4 @@
-<?php
+<?php 
 header('Content-type: application/xml');
 $pub_key = "8353B77A240044B1BA565E0393C18E88";
 $pri_key = "3B80540E925B4BB6B5AE7A363AA551C8";

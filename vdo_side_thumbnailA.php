@@ -1,4 +1,4 @@
-<?
+<?php 
 	if ( isset($removeAdd) && $removeAdd == true ){
 		$ad300x250 = '<img src="'.THIS_SITE.'img/GIF_300x250-Baby-Panda.gif">';
 	}else{
