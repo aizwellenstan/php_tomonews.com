@@ -169,7 +169,7 @@ include_once('side_thumb_apiAO.php');
 			    preload="auto"
 			    width="970"
 			    height="auto"
-			    poster="<?=$thumb_url?>"
+			    poster="<?='http://cms.nextanimation.com.tw/'.$thumb_url?>"
 			    data-setup="{}"
 			  >
 			    <source src="<?='http://cms.nextanimation.com.tw/'.$video_url?>" type="video/mp4" />
