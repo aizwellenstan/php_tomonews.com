@@ -308,9 +308,6 @@ function show_SmallThumbnail_lazy($video_id,$cateid , $catename,$des,$cdate,$thu
 	global  $theme_name;
 	global  $NSFW_v;
 	global  $NSFW;
-	header("Access-Control-Allow-Origin: *");
-	header("Access-Control-Allow-Methods: *");
-	header("Access-Control-Allow-Headers: Origin, Methods, Content-Type");
 	
     echo '<a href="'.THIS_SITE.urlencode(str_replace(' ', '-', remove_punc($des))).'-'.$video_id.'">';
     echo '<div class="index mov" data-id="'.$nail_id.'" >';

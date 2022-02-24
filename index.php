@@ -7,6 +7,9 @@
 include_once('configA.php');
 include_once('api_settingA.php');
 include_once('device.php');
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: *");
+header("Access-Control-Allow-Headers: Origin, Methods, Content-Type");
 //include_once('lang_redirect.php');
 
 $page=isset($_GET['page']) ? (int)$_GET['page'] : '';
