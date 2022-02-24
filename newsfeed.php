@@ -123,7 +123,7 @@ label {
 			$edate=strtotime(date('Y-m-d h:i:sa'));
 			$today = date('Y-m-d');
 			// $getUrls=APPLICATION_FEED_URL.'KBJRKBD5PNUFPGRALF?start='.(($page - 1)* PAGE_LIMIT_NEWSFEED).'&count='.PAGE_LIMIT_NEWSFEED.'&filters[]=c_ts_publish_l:['.$sdate.'%20TO%20'.$edate.']&sort=c_ts_publish_l+desc';
-			$getUrls = "http://cms.nextanimation.com.tw/api/getProgramVideos?program=TomoNews%20US&published_date=$today&counts=20&page=$page";
+			$getUrls = "https://cms.nextanimation.com.tw/api/getProgramVideos?program=TomoNews%20US&published_date=$today&counts=20&page=$page";
 
 			$data = curl_info($getUrls, null);
 			$dAry = json_decode( $data, true );
@@ -245,7 +245,7 @@ label {
 					$paging = isset($rightVideo) ? 2 :  rand(1,3) ;
 					$today = date('Y-m-d');
 					$getUrls5 = APPLICATION_FEED_URL.'KBJRKBD5PNUFPGRALF?start='.$paging.'&count=100&filters[]=c_ts_publish_l:['.$sdate.'%20TO%20'.$edate.']';
-					$getUrls5 = "http://cms.nextanimation.com.tw/api/getProgramVideos?program=TomoNews%20US&published_date=$today&counts=5&page=0";
+					$getUrls5 = "https://cms.nextanimation.com.tw/api/getProgramVideos?program=TomoNews%20US&published_date=$today&counts=5&page=0";
 
 					?><div class="mov" style="width: 300px; height: 600px;background:#ccc;margin:0;margin-top:5px;margin-bottom:5px;"><? echo $ad300x600_1;?></div><?
 					echo '<div id="ymal_list" class="mov_list" >'; 
