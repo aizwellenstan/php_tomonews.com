@@ -88,7 +88,7 @@ $thisURL=THIS_SITE;
 			
 			// $getUrls=APPLICATION_FRONT_PAGE_URL2;
 			$today = date('Y-m-d');
-			$getUrls="https://cms.nextanimation.com.tw/api/getFrontPage?program=TomoNews%20US&published_date=$today&counts=10";
+			$getUrls="http://cms.nextanimation.com.tw/api/getFrontPage?program=TomoNews%20US&published_date=$today&counts=10";
 			$data = curl_info($getUrls, null);
 		
 			$dAry = json_decode( $data, true );
@@ -146,7 +146,7 @@ $thisURL=THIS_SITE;
             $PAGEjs =  $PAGE;
             $sdate=strtotime('-60 day',time());
 			// $getUrls5 = APPLICATION_FEED_URL.'KBJRKBD5PNUFPGRALF?start=0&count=31&sort=c_ts_publish_l+desc&filters[]=c_ts_publish_l:['.$sdate.'%20TO%20*]';
-			$getUrls5 = "https://cms.nextanimation.com.tw/api/getProgramVideos?program=TomoNews%20US&published_date=$today&counts=15&page=0";
+			$getUrls5 = "http://cms.nextanimation.com.tw/api/getProgramVideos?program=TomoNews%20US&published_date=$today&counts=15&page=0";
 			?><div class="mov" style="width:300px;margin:0;margin-bottom: 20px;"><? echo $ad300x250_2;?></div><?
 			echo '<div id="ymal_list" class="mov_list" >'; 
 			//echo '<img src="'.THIS_SITE.'img/also_like.gif">'; 

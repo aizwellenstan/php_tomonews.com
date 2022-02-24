@@ -340,7 +340,7 @@ include_once('side_thumb_apiAO.php');
 					$edate=strtotime(date('Y-m-d h:i:sa'));
 					$today = date('Y-m-d');
 					// $getUrls5 = APPLICATION_FEED_URL.'KBJRKBD5PNUFPGRALF?start=0&sort=c_ts_publish_l+desc&count=4&filters[]=c_ts_publish_l:['.$sdate.'%20TO%20'.$edate.']';
-					$getUrls5 = "https://cms.nextanimation.com.tw/api/getProgramVideos?program=TomoNews%20US&published_date=$today&counts=5&page=0";
+					$getUrls5 = "http://cms.nextanimation.com.tw/api/getProgramVideos?program=TomoNews%20US&published_date=$today&counts=5&page=0";
 
 					?><div class="mov" style="width:300px;margin:0;margin-bottom: 20px;"><? echo $ad300x250;?></div><?
 						echo '<div id="ymal_list" class="mov_list" >'; 

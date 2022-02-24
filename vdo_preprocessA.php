@@ -8,7 +8,7 @@ $OPT1=isset($_GET['opt1']) ? $_GET['opt1'] : '';
 $OPT2=isset($_GET['opt2']) ? $_GET['opt2'] : '';
 
 // $getUrls = APPLICATION_FEED_URL.'KBJRKBD5PNUFPGRALF?filters[]=obj_id:"'.$video_id.'"';
-$getUrls = "https://cms.nextanimation.com.tw/api/getVideos?video_id=$video_id";
+$getUrls = "http://cms.nextanimation.com.tw/api/getVideos?video_id=$video_id";
 
 $data2=curl_info($getUrls, null);
 $dAry=json_decode($data2, true);
@@ -120,7 +120,7 @@ $edate=date('Y-m-d', strtotime('-3 day',$_date));
 $sdate=$_date;
 
 // $getNextUrls = APPLICATION_FEED_URL.'KBJRKBD5PNUFPGRALF?start=0&count=10&sort=c_ts_publish_l+desc&filters[]=c_ts_publish_l:['.$edate.'%20TO%20'.$sdate.']';
-$getNextUrls = "https://cms.nextanimation.com.tw/api/getProgramVideos?program=TomoNews%20US&published_date=$edate&counts=10";
+$getNextUrls = "http://cms.nextanimation.com.tw/api/getProgramVideos?program=TomoNews%20US&published_date=$edate&counts=10";
 $data4=curl_info($getNextUrls, null);
 
 $dAry4=json_decode($data4, true);

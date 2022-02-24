@@ -151,7 +151,7 @@ label {
 		<?
 		// $getUrls= APPLICATION_FEED_URL.$catLink[$cate_title].'?start='.(($page - 1)* PAGE_LIMIT_CATEGORY).'&count='.(PAGE_LIMIT_CATEGORY).'&filters[]=c_ts_publish_l:['.$sdate.'%20TO%20'.$edate.']&sort=c_ts_publish_l+desc';
     $today = date('Y-m-d');
-    $getUrls = "https://cms.nextanimation.com.tw/api/getProgramVideos?program=TomoNews%20US&published_date=$today&counts=20&page=$page&category=$cate_title"; 
+    $getUrls = "http://cms.nextanimation.com.tw/api/getProgramVideos?program=TomoNews%20US&published_date=$today&counts=20&page=$page&category=$cate_title"; 
 		$data=curl_info($getUrls, null);
         $dAry=json_decode($data, true);		
 		
@@ -291,7 +291,7 @@ label {
                    $PAGEjs =  $PAGE;
                    $sdate=strtotime('-60 day',time());//Uncomment when you get full data from anvato
 				           $today = date('Y-m-d');
-					         $getUrls5 = "https://cms.nextanimation.com.tw/api/getProgramVideos?program=TomoNews%20US&published_date=$today&counts=5&page=0";
+					         $getUrls5 = "http://cms.nextanimation.com.tw/api/getProgramVideos?program=TomoNews%20US&published_date=$today&counts=5&page=0";
 
 					echo '<div id="ymal_list" class="mov_list" >'; 
 					echo '<div class="right-side-title">YOU MAY ALSO LIKE</div>';

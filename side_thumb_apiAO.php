@@ -15,7 +15,7 @@ function insert_breakingNews($num){
 	// $listTitle = trim($dAry['params']['playlist_list']['playlist']['description']);
 
 	// $getUrls3 = APPLICATION_FEED_URL.'KSIWPX4ZPE3ARGAKBB?start=0&count='.($num + 1).'&sort=c_ts_publish_l+desc';
-	$getUrls3 = "https://cms.nextanimation.com.tw/api/getBreakingNews?program=TomoNews%20US&keyword=trump&counts=5";
+	$getUrls3 = "http://cms.nextanimation.com.tw/api/getBreakingNews?program=TomoNews%20US&keyword=trump&counts=5";
 	$data3 = curl_info($getUrls3, null);
     $dAry3 = json_decode($data3, true);
     $dAryn3 = $dAry3['docs'];

@@ -144,7 +144,7 @@ if($sdate!=''&&$edate!=''){ $range = '&filters[]=c_ts_publish_l:['.strtotime('+0
 				*/
 		// $getUrls= APPLICATION_FEED_URL.'KBJRKBD5PNUFPGRALF?start='.(($page - 1)* PAGE_LIMIT_CATEGORY).'&count='.PAGE_LIMIT_CATEGORY.$range.'&sort=c_ts_publish_l+desc&q="'.$kw.'"';
 		$today = date('Y-m-d');
-		$getUrls = "https://cms.nextanimation.com.tw/api/getProgramVideos?program=TomoNews%20US&published_date=$today&counts=20&page=$page&keyword=$kw";
+		$getUrls = "http://cms.nextanimation.com.tw/api/getProgramVideos?program=TomoNews%20US&published_date=$today&counts=20&page=$page&keyword=$kw";
 		$data=curl_info($getUrls, null);
         $dAry=json_decode($data, true);		
 		$dAryn=$dAry['docs'];

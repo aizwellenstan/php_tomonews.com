@@ -6,7 +6,7 @@ $PAGE_LIMIT = 4;
 	
 // $getFeed = APPLICATION_FEED_URL.'KBJRKBD5PNUFPGRALF?filters[]=u_Next_Media_Clip_Id_s="'.$video_id.'"';
 $today = date('Y-m-d');
-$getFeed = "https://cms.nextanimation.com.tw/api/getProgramVideos?program=TomoNews%20US&published_date=$today&counts=20&page=0";
+$getFeed = "http://cms.nextanimation.com.tw/api/getProgramVideos?program=TomoNews%20US&published_date=$today&counts=20&page=0";
 $dataFeed = curl_info($getFeed, null);
 $dAryFeed = json_decode($dataFeed, true);
 if ($dAryFeed['numFound'] > 0){
@@ -83,7 +83,7 @@ $KV_THEME = 'false';
 //////HANDLE target VIODE
   $today = date('Y-m-d');
   // $getUrls= APPLICATION_FEED_URL.$playlists_arr[0].'?start=0&count=1';
-  $getUrls = "https://cms.nextanimation.com.tw/api/getProgramVideos?program=TomoNews%20US&published_date=$today&counts=1&page=0&category=".$playlistsBottom_arr[0];
+  $getUrls = "http://cms.nextanimation.com.tw/api/getProgramVideos?program=TomoNews%20US&published_date=$today&counts=1&page=0&category=".$playlistsBottom_arr[0];
 
   $data=curl_info($getUrls, ' ');
   $dAry=json_decode($data, true);		
