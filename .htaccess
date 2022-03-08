@@ -92,7 +92,8 @@
   RewriteRule ^3bc12j([^/]*)$ line/mrss.php?code=3bc12j [QSA,NC,L]
   RewriteRule ^4daa1j([^/]*)$ line/mrss.php?code=4daa1j [QSA,NC,L]
   
-  RewriteRule ^5cc23j([^/]*)$ line/videoelephant.php [QSA,NC,L]
+  RewriteRule ^5cc23j([^/]*)$ line/mrss.php?code=5cc23j [QSA,NC,L]
+ # RewriteRule ^5cc23j([^/]*)$ line/videoelephant.php [QSA,NC,L]
 
   ErrorDocument 404 /404.php
   RewriteRule ^disqus/mobile.html$ / [L,QSA]
